@@ -5,35 +5,36 @@ body {
     background-image: url("../img/bg.jpg");
     background-size: cover;
     padding-inline: 125px;
-    padding-block: 40px;
+    padding-top: 40px;
     font-family: 'Inter', sans-serif;
 }
 
 header {
-    margin-bottom: 50px;
+    margin-bottom: 75px;
 }
 
 header img {
-    width: 250px;
+    width: 150px;
 }
 
 main {
-    color: white;
+    color: #dadae0;
 }
 
-#welcome h1 {
+h1 {
+    color: white;
     font-size: 5rem;
     width: 475px;
     line-height: 0.8;
     font-family: 'Outfit', sans-serif;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
 strong {
     font-weight: bold;
 }
 
-#welcome h2 {
+h2 {
     color: #d20094;
     font-size: 2rem;
     font-weight: bold;
@@ -55,13 +56,17 @@ strong {
     display: inline-block;
 }
 
+form *:not(button) {
+    padding-top: 10px 
+}
+
 #welcome form button {
     float: right;
     background-color: #00ffff;
-    padding-inline: 30px;
-    padding-block: 10px;
+    padding-inline: 45px;
+    padding-block: 15px;
     font-size: 1.3rem;
     font-weight: bold;
     border: none;
-    box-shadow: 2px 2px 8px #00ffff;
+    box-shadow: 0px 0px 20px 4px #53e0e0;
 }
