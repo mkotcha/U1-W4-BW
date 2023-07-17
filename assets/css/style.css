@@ -1,72 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
-    background-image: url("../img/bg.jpg");
-    background-size: cover;
-    padding-inline: 125px;
-    padding-top: 40px;
-    font-family: 'Inter', sans-serif;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-inline: 125px;
+  padding-top: 40px;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
 }
 
 header {
-    margin-bottom: 75px;
+  margin-bottom: 75px;
 }
 
 header img {
-    width: 150px;
+  width: 150px;
 }
 
 main {
-    color: #dadae0;
+  color: #dadae0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Outfit", sans-serif;
 }
 
 h1 {
-    color: white;
-    font-size: 5rem;
-    width: 475px;
-    line-height: 0.8;
-    font-family: 'Outfit', sans-serif;
-    margin-bottom: 55px;
+  color: white;
+  font-size: 5rem;
+  width: 475px;
+  line-height: 0.8;
+  margin-bottom: 55px;
 }
 
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 h2 {
-    color: #d20094;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 16px;
+  font-size: 3.2rem;
+}
+
+h3 {
+  color: #d20094;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+#welcome {
+  display: none;
 }
 
 #welcome p {
-    max-width: 520px;
-    margin-bottom: 50px;
+  max-width: 520px;
+  margin-bottom: 50px;
 }
 
 #welcome ul {
-    padding-left: 30px;
-    line-height: 1.6;
-    margin-bottom: 75px;
+  padding-left: 30px;
+  line-height: 1.6;
+  margin-bottom: 75px;
 }
 
-#welcome form *{
-    display: inline-block;
+#welcome form * {
+  display: inline-block;
 }
 
 form *:not(button) {
-    padding-top: 10px 
+  padding-top: 10px;
 }
 
 #welcome form button {
-    float: right;
-    background-color: #00ffff;
-    padding-inline: 45px;
-    padding-block: 15px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    border: none;
-    box-shadow: 0px 0px 20px 4px #53e0e0;
+  float: right;
+  background-color: #00ffff;
+  padding-inline: 45px;
+  padding-block: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0px 0px 20px 4px #53e0e0;
+}
+
+#countdown {
+  float: right;
+  border: 12px solid #00ffff;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  color: white;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+#countdown p:first-child {
+  font-size: 0.5rem;
+  /* font-weight: bold; */
+  padding-top: 20px;
+}
+
+#countdown p:nth-child(2) {
+  font-size: 2.4rem;
+  /* font-weight: 500; */
+}
+
+#countdown p:last-child {
+  font-size: 0.5rem;
+}
+
+#exam {
+  text-align: center;
+  margin-top: 160px;
+}
+
+#exam h2 {
+  max-width: 500px;
+  margin: 0 auto 60px;
+}
+
+#exam button {
+  border: 2px solid grey;
+  background-color: transparent;
+  font-size: 1rem;
+  width: 340px;
+  min-height: 70px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-weight: bold;
+  font-family: "Inter", "merda" sans-serif;
+  margin: 0 20px 20px;
+}
+
+#exam p {
+  display: inline-block;
+}
+
+#exam button:last-child {
+  float: right;
+  margin-right: 0;
 }

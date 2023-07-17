@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
-      <img src="./assets/img/epicode_logo.png" alt="Logo-EPICODE">
+      <img src="./assets/img/epicode_logo.png" alt="Logo-EPICODE" />
+      <div id="countdown">
+        <p>SECONDS</p>
+        <p>16</p>
+        <p>REMAINING</p>
+      </div>
     </header>
     <main>
       <div id="welcome">
         <h1>Welcome to <strong>your exam</strong></h1>
         <div>
-          <h2>Instruction</h2>
-          <p>We don't expect most engineers to know the answer to all of these questions, so don't worry if you are unsure of a few of them.
+          <h3>Instruction</h3>
+          <p>
+            We don't expect most engineers to know the answer to all of these questions, so don't worry if you are
+            unsure of a few of them.
           </p>
           <ul>
             <li>Each question is <strong>timed</strong> and can only be <strong>answered once</strong>.</li>
@@ -24,11 +31,23 @@
             <li>This exam will take approx. <strong>0-5 minutes</strong>.</li>
           </ul>
           <form>
-            <input type="checkbox" required>
+            <input type="checkbox" required />
             <p><strong>I promise to answer myself without help from anyone</strong></p>
             <button id="proceed">PROCEED</button>
           </form>
         </div>
+      </div>
+      <div id="exam">
+        <h2>How can I create a checkbox in HTML?</h2>
+
+        <form>
+          <button>input type =</button>
+          <button>&#039;Do-while&#039; loops</button>
+          <button>&#039;While&#039; loops</button>
+          <button>&#039;For&#039; loops</button>
+          <p>QUESTION 1 <span>/ 10</span></p>
+          <button></button>
+        </form>
       </div>
     </main>
   </body>
