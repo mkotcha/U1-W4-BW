@@ -21,10 +21,6 @@ header {
   margin-bottom: 50px;
 }
 
-
-
-
-
 header img {
   width: 150px;
 }
@@ -90,7 +86,7 @@ form *:not(button) {
   padding-top: 10px;
 }
 
-#welcome form button {
+.proceed {
   float: right;
   background-color: #00ffff;
   padding-inline: 45px;
@@ -149,7 +145,7 @@ form *:not(button) {
   background: rgba(255, 255, 255, 0.05);
   color: white;
   font-weight: bold;
-  font-family: "Inter", "merda" sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0 20px 20px;
 }
 
@@ -197,9 +193,12 @@ button#avanti:hover {
 
 #results {
   text-align: center;
-  /* display: none; */
+  display: none;
 }
 
+#results h2 {
+    font-weight: bold;
+}
 
 .result-grafic {
   border: 40px solid white;
@@ -215,8 +214,6 @@ button#avanti:hover {
 .result-grafic p:first-child {
   margin-bottom: 20px;
 }
-
-
 
 .answer-result {
   max-width: 200px;
@@ -240,4 +237,57 @@ button#avanti:hover {
   font-size: 1rem;
   font-weight: bold;
   box-shadow: 2px 2px 4px #fff;
+}
+
+#feedback {
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+}
+
+#feedback #img-stelle img {
+    filter: grayscale(100%) brightness(20%);
+}
+
+#feedback h2 {
+    padding-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+#feedback p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-inline: auto;
+
+}
+
+/* Per vedere le stelle in azzurro */
+.selected-stars {
+    filter: none;
+}
+
+#img-stelle {
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+#feedback form {
+    margin-top: 50px;
+    max-width: 650px;
+    margin-inline: auto;
+    background-color: transparent;
+}
+
+#feedback form input {
+    all: unset;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid #C2128D;
+    padding: 0 0 10px 25px;
+}
+
+#feedback form button {
+    text-align: center;
+    float: unset;
+    margin-top: 60px;
 }
