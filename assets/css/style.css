@@ -144,7 +144,41 @@ form *:not(button) {
   display: inline-block;
 }
 
-#exam button:last-child {
+/* #exam button:last-child {
   float: right;
   margin-right: 0;
+  border-radius: 0;
+  width: 200px;
+} */
+
+.container-buttons {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.form-footer {
+  /* border: 1px solid red; */
+  margin-top: 50px;
+  text-align: left;
+}
+
+.form-footer p {
+  padding-top: 30px;
+}
+
+button#avanti {
+  float: right;
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0;
+  width: 200px;
+  min-height: 50px;
+  padding: 0;
+}
+
+button#avanti:hover {
+  background-color: #00ffff;
 }
