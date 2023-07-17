@@ -18,8 +18,12 @@ body {
 }
 
 header {
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 }
+
+
+
+
 
 header img {
   width: 150px;
@@ -51,14 +55,21 @@ h2 {
 }
 
 h3 {
-  color: #d20094;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 16px;
 }
 
+h4 {
+  font-size: 1.2rem;
+}
+
 #welcome {
   display: none;
+}
+
+#welcome h3 {
+  color: #d20094;
 }
 
 #welcome p {
@@ -91,6 +102,7 @@ form *:not(button) {
 }
 
 #countdown {
+  display: none;
   float: right;
   border: 12px solid #00ffff;
   border-radius: 50%;
@@ -117,6 +129,7 @@ form *:not(button) {
 }
 
 #exam {
+  display: none;
   text-align: center;
   margin-top: 160px;
 }
@@ -180,4 +193,51 @@ button#avanti {
 
 button#avanti:hover {
   background-color: #00ffff;
+}
+
+#results {
+  text-align: center;
+  /* display: none; */
+}
+
+
+.result-grafic {
+  border: 40px solid white;
+  border-radius: 50%;
+  height: 320px;
+  width: 320px;
+  margin-inline: 150px;
+  padding-top: 50px;
+  padding-inline: 10px;
+  box-shadow: 5px 5px 8px #d20094;
+}
+
+.result-grafic p:first-child {
+  margin-bottom: 20px;
+}
+
+
+
+.answer-result {
+  max-width: 200px;
+}
+
+.answer-result:last-child {
+  text-align: right;
+}
+
+.inline-block {
+  display: inline-block;
+  margin: 40px;
+}
+
+#results button {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px #fff;
 }
