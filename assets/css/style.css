@@ -143,6 +143,14 @@ form *:not(button) {
   margin: 0 20px 20px;
 }
 
+#exam button:hover {
+  background-color: #8e0665;
+}
+
+#exam button.button-clicked {
+  background-color: #d20094;
+}
+
 #exam p {
   display: inline-block;
 }
