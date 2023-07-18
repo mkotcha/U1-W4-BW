@@ -184,8 +184,8 @@ h4 {
 }
 
 #exam h2 {
-  max-width: 500px;
-  margin: 0 auto 60px;
+  max-width: 700px;
+  margin: 0 auto 120px;
 }
 
 #exam button {
@@ -206,20 +206,19 @@ h4 {
   background-color: #8e0665;
 }
 
+#exam button:hover {
+  background-color: #8e0665;
+  cursor: pointer;
+}
+
 #exam button.button-clicked {
   background-color: #d20094;
 }
 
 #exam p {
   display: inline-block;
+  position: absolute;
 }
-
-/* #exam button:last-child {
-  float: right;
-  margin-right: 0;
-  border-radius: 0;
-  width: 200px;
-} */
 
 .container-buttons {
   max-width: 800px;
@@ -227,7 +226,6 @@ h4 {
 }
 
 .form-footer {
-  /* border: 1px solid red; */
   margin-top: 50px;
   text-align: left;
 }
@@ -237,15 +235,19 @@ h4 {
 }
 
 button#avanti {
-  float: right;
   margin: 0;
-
   font-size: 1rem;
   font-weight: bold;
   border-radius: 0;
   width: 200px;
   min-height: 50px;
   padding: 0;
+  position: absolute;
+  right: 125px;
+}
+
+#exam p, button#avanti {
+  bottom: 100px;
 }
 
 button#avanti.selected-avanti {
