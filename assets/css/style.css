@@ -246,7 +246,8 @@ button#avanti {
   right: 125px;
 }
 
-#exam p, button#avanti {
+#exam p,
+button#avanti {
   bottom: 100px;
 }
 
@@ -259,14 +260,11 @@ button#avanti.selected-avanti {
 /* ----------------------------------- FINE EXAM STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
-<<<<<<< HEAD
 
 .result-main {
   max-width: 930px;
   margin-inline: auto;
 }
-=======
->>>>>>> rateus
 
 #results {
   text-align: center;
@@ -302,13 +300,6 @@ button#avanti.selected-avanti {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-=======
-.answer-result:last-child {
-  text-align: right;
-}
-
->>>>>>> rateus
 #results button {
   width: 200px;
   height: 50px;
@@ -321,7 +312,6 @@ button#avanti.selected-avanti {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 
 
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
@@ -331,16 +321,9 @@ button#avanti.selected-avanti {
   background-color: white;
   color: #d20094;
 }
-=======
-#results button:hover {
-  background-color: white;
-  color: #d20094;
-}
 
-/* --------------------------------------------------------- */
->>>>>>> rateus
-
-#result, #feedback {
+#result,
+#feedback {
   font-family: "Outfit", sans-serif;
   text-align: center;
 }
@@ -349,17 +332,6 @@ button#avanti.selected-avanti {
   filter: grayscale(100%) brightness(20%);
 }
 
-<<<<<<< HEAD
-=======
-#feedback #img-stelle > img.selected-stars {
-  filter: none;
-}
-#feedback #img-stelle img.clicked-star {
-  filter: none;
-  filter: drop-shadow(0 0 10px white);
-}
-
->>>>>>> rateus
 #feedback h2 {
   padding-top: 100px;
   margin-bottom: 25px;
@@ -382,13 +354,10 @@ button#avanti.selected-avanti {
   margin-bottom: 70px;
 }
 
-<<<<<<< HEAD
 #feedback #img-stelle>img.selected-stars {
   filter: none;
 }
 
-=======
->>>>>>> rateus
 #img-stelle img:not(:last-child) {
   padding-right: 20px;
 }
@@ -412,13 +381,7 @@ button#avanti.selected-avanti {
 #feedback form button {
   text-align: center;
   float: unset;
-<<<<<<< HEAD
   margin-top: 65px;
 }
 
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
-=======
-  margin-top: 60px;
-}
-/* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
->>>>>>> rateus
