@@ -24,6 +24,7 @@ const setStar = event => {
   stars.forEach(elm => elm.classList.remove("clicked-star"));
   element.classList.add("clicked-star");
   clicked = true;
+
   while ((element = element.nextElementSibling)) {
     element.classList.remove("selected-stars");
   }
