@@ -78,7 +78,9 @@ h4 {
   color: #d20094;
 }
 
-#welcome p, #welcome ul, #welcome label {
+#welcome p,
+#welcome ul,
+#welcome label {
   font-size: 19px;
 }
 
@@ -336,6 +338,10 @@ button#avanti.selected-avanti {
 #img-stelle {
   margin-top: 30px;
   margin-bottom: 70px;
+}
+
+#feedback #img-stelle > img.selected-stars {
+  filter: none;
 }
 
 #img-stelle img:not(:last-child) {
