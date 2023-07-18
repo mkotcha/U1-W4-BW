@@ -94,7 +94,6 @@ form *:not(button) {
 }
 
 #countdown {
-  display: none;
   float: right;
   border: 12px solid #00ffff;
   border-radius: 50%;
@@ -121,7 +120,6 @@ form *:not(button) {
 }
 
 #exam {
-  display: none;
   text-align: center;
   margin-top: 160px;
 }
