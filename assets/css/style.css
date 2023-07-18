@@ -60,10 +60,6 @@ h4 {
   font-size: 1.2rem;
 }
 
-#welcome {
-  display: none;
-}
-
 #welcome h3 {
   color: #d20094;
 }
@@ -197,7 +193,7 @@ button#avanti:hover {
 }
 
 #results h2 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .result-grafic {
@@ -240,54 +236,53 @@ button#avanti:hover {
 }
 
 #feedback {
-    font-family: "Outfit", sans-serif;
-    text-align: center;
+  font-family: "Outfit", sans-serif;
+  text-align: center;
 }
 
 #feedback #img-stelle img {
-    filter: grayscale(100%) brightness(20%);
+  filter: grayscale(100%) brightness(20%);
 }
 
 #feedback h2 {
-    padding-top: 25px;
-    margin-bottom: 25px;
-    font-weight: bold;
+  padding-top: 25px;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 
 #feedback p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin-inline: auto;
-
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-inline: auto;
 }
 
 /* Per vedere le stelle in azzurro */
 .selected-stars {
-    filter: none;
+  filter: none;
 }
 
 #img-stelle {
-    margin-top: 30px;
-    margin-bottom: 70px;
+  margin-top: 30px;
+  margin-bottom: 70px;
 }
 
 #feedback form {
-    margin-top: 50px;
-    max-width: 650px;
-    margin-inline: auto;
-    background-color: transparent;
+  margin-top: 50px;
+  max-width: 650px;
+  margin-inline: auto;
+  background-color: transparent;
 }
 
 #feedback form input {
-    all: unset;
-    text-align: left;
-    width: 100%;
-    border-bottom: 1px solid #C2128D;
-    padding: 0 0 10px 25px;
+  all: unset;
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid #c2128d;
+  padding: 0 0 10px 25px;
 }
 
 #feedback form button {
-    text-align: center;
-    float: unset;
-    margin-top: 60px;
+  text-align: center;
+  float: unset;
+  margin-top: 60px;
 }
