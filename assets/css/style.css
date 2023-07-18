@@ -108,7 +108,7 @@ h4 {
 }
 
 /* Stile personalizzato del checkbox */
-#welcome form input + label {
+#welcome form input+label {
   position: relative;
   top: 20px;
   padding-left: 30px;
@@ -116,7 +116,7 @@ h4 {
 }
 
 /* Stile del segno di spunta quando il checkbox è selezionato */
-#welcome form input + label::before {
+#welcome form input+label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -126,8 +126,9 @@ h4 {
   border: 2px solid white;
   background-color: transparent;
 }
+
 /* Stile del segno di spunta quando il checkbox è selezionato */
-#welcome form input:checked + label::before {
+#welcome form input:checked+label::before {
   background-color: white;
 }
 
@@ -303,13 +304,21 @@ button#avanti.selected-avanti {
   font-size: 1rem;
   font-weight: bold;
   box-shadow: 2px 2px 4px #fff;
+  cursor: pointer;
 }
+
 
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
 
-#feedback {
+#results button:hover {
+  background-color: white;
+  color: #d20094;
+}
+
+
+result #feedback {
   font-family: "Outfit", sans-serif;
   text-align: center;
 }
@@ -340,7 +349,7 @@ button#avanti.selected-avanti {
   margin-bottom: 70px;
 }
 
-#feedback #img-stelle > img.selected-stars {
+#feedback #img-stelle>img.selected-stars {
   filter: none;
 }
 
@@ -369,4 +378,5 @@ button#avanti.selected-avanti {
   float: unset;
   margin-top: 65px;
 }
+
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
