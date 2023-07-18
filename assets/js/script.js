@@ -417,8 +417,7 @@ const question = [
 let correct = 0;
 let incorrect = 0;
 
-document.getElementById("avanti").disabled = true;
-
+const btnAvanti = document.querySelector("#avanti");
 const numberQuestion = 7;
 const difficult = "easy";
 let currentAnswer = "";
@@ -441,9 +440,11 @@ const setClicked = function (event) {
 	event.preventDefault();
 	document.querySelectorAll(".container-buttons button").forEach((elem) => elem.classList.remove("button-clicked"));
 	event.target.classList.add("button-clicked");
-	document.getElementById("avanti").disabled = false;
+	btnAvanti.disabled = false;
+	btnAvanti.classList.add("selected-avanti");
 	currentAnswer = event.target.innerHTML;
 	console.log(currentAnswer);
+	console.log(btnAvanti);
 };
 
 let test = {};
@@ -451,7 +452,8 @@ let test = {};
 const setQuestion = () => {
 	document.querySelectorAll(".container-buttons button").forEach((elem) => elem.classList.remove("button-clicked"));
 	test = getQuestion(question, difficult);
-	document.getElementById("avanti").disabled = true;
+	btnAvanti.disabled = true;
+	btnAvanti.classList.remove("selected-avanti");
 	let h2 = document.querySelector("h2");
 	h2.innerHTML = test.question;
 	const arrQuestion = [test.correct_answer, ...test.incorrect_answers];
@@ -484,7 +486,7 @@ const setQuestion = () => {
 };
 
 setQuestion();
-// ///////////////////////
+
 function decimalAdjust(type, value, exp) {
 	type = String(type);
 	if (!["round", "floor", "ceil"].includes(type)) {
@@ -510,12 +512,15 @@ const getResult = () => {
 	const incorrectPercent = round10((100 / numberQuestion) * incorrect, -1);
 
 	const correctCont = document.querySelector(".corrects-result");
-	correctCont.innerHTML = `<h2>Correct ${correctPercent}</h2><h4>${correct}/${numberQuestion} questions</h4>`;
+	correctCont.innerHTML = `<h2>Correct ${correctPercent}%</h2><h4>${correct}/${numberQuestion} questions</h4>`;
 	const incorrectCont = document.querySelector(".wrongs-result");
-	incorrectCont.innerHTML = `<h2>Correct ${incorrectPercent}</h2><h4>${incorrect}/${numberQuestion} questions</h4>`;
-
+	incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent}%</h2><h4>${incorrect}/${numberQuestion} questions</h4>`;
 	document.querySelector("#exam").style.display = "none";
 	document.querySelector("#results").style.display = "inline-block";
+};
+
+const getFeedback = () => {
+	window.location.href = "feedback.html";
 };
 
 const nextQuestion = (event) => {
@@ -533,6 +538,8 @@ const nextQuestion = (event) => {
 	}
 };
 
-document.querySelector("#avanti").onclick = nextQuestion;
+btnAvanti.onclick = nextQuestion;
+
+document.querySelector("#rate-us").onclick = getFeedback;
 
 // console.log(test);
