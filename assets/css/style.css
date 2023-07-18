@@ -258,9 +258,15 @@ button#avanti.selected-avanti {
 
 /* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
 
+.result-main {
+  max-width: 930px;
+  margin-inline: auto;
+}
+
 #results {
   text-align: center;
   display: none;
+  padding-top: 80px;
 }
 
 #results h2 {
@@ -272,10 +278,11 @@ button#avanti.selected-avanti {
   border-radius: 50%;
   height: 320px;
   width: 320px;
-  margin-inline: 150px;
+  margin-inline: 100px;
   padding-top: 50px;
   padding-inline: 10px;
   box-shadow: 5px 5px 8px #d20094;
+  margin-block: 50px;
 }
 
 .result-grafic p:first-child {
@@ -286,13 +293,8 @@ button#avanti.selected-avanti {
   max-width: 200px;
 }
 
-.answer-result:last-child {
-  text-align: right;
-}
-
 .inline-block {
   display: inline-block;
-  margin: 40px;
 }
 
 #results button {
