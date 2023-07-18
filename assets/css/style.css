@@ -250,6 +250,10 @@ button#avanti:hover {
   filter: grayscale(100%) brightness(20%);
 }
 
+#feedback #img-stelle img.clicked-star {
+  filter: none;
+}
+
 #feedback h2 {
   padding-top: 25px;
   margin-bottom: 25px;
@@ -263,13 +267,14 @@ button#avanti:hover {
 }
 
 /* Per vedere le stelle in azzurro */
-.selected-stars {
-  filter: none;
-}
 
 #img-stelle {
   margin-top: 30px;
   margin-bottom: 70px;
+}
+
+#feedback #img-stelle > img.selected-stars {
+  filter: none;
 }
 
 #feedback form {
