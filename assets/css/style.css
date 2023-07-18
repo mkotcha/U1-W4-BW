@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* --------------- GENERALE ---------------  */
+/* ----------------------------------- GENERALE -----------------------------------  */
 
 body {
   background-image: url("../img/bg.jpg");
@@ -62,8 +62,7 @@ h4 {
   font-size: 1.2rem;
 }
 
-
-/* --------------- WELCOME STYLE ---------------  */
+/* ----------------------------------- INIZIO WELCOME STYLE -----------------------------------  */
 
 #welcome-main {
   max-width: 921px;
@@ -99,8 +98,9 @@ h4 {
   display: inline-block;
 }
 
-/* --------------- PERSONALIZZAZIONE DEL CHECKBOX ---------------  */
+/* ----------------------------------- PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
 
+/* Nascondi il box di default */
 #welcome form input {
   display: none;
 }
@@ -124,12 +124,12 @@ h4 {
   border: 2px solid white;
   background-color: transparent;
 }
-
+/* Stile del segno di spunta quando il checkbox è selezionato */
 #welcome form input:checked + label::before {
   background-color: white;
 }
 
-/* --------------- FINE PERSONALIZZAZIONE DEL CHECKBOX ---------------  */
+/* ----------------------------------- FINE PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
 
 #proceed {
   float: right;
@@ -143,7 +143,10 @@ h4 {
   cursor: pointer;
 }
 
-/* --------------- FINE WELCOME STYLE ---------------  */
+/* ----------------------------------- FINE WELCOME STYLE -----------------------------------  */
+
+
+/* ----------------------------------- INIZIO EXAM STYLE -----------------------------------  */
 
 #countdown {
   float: right;
@@ -247,6 +250,10 @@ button#avanti.selected-avanti {
   font-weight: bold;
 }
 
+/* ----------------------------------- FINE EXAM STYLE -----------------------------------  */
+
+/* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
+
 #results {
   text-align: center;
   display: none;
@@ -295,6 +302,10 @@ button#avanti.selected-avanti {
   box-shadow: 2px 2px 4px #fff;
 }
 
+/* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
+
+/* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
+
 #feedback {
   font-family: "Outfit", sans-serif;
   text-align: center;
@@ -305,14 +316,14 @@ button#avanti.selected-avanti {
 }
 
 #feedback h2 {
-  padding-top: 25px;
+  padding-top: 40px;
   margin-bottom: 25px;
   font-weight: bold;
 }
 
 #feedback p {
-  font-size: 1.5rem;
-  max-width: 600px;
+  font-size: 1.8rem;
+  max-width: 720px;
   margin-inline: auto;
 }
 
@@ -324,6 +335,10 @@ button#avanti.selected-avanti {
 #img-stelle {
   margin-top: 30px;
   margin-bottom: 70px;
+}
+
+#img-stelle img:not(:last-child) {
+  padding-right: 20px;
 }
 
 #feedback form {
@@ -346,3 +361,4 @@ button#avanti.selected-avanti {
   float: unset;
   margin-top: 60px;
 }
+/* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
