@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.container {
+				width: 300px;
+				height: 300px;
+				border: 1px solid black;
+			}
+
+			.progressive-bar {
+				position: relative;
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				color: #fff;
+				outline: 2px solid #7effb2;
+				outline-offset: -1px;
+			}
+
+			.progressive-bar::after .number {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.progressive-bar::after {
+				content: "";
+				width: 180px;
+				height: 180px;
+				border-radius: 50%;
+				outline: inherit;
+			}
+
+			.number {
+				font-size: 21px;
+				font-weight: bold;
+			}
+
+			.container {
+				stroke-dasharray: 410;
+				stroke-dashoffset: 410;
+				transform: rotate(-90deg);
+				animation: bar-fill 8s linear forwards;
+			}
+
+			@keyframes bar-fill {
+				100% {
+					stroke-dashoffset: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="container">
+				<div class="progressive-bar">
+					<h2 class="number">3232</h2>
+				</div>
+			</div>
+		</div>
+		<script>
+			const num = document.querySelector(".number");
+			const numVal = Number(num.getAttribute("data-value"));
+			let counter = 0;
+
+			setInterval(() => {
+				if (counter !== numVal) {
+					counter++;
+					num.innerHTML = `${counter}%`;
+				}
+			}, 80);
+		</script>
+	</body>
+</html>

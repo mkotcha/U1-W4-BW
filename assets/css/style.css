@@ -305,11 +305,15 @@ button#avanti.selected-avanti {
   font-size: 1rem;
   font-weight: bold;
   box-shadow: 2px 2px 4px #fff;
+  cursor: pointer;
 }
 
-/* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
+#results button:hover {
+  background-color: white;
+  color: #d20094;
+}
 
-/* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
+/* --------------------------------------------------------- */
 
 #feedback {
   font-family: "Outfit", sans-serif;
