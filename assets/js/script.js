@@ -516,6 +516,7 @@ const getResult = () => {
 	correctCont.innerHTML = `<h2>Correct ${correctPercent}%</h2><h4>${correct}/${numberQuestion} questions</h4>`;
 	const incorrectCont = document.querySelector(".wrongs-result");
 	incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent}%</h2><h4>${incorrect}/${numberQuestion} questions</h4>`;
+
 	document.querySelector("#exam").style.display = "none";
 	document.querySelector("#results").style.display = "inline-block";
 };
@@ -540,12 +541,6 @@ const nextQuestion = (event) => {
 };
 
 btnAvanti.onclick = nextQuestion;
-
-document.querySelector("#rate-us").onclick = getFeedback;
-
-function getFeedback() {
-	window.location.href = "feedback.html";
-}
 
 document.querySelector("#rate-us").onclick = getFeedback;
 
