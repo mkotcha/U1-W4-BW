@@ -222,8 +222,25 @@ button#avanti:hover {
   display: inline-block;
 }
 
+.result-grafic::after {
+  content: '';
+  border: 40px solid blue;
+  border-radius: 50%;
+  height: 320px;
+  width: 320px;
+  padding-top: 50px;
+  padding-inline: 10px;
+  box-shadow: 5px 5px 8px #d20094;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -89%);
+}
+
 .result-grafic p:first-child {
   margin-bottom: 20px;
+  border-left: red;
 }
 
 .answer-result {
@@ -234,8 +251,6 @@ button#avanti:hover {
 .answer-result:last-child {
   text-align: right;
 }
-
-
 
 #results button {
   width: 200px;
