@@ -479,8 +479,7 @@ const question = [
 let correct = 0;
 let incorrect = 0;
 
-document.getElementById("avanti").disabled = true;
-
+const btnAvanti = document.querySelector("#avanti");
 const numberQuestion = 5;
 const difficult = "easy";
 let currentAnswer = "";
@@ -505,9 +504,11 @@ const setClicked = function (event) {
     .querySelectorAll(".container-buttons button")
     .forEach((elem) => elem.classList.remove("button-clicked"));
   event.target.classList.add("button-clicked");
-  document.getElementById("avanti").disabled = false;
+  btnAvanti.disabled = false;
+  btnAvanti.classList.add("selected-avanti");
   currentAnswer = event.target.innerHTML;
   console.log(currentAnswer);
+  console.log(btnAvanti);
 };
 
 let test = {};
@@ -517,7 +518,8 @@ const setQuestion = () => {
     .querySelectorAll(".container-buttons button")
     .forEach((elem) => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
-  document.getElementById("avanti").disabled = true;
+  btnAvanti.disabled = true;
+  btnAvanti.classList.remove("selected-avanti");
   let h2 = document.querySelector("h2");
   h2.innerHTML = test.question;
   const arrQuestion = [test.correct_answer, ...test.incorrect_answers];
@@ -553,6 +555,7 @@ setQuestion();
 
 const getResult = () => {
   console.log("result");
+  document.querySelector("#exam").style.display = "none";
 };
 
 const nextQuestion = (event) => {
@@ -570,6 +573,6 @@ const nextQuestion = (event) => {
   }
 };
 
-document.querySelector("#avanti").onclick = nextQuestion;
+btnAvanti.onclick = nextQuestion;
 
 // console.log(test);
