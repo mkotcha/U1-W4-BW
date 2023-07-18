@@ -1,0 +1,38 @@
+body {
+  background-color: yellow;
+  background-image: url(../assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; /*1*/
+  border: 60px solid transparent;
+  background-image: url(../assets/img/bg.jpg), conic-gradient(from 0deg at center, cyan 67%, magenta 10%);
+  background-position: 0 50%;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin: 100px auto;
+}
+
+circle {
+  fill: transparent;
+  stroke: cyan;
+  stroke-width: 30;
+  stroke-dasharray: 189 189;
+}
+
+circle + circle {
+  fill: transparent;
+  stroke: magenta;
+  stroke-width: 30;
+  stroke-dasharray: 30 189;
+  transition: stroke-dasharray 2s;
+}
+
+circle + circle:hover {
+  stroke-dasharray: 189 189;
+}
