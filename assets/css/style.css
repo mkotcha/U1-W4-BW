@@ -308,17 +308,16 @@ button#avanti.selected-avanti {
 }
 
 
+
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
-
 #results button:hover {
   background-color: white;
   color: #d20094;
 }
 
-
-result #feedback {
+#result, #feedback {
   font-family: "Outfit", sans-serif;
   text-align: center;
 }
