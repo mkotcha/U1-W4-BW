@@ -193,6 +193,9 @@ button#avanti:hover {
   background-color: #00ffff;
 }
 
+/* --------------------------------------------------------- */
+
+
 #results {
   text-align: center;
   display: none;
@@ -202,15 +205,21 @@ button#avanti:hover {
   font-weight: bold;
 }
 
+.cont-result {
+  vertical-align: middle;
+  text-align: center;
+}
+
 .result-grafic {
   border: 40px solid white;
   border-radius: 50%;
   height: 320px;
   width: 320px;
-  margin-inline: 150px;
   padding-top: 50px;
   padding-inline: 10px;
+  margin: 50px;
   box-shadow: 5px 5px 8px #d20094;
+  display: inline-block;
 }
 
 .result-grafic p:first-child {
@@ -219,16 +228,14 @@ button#avanti:hover {
 
 .answer-result {
   max-width: 200px;
+  display: inline-block;
 }
 
 .answer-result:last-child {
   text-align: right;
 }
 
-.inline-block {
-  display: inline-block;
-  margin: 40px;
-}
+
 
 #results button {
   width: 200px;
@@ -240,6 +247,8 @@ button#avanti:hover {
   font-weight: bold;
   box-shadow: 2px 2px 4px #fff;
 }
+
+/* --------------------------------------------------------- */
 
 #feedback {
   font-family: "Outfit", sans-serif;

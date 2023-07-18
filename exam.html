@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <img src="./assets/img/epicode_logo.png" alt="Logo-EPICODE" />
-      <div id="countdown">
-        <p>SECONDS</p>
-        <p>16</p>
-        <p>REMAINING</p>
-      </div>
-    </header>
-    <main>
-      <div id="exam">
-        <h2>How can I create a checkbox in HTML?</h2>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/reset.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<img src="./assets/img/epicode_logo.png" alt="Logo-EPICODE" />
+			<div id="countdown">
+				<p>SECONDS</p>
+				<p>16</p>
+				<p>REMAINING</p>
+			</div>
+		</header>
+		<main>
+			<!-- style="display: none" -->
+			<div id="exam">
+				<h2>How can I create a checkbox in HTML?</h2>
 
-        <form>
-          <div class="container-buttons">
-            <button type="button">input type =</button>
-            <button type="button">&#039;Do-while&#039; loops</button>
-            <button type="button">&#039;While&#039; loops</button>
-            <button type="button">&#039;For&#039; loops</button>
-          </div>
+				<form>
+					<div class="container-buttons">
+						<button type="button">input type =</button>
+						<button type="button">&#039;Do-while&#039; loops</button>
+						<button type="button">&#039;While&#039; loops</button>
+						<button type="button">&#039;For&#039; loops</button>
+					</div>
 
-          <div class="form-footer">
-            <p>QUESTION 1 <span>/ 10</span></p>
-            <button id="avanti">AVATI</button>
-          </div>
-        </form>
-      </div>
-      <div id="results">
-        <h2>Results</h2>
-        <h3>The summary of your answer</h3>
-        <div class="cont-results">
-          <div class="answer-result inline-block">
-            <h2>Correct 66.7%</h2>
-            <h4>4/6 questions</h4>
-          </div>
+					<div class="form-footer">
+						<p>QUESTION 1 <span>/ 10</span></p>
+						<button id="avanti">AVATI</button>
+					</div>
+				</form>
+			</div>
+			<!-- -------------------------------------------------------------------------------------------------------------------------------
+      
+      
+      --------------------------------------------------------------------------------------------------------------------------------------->
+			<div id="results">
+				<!-- style="display: block" -->
+				<h2>Results</h2>
+				<h3>The summary of your answer</h3>
 
-          <div class="result-grafic inline-block">
-            <p>
-              <strong>
-                Congratulations! <br />
-                You passed the exam.
-              </strong>
-            </p>
-            <p>We'll send you the certificate in few moments. Check your email(including promotion / spam folder)</p>
-          </div>
+				<div class="cont-results">
+					<div class="answer-result corrects-result">
+						<h2>Correct 66.7%</h2>
+						<h4>4/6 questions</h4>
+					</div>
 
-          <div class="answer-result inline-block">
-            <h2>Wrong 33.3%</h2>
-            <h4>2/6 questions</h4>
-          </div>
-        </div>
-        <button type="button" id="rate-us">RATE US</button>
-      </div>
-    </main>
-    <script src="assets/js/script.js"></script>
-  </body>
+					<div class="result-grafic">
+						<p>
+							<strong>
+								Congratulations! <br />
+								You passed the exam.
+							</strong>
+						</p>
+						<p>We'll send you the certificate in few moments. Check your email(including promotion / spam folder)</p>
+					</div>
+
+					<div class="answer-result wrongs-result">
+						<h2>Wrong 33.3%</h2>
+						<h4>2/6 questions</h4>
+					</div>
+				</div>
+				<button type="button" id="rate-us">RATE US</button>
+			</div>
+		</main>
+		<script src="assets/js/script.js"></script>
+	</body>
 </html>
