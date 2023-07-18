@@ -419,6 +419,7 @@ let incorrect = 0;
 
 const btnAvanti = document.querySelector("#avanti");
 const numberQuestion = 7;
+
 const difficult = "easy";
 let currentAnswer = "";
 
