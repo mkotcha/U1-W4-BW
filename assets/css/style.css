@@ -78,7 +78,9 @@ h4 {
   color: #d20094;
 }
 
-#welcome p, #welcome ul, #welcome label {
+#welcome p,
+#welcome ul,
+#welcome label {
   font-size: 19px;
 }
 
@@ -264,15 +266,21 @@ button#avanti.selected-avanti {
   font-weight: bold;
 }
 
+.cont-result {
+  vertical-align: middle;
+  text-align: center;
+}
+
 .result-grafic {
   border: 40px solid white;
   border-radius: 50%;
   height: 320px;
   width: 320px;
-  margin-inline: 150px;
   padding-top: 50px;
   padding-inline: 10px;
+  margin: 50px;
   box-shadow: 5px 5px 8px #d20094;
+  display: inline-block;
 }
 
 .result-grafic p:first-child {
@@ -281,15 +289,11 @@ button#avanti.selected-avanti {
 
 .answer-result {
   max-width: 200px;
+  display: inline-block;
 }
 
 .answer-result:last-child {
   text-align: right;
-}
-
-.inline-block {
-  display: inline-block;
-  margin: 40px;
 }
 
 #results button {
@@ -316,6 +320,10 @@ button#avanti.selected-avanti {
   filter: grayscale(100%) brightness(20%);
 }
 
+#feedback #img-stelle img.clicked-star {
+  filter: none;
+}
+
 #feedback h2 {
   padding-top: 40px;
   margin-bottom: 25px;
@@ -329,9 +337,6 @@ button#avanti.selected-avanti {
 }
 
 /* Per vedere le stelle in azzurro */
-.selected-stars {
-  filter: none;
-}
 
 #img-stelle {
   margin-top: 30px;
@@ -340,6 +345,10 @@ button#avanti.selected-avanti {
 
 #img-stelle img:not(:last-child) {
   padding-right: 20px;
+}
+
+#feedback #img-stelle > img.selected-stars {
+  filter: none;
 }
 
 #feedback form {
