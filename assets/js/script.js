@@ -480,8 +480,12 @@ let correct = 0;
 let incorrect = 0;
 
 const btnAvanti = document.querySelector("#avanti");
+<<<<<<< HEAD
+const numberQuestion = 5;
+=======
 const numberQuestion = 7;
 
+>>>>>>> 02c83487b20c842f1ed87943d902cc077faf06d1
 const difficult = "easy";
 let currentAnswer = "";
 
@@ -500,6 +504,7 @@ const getQuestion = (arr, difficult) => {
 };
 
 const setClicked = function (event) {
+<<<<<<< HEAD
   event.preventDefault();
   document
     .querySelectorAll(".container-buttons button")
@@ -510,11 +515,22 @@ const setClicked = function (event) {
   currentAnswer = event.target.innerHTML;
   console.log(currentAnswer);
   console.log(btnAvanti);
+=======
+	event.preventDefault();
+	document.querySelectorAll(".container-buttons button").forEach((elem) => elem.classList.remove("button-clicked"));
+	event.target.classList.add("button-clicked");
+	btnAvanti.disabled = false;
+	btnAvanti.classList.add("selected-avanti");
+	currentAnswer = event.target.innerHTML;
+	console.log(currentAnswer);
+	console.log(btnAvanti);
+>>>>>>> 02c83487b20c842f1ed87943d902cc077faf06d1
 };
 
 let test = {};
 
 const setQuestion = () => {
+<<<<<<< HEAD
   document
     .querySelectorAll(".container-buttons button")
     .forEach((elem) => elem.classList.remove("button-clicked"));
@@ -527,6 +543,18 @@ const setQuestion = () => {
   const randQuestion = [];
   // console.log(arrQuestion);
   const btn = document.querySelectorAll(".container-buttons button");
+=======
+	document.querySelectorAll(".container-buttons button").forEach((elem) => elem.classList.remove("button-clicked"));
+	test = getQuestion(question, difficult);
+	btnAvanti.disabled = true;
+	btnAvanti.classList.remove("selected-avanti");
+	let h2 = document.querySelector("h2");
+	h2.innerHTML = test.question;
+	const arrQuestion = [test.correct_answer, ...test.incorrect_answers];
+	const randQuestion = [];
+	// console.log(arrQuestion);
+	const btn = document.querySelectorAll(".container-buttons button");
+>>>>>>> 02c83487b20c842f1ed87943d902cc077faf06d1
 
   while (arrQuestion.length > 0) {
     index = Math.floor(Math.random() * arrQuestion.length);
@@ -553,27 +581,7 @@ const setQuestion = () => {
 };
 
 setQuestion();
-
-function decimalAdjust(type, value, exp) {
-  type = String(type);
-  if (!["round", "floor", "ceil"].includes(type)) {
-    throw new TypeError(
-      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'."
-    );
-  }
-  exp = Number(exp);
-  value = Number(value);
-  if (exp % 1 !== 0 || Number.isNaN(value)) {
-    return NaN;
-  } else if (exp === 0) {
-    return Math[type](value);
-  }
-  const [magnitude, exponent = 0] = value.toString().split("e");
-  const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
-  // Shift back
-  const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
-  return Number(`${newMagnitude}e${+newExponent + exp}`);
-}
+<<<<<<< HEAD
 
 const getResult = () => {
   const round10 = (value, exp) => decimalAdjust("round", value, exp);
@@ -586,13 +594,43 @@ const getResult = () => {
   incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent}%</h2><h4>${incorrect}/${numberQuestion} questions</h4>`;
 
   document.querySelector("#exam").style.display = "none";
-  document.querySelector("#results").style.display = "inline-block";
-  document.querySelector("main").classList.add("result-main");
-  document.querySelector("#countdown").style.display = "none";
+=======
+
+function decimalAdjust(type, value, exp) {
+	type = String(type);
+	if (!["round", "floor", "ceil"].includes(type)) {
+		throw new TypeError("The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'.");
+	}
+	exp = Number(exp);
+	value = Number(value);
+	if (exp % 1 !== 0 || Number.isNaN(value)) {
+		return NaN;
+	} else if (exp === 0) {
+		return Math[type](value);
+	}
+	const [magnitude, exponent = 0] = value.toString().split("e");
+	const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
+	// Shift back
+	const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
+	return Number(`${newMagnitude}e${+newExponent + exp}`);
+}
+
+const getResult = () => {
+	const round10 = (value, exp) => decimalAdjust("round", value, exp);
+	const correctPercent = round10((100 / numberQuestion) * correct, -1);
+	const incorrectPercent = round10((100 / numberQuestion) * incorrect, -1);
+
+	const correctCont = document.querySelector(".corrects-result");
+	correctCont.innerHTML = `<h2>Correct ${correctPercent}%</h2><h4>${correct}/${numberQuestion} questions</h4>`;
+	const incorrectCont = document.querySelector(".wrongs-result");
+	incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent}%</h2><h4>${incorrect}/${numberQuestion} questions</h4>`;
+	document.querySelector("#exam").style.display = "none";
+	document.querySelector("#results").style.display = "inline-block";
+>>>>>>> 02c83487b20c842f1ed87943d902cc077faf06d1
 };
 
 const getFeedback = () => {
-  window.location.href = "feedback.html";
+	window.location.href = "feedback.html";
 };
 
 const nextQuestion = (event) => {
@@ -611,7 +649,16 @@ const nextQuestion = (event) => {
 };
 
 btnAvanti.onclick = nextQuestion;
+<<<<<<< HEAD
+=======
 
 document.querySelector("#rate-us").onclick = getFeedback;
+
+function getFeedback() {
+	window.location.href = "feedback.html";
+}
+
+document.querySelector("#rate-us").onclick = getFeedback;
+>>>>>>> 02c83487b20c842f1ed87943d902cc077faf06d1
 
 // console.log(test);
