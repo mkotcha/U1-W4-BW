@@ -543,10 +543,4 @@ btnAvanti.onclick = nextQuestion;
 
 document.querySelector("#rate-us").onclick = getFeedback;
 
-function getFeedback() {
-	window.location.href = "feedback.html";
-}
-
-document.querySelector("#rate-us").onclick = getFeedback;
-
 // console.log(test);
