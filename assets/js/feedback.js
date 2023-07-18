@@ -1,5 +1,7 @@
 const stars = document.querySelectorAll("#img-stelle > img");
 let clicked = false;
+const btnNext = document.querySelector("#proceed");
+btnNext.disabled = true;
 
 remStarNext = element => {
   while ((element = element.nextElementSibling)) {
@@ -35,6 +37,7 @@ const setStar = event => {
   stars.forEach(elm => elm.classList.remove("clicked-star"));
   element.classList.add("clicked-star");
   clicked = true;
+  btnNext.disabled = false;
 };
 
 stars.forEach(elm => (elm.onmouseover = colorStar));
