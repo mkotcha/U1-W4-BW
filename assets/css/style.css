@@ -82,7 +82,7 @@ form *:not(button) {
   padding-top: 10px;
 }
 
-.proceed {
+#proceed {
   float: right;
   background-color: #00ffff;
   padding-inline: 45px;
