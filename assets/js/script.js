@@ -478,56 +478,12 @@ const question = [
 
 let correct = 0;
 let incorrect = 0;
-const timerStart = 60;
-let timer = timerStart;
-const timerElm = document.querySelector("#countdown-text p:nth-child(2)");
 
 const btnAvanti = document.querySelector("#avanti");
 const numberQuestion = 7;
-let test = {};
+
 const difficult = "easy";
 let currentAnswer = "";
-let counterInterval;
-let counterTimeout;
-
-const dropSecond = () => {
-  const radius = document.querySelector("circle").attributes.r.value;
-  const circ = radius * 2 * Math.PI;
-  const step = circ / timerStart;
-  const delta = step * (timerStart - timer);
-  const circle = document.querySelector("circle + circle");
-  const offset = 16;
-  circle.style["stroke-dasharray"] = `${circ - delta - offset} ${delta + offset} `;
-  timer--;
-  timerElm.innerText = timer;
-  if (timer < 20) {
-    circle.style.transition = "stroke 20s";
-    circle.style.stroke = "#4b081c";
-  }
-};
-
-const dropQuestion = () => {
-  currentAnswer = "";
-  incorrect++;
-  if (correct + incorrect === numberQuestion) {
-    getResult();
-  } else {
-    setQuestion();
-  }
-};
-
-const setCounter = () => {
-  timer = timerStart;
-  timerElm.innerText = timer;
-  clearInterval(counterInterval);
-  clearTimeout(counterTimeout);
-  counterInterval = setInterval(dropSecond, 1000);
-  counterTimeout = setTimeout(dropQuestion, timerStart * 1000);
-  const circle = document.querySelector("circle + circle");
-  circle.style["stroke-dasharray"] = `320 6`;
-  circle.style.transition = "stroke 0.1s";
-  circle.style.stroke = "#d20094";
-};
 
 const getQuestion = (arr, difficult) => {
   let notFound = true;
@@ -539,6 +495,7 @@ const getQuestion = (arr, difficult) => {
       notFound = false;
     }
   }
+  console.log(arr[index]);
   return arr[index];
 };
 
@@ -555,6 +512,8 @@ const setClicked = function (event) {
   console.log(btnAvanti);
 };
 
+let test = {};
+
 const setQuestion = () => {
   document
     .querySelectorAll(".container-buttons button")
@@ -569,11 +528,6 @@ const setQuestion = () => {
   // console.log(arrQuestion);
   const btn = document.querySelectorAll(".container-buttons button");
 
-  while (arrQuestion.length > 0) {
-    index = Math.floor(Math.random() * arrQuestion.length);
-    randQuestion.push(arrQuestion[index]);
-    arrQuestion.splice(index, 1);
-  }
   while (arrQuestion.length > 0) {
     index = Math.floor(Math.random() * arrQuestion.length);
     randQuestion.push(arrQuestion[index]);
@@ -596,14 +550,7 @@ const setQuestion = () => {
     btn[i].innerHTML = randQuestion[i];
     btn[i].onclick = setClicked;
   }
-  for (let i = 0; i < randQuestion.length; i++) {
-    btn[i].innerHTML = randQuestion[i];
-    btn[i].onclick = setClicked;
-  }
 
-  document.querySelector(".form-footer p").innerHTML = `QUESTION ${
-    correct + incorrect + 1
-  } <span>/ ${numberQuestion}</span>`;
   document.querySelector(".form-footer p").innerHTML = `QUESTION ${
     correct + incorrect + 1
   } <span>/ ${numberQuestion}</span>`;
@@ -612,33 +559,23 @@ const setQuestion = () => {
 setQuestion();
 
 const getResult = () => {
-  clearInterval(counterInterval);
-  clearTimeout(counterTimeout);
-  const correctCont = document.querySelector(".corrects-result");
-  const textExamResult = document.querySelector(".result-grafic p");
-  const correctPercent = (100 / numberQuestion) * correct;
-  const incorrectPercent = (100 / numberQuestion) * incorrect;
   const correctCont = document.querySelector(".corrects-result");
   const textExamResult = document.querySelector(".resutGrafic-text p");
   const correctPercent = (100 / numberQuestion) * correct;
   const incorrectPercent = (100 / numberQuestion) * incorrect;
   const resultsGraphic = document.querySelector(".result-grafic circle+circle");
 
-  correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>
-  correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>
-  	<h4>${correct}/${numberQuestion} questions</h4>`;
+  correctCont.innerHTML = `<div class='align-sx'><h2>Correct</h2> <h2><strong>${correctPercent.toFixed(
+    2
+  )}%</strong></h2>
+  	<h4>${correct}/${numberQuestion} questions</h4></div>`;
 
   const incorrectCont = document.querySelector(".wrongs-result");
-  incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent.toFixed(2)}%</h2>
-  const incorrectCont = document.querySelector(".wrongs-result");
-  incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent.toFixed(2)}%</h2>
-  	<h4>${incorrect}/${numberQuestion} questions</h4>`;
+  incorrectCont.innerHTML = `<div class='align-dx'><h2>Wrong</h2> <h2><strong>${incorrectPercent.toFixed(
+    2
+  )}%</strong></h2>
+  	<h4>${incorrect}/${numberQuestion} questions</h4></div>`;
 
-  document.querySelector("#exam").style.display = "none";
-  document.querySelector("#results").style.display = "inline-block";
-  document.querySelector("main").classList.remove("main-exam");
-  document.querySelector("main").classList.add("result-main");
-  document.querySelector("#countdown").style.display = "none";
   document.querySelector("#exam").style.display = "none";
   document.querySelector("#results").style.display = "inline-block";
   document.querySelector("main").classList.remove("main-exam");
@@ -649,10 +586,10 @@ const getResult = () => {
 
   if (correctPercent > 60) {
     textExamResult.innerHTML =
-      "<strong>Congratulations!<br> You passed the exam.</strong>";
+      "<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><p><br>We'll send you the certificate in few moments. Check your email (including promotion / spam folder)</p>";
   } else {
     textExamResult.innerHTML =
-      "<strong>Sorry!<br> you didn't pass the exam.</strong>";
+      "<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><p><br>We'll send you the result of the exam in few moments. Check your email (including promotion / spam folder)</p>";
   }
 
   document.querySelector(
@@ -664,20 +601,23 @@ const getFeedback = () => {
   window.location.href = "feedback.html";
 };
 
-const nextQuestion = event => {
+const nextQuestion = (event) => {
   event.preventDefault();
+  // console.log("Va");
   if (test.correct_answer === currentAnswer) {
     correct++;
   } else {
     incorrect++;
   }
+  setQuestion();
+  console.log(correct, incorrect);
   if (correct + incorrect === numberQuestion) {
     getResult();
-  } else {
-    setQuestion();
   }
 };
 
 btnAvanti.onclick = nextQuestion;
 
 document.querySelector("#rate-us").onclick = getFeedback;
+
+// console.log(test);

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 
 *,
 *::after,
@@ -320,8 +320,9 @@ button#avanti.selected-avanti {
 /* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
 
 .result-main {
-  max-width: 930px;
+  max-width: 1010px;
   margin-inline: auto;
+  margin-top: 90px;
 }
 
 #results {
@@ -330,8 +331,15 @@ button#avanti.selected-avanti {
 }
 
 #results h2 {
-  font-weight: bold;
   margin-bottom: 5px;
+}
+
+.align-sx {
+  text-align: left;
+}
+
+.align-dx {
+  text-align: right;
 }
 
 .result-grafic {
@@ -341,12 +349,60 @@ button#avanti.selected-avanti {
   text-align: center;
   font: inherit;
   vertical-align: middle;
-  margin-block: 50px;
+  margin-block: 60px;
+  margin-inline: 100px
 }
 
-.result-grafic p:first-child {
-  margin-bottom: 20px;
-  border-left: red;
+.result-grafic svg {
+  stroke: #C2128D;
+  width: 400px;
+  height: 400px;
+}
+
+.result-grafic circle {
+
+  stroke-width: 60;
+  stroke-dasharray: 1004.8;
+  fill: transparent;
+  /* transform-origin: top; */
+}
+
+.result-grafic circle+circle {
+  transform: rotate(90deg) scaleX(-1);
+  transform-origin: 50%;
+  stroke: #00FFFF;
+  stroke-width: 60;
+  stroke-dasharray: 1004.8;
+
+}
+
+.result-grafic circle+circle {
+  stroke-dasharray: 702.4 1004.8;
+}
+
+.azzurro {
+  color: #00FFFF;
+}
+
+.rosso {
+  color: #ff2100f5;
+}
+
+.resutGrafic-text {
+  position: absolute;
+  margin-top: 125px;
+  margin-left: 100px;
+}
+
+.resutGrafic-text p {
+  max-width: 200px;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+.exam-not-approved {
+  padding-top: 85px;
+  padding-inline: 50px;
 }
 
 .answer-result {
@@ -371,7 +427,7 @@ button#avanti.selected-avanti {
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
 #results button:hover {
   background-color: white;
-  color: #d20094;
+  color: #C2128D;
 }
 
 #result,
