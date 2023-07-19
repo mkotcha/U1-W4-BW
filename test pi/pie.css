@@ -1,21 +1,41 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   background-color: yellow;
   background-image: url(../assets/img/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
+
   background-size: cover;
+  background-repeat: no-repeat;
+  padding-inline: 125px;
+  padding-top: 40px;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  color: white;
 }
 
-#container {
-  width: 300px;
-  height: 300px;
+.result-grafic {
   border-radius: 50%; /*1*/
-  border: 60px solid transparent;
+  border: 40px solid transparent;
   background-image: url(../assets/img/bg.jpg), conic-gradient(from 0deg at center, cyan 67%, magenta 10%);
-  background-position: 0 50%;
+  background-position: center 42%;
+  /* background-size: auto 100vh; */
   background-origin: border-box;
   background-clip: padding-box, border-box;
   margin: 100px auto;
+
+  border-radius: 50%;
+  height: 320px;
+  width: 320px;
+  margin-inline: 100px;
+  padding-top: 40px;
+  padding-inline: 10px;
+  box-shadow: 5px 5px 8px #d20094;
+  margin-block: 50px;
+  /* clip-path: circle(25%); */
 }
 
 circle {
@@ -35,4 +55,8 @@ circle + circle {
 
 circle + circle:hover {
   stroke-dasharray: 189 189;
+}
+
+#results {
+  display: block;
 }
