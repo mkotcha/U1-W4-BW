@@ -535,11 +535,11 @@ const setQuestion = () => {
   }
 
   if (test.type === "boolean") {
-    document.querySelector("#exam").classList.add("div-exam-padding-top");
+    document.querySelector("#exam").classList.add("padding-top");
     btn[2].style.display = "none";
     btn[3].style.display = "none";
   } else {
-    document.querySelector("#exam").classList.remove("div-exam-padding-top");
+    document.querySelector("#exam").classList.remove("padding-top");
     btn[2].style.display = "inline-block";
     btn[3].style.display = "inline-block";
   }
