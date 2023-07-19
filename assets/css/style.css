@@ -185,7 +185,7 @@ circle + circle {
   stroke-dasharray: 320 6;
   stroke-linecap: round;
   transition: stroke-dasharray 2s;
-  transition: stroke 20s;
+  transition: stroke 20s ease-in;
 }
 
 circle + circle:hover {

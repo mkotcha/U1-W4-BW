@@ -416,15 +416,17 @@ const question = [
 
 let correct = 0;
 let incorrect = 0;
-const timerStart = 60;
+const timerStart = 30;
 let timer = timerStart;
 const timerElm = document.querySelector("#countdown-text p:nth-child(2)");
 
 const btnAvanti = document.querySelector("#avanti");
 const numberQuestion = 7;
-
+let test = {};
 const difficult = "easy";
 let currentAnswer = "";
+let counterInterval;
+let counterTimeout;
 
 const dropSecond = () => {
   const radius = document.querySelector("circle").attributes.r.value;
@@ -432,15 +434,38 @@ const dropSecond = () => {
   const step = circ / timerStart;
   const delta = step * (timerStart - timer);
   const circle = document.querySelector("circle + circle");
-  circle.style["stroke-dasharray"] = `${circ - delta - 16} ${delta + 16} `;
+  const offset = 16;
+  circle.style["stroke-dasharray"] = `${circ - delta - offset} ${delta + offset} `;
   timer--;
   timerElm.innerText = timer;
   if (timer < 20) {
+    circle.style.transition = "stroke 20s";
     circle.style.stroke = "#4b081c";
   }
 };
 
-setInterval(dropSecond, 1000);
+const dropQuestion = () => {
+  currentAnswer = "";
+  incorrect++;
+  if (correct + incorrect === numberQuestion) {
+    getResult();
+  } else {
+    setQuestion();
+  }
+};
+
+const setCounter = () => {
+  timer = timerStart;
+  timerElm.innerText = timer;
+  clearInterval(counterInterval);
+  clearTimeout(counterTimeout);
+  counterInterval = setInterval(dropSecond, 1000);
+  counterTimeout = setTimeout(dropQuestion, timerStart * 1000);
+  const circle = document.querySelector("circle + circle");
+  circle.style["stroke-dasharray"] = `320 6`;
+  circle.style.transition = "stroke 0.1s";
+  circle.style.stroke = "#d20094";
+};
 
 const getQuestion = (arr, difficult) => {
   let notFound = true;
@@ -452,7 +477,6 @@ const getQuestion = (arr, difficult) => {
       notFound = false;
     }
   }
-  console.log(arr[index]);
   return arr[index];
 };
 
@@ -463,15 +487,10 @@ const setClicked = function (event) {
   btnAvanti.disabled = false;
   btnAvanti.classList.add("selected-avanti");
   currentAnswer = event.target.innerHTML;
-  console.log(currentAnswer);
-  console.log(btnAvanti);
 };
 
-let test = {};
-
 const setQuestion = () => {
-  timer = timerStart;
-  timerElm.innerText = timer;
+  setCounter();
   document.querySelectorAll(".container-buttons button").forEach(elem => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
   btnAvanti.disabled = true;
@@ -512,6 +531,8 @@ const setQuestion = () => {
 setQuestion();
 
 const getResult = () => {
+  clearInterval(counterInterval);
+  clearTimeout(counterTimeout);
   const correctCont = document.querySelector(".corrects-result");
   const textExamResult = document.querySelector(".result-grafic p");
   const correctPercent = (100 / numberQuestion) * correct;
@@ -555,21 +576,18 @@ const getFeedback = () => {
 
 const nextQuestion = event => {
   event.preventDefault();
-  // console.log("Va");
   if (test.correct_answer === currentAnswer) {
     correct++;
   } else {
     incorrect++;
   }
-  setQuestion();
-  console.log(correct, incorrect);
   if (correct + incorrect === numberQuestion) {
     getResult();
+  } else {
+    setQuestion();
   }
 };
 
 btnAvanti.onclick = nextQuestion;
 
 document.querySelector("#rate-us").onclick = getFeedback;
-
-// console.log(test);
