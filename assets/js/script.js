@@ -509,18 +509,13 @@ const setQuestion = () => {
 		randQuestion.push(arrQuestion[index]);
 		arrQuestion.splice(index, 1);
 	}
-	while (arrQuestion.length > 0) {
-		index = Math.floor(Math.random() * arrQuestion.length);
-		randQuestion.push(arrQuestion[index]);
-		arrQuestion.splice(index, 1);
-	}
 
 	if (test.type === "boolean") {
-		document.querySelector("#exam").classList.add("div-exam-padding-top");
+		document.querySelector("#exam form").classList.add("exam-form-padding-top");
 		btn[2].style.display = "none";
 		btn[3].style.display = "none";
 	} else {
-		document.querySelector("#exam").classList.remove("div-exam-padding-top");
+		document.querySelector("#exam form").classList.remove("exam-form-padding-top");
 		btn[2].style.display = "inline-block";
 		btn[3].style.display = "inline-block";
 	}
@@ -529,14 +524,7 @@ const setQuestion = () => {
 		btn[i].innerHTML = randQuestion[i];
 		btn[i].onclick = setClicked;
 	}
-	for (let i = 0; i < randQuestion.length; i++) {
-		btn[i].innerHTML = randQuestion[i];
-		btn[i].onclick = setClicked;
-	}
 
-	document.querySelector(".form-footer p").innerHTML = `QUESTION ${
-		correct + incorrect + 1
-	} <span>/ ${numberQuestion}</span>`;
 	document.querySelector(".form-footer p").innerHTML = `QUESTION ${
 		correct + incorrect + 1
 	} <span>/ ${numberQuestion}</span>`;
@@ -552,13 +540,16 @@ const getResult = () => {
 	const correctPercent = (100 / numberQuestion) * correct;
 	const incorrectPercent = (100 / numberQuestion) * incorrect;
 
-	correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>`;
-	correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>
-  	<h4>${correct}/${numberQuestion} questions</h4>`;
+	correctCont.innerHTML = `<div class='align-sx'><h2>Correct</h2> <h2><strong>${correctPercent.toFixed(
+		2
+	)}%</strong></h2>
+  	<h4>${correct}/${numberQuestion} questions</h4></div>`;
 
 	const incorrectCont = document.querySelector(".wrongs-result");
-	incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent.toFixed(2)}%</h2>
-  	<h4>${incorrect}/${numberQuestion} questions</h4>`;
+	incorrectCont.innerHTML = `<div class='align-dx'><h2>Wrong</h2> <h2><strong>${incorrectPercent.toFixed(
+		2
+	)}%</strong></h2>
+  	<h4>${incorrect}/${numberQuestion} questions</h4></div>`;
 
 	document.querySelector("#exam").style.display = "none";
 	document.querySelector("#results").style.display = "inline-block";
@@ -569,9 +560,11 @@ const getResult = () => {
 	const correctToStroke = (1004.8 * correctPercent.toFixed(2)) / 100;
 
 	if (correctPercent > 60) {
-		textExamResult.innerHTML = "<strong>Congratulations!<br> You passed the exam.</strong>";
+		textExamResult.innerHTML =
+			"<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><p><br>We'll send you the certificate in few moments. Check your email (including promotion / spam folder)</p>";
 	} else {
-		textExamResult.innerHTML = "<strong>Sorry!<br> you didn't pass the exam.</strong>";
+		textExamResult.innerHTML =
+			"<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><p><br>We'll send you the result of the exam in few moments. Check your email (including promotion / spam folder)</p>";
 	}
 
 	document.querySelector(".result-grafic circle+circle").style.strokeDasharray = `${correctToStroke} 1004.8`;

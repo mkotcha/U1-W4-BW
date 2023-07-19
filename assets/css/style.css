@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 
 *,
 *::after,
@@ -53,7 +53,6 @@ h2 {
 
 h3 {
   font-size: 2.1rem;
-  margin-bottom: 16px;
 }
 
 h4 {
@@ -73,7 +72,7 @@ h4 {
 #welcome-main {
   max-width: 921px;
   margin-inline: auto;
-  margin-top: 115px;
+  margin-top: 120px;
 }
 
 #welcome h1 {
@@ -219,20 +218,26 @@ header circle+circle {
 }
 
 .main-exam {
-  margin-top: 160px;
+  margin-top: 185px;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 #exam {
   text-align: center;
 }
 
-.div-exam-padding-top {
-  padding-top: 40px;
+.exam-form-padding-top {
+  padding-top: 60px;
+}
+
+.padding-top {
+  padding-top: 30px;
 }
 
 #exam h2 {
   max-width: 700px;
-  margin: 0 auto 120px;
+  margin-inline: auto;
 }
 
 #exam button {
@@ -281,6 +286,10 @@ button#avanti {
   bottom: 100px;
 }
 
+#exam form {
+  margin-top: 60px;
+}
+
 .form-footer p {
   padding-top: 30px;
   left: 125px
@@ -313,9 +322,9 @@ button#avanti.selected-avanti {
 /* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
 
 .result-main {
-  max-width: 930px;
+  max-width: 1010px;
   margin-inline: auto;
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 #results {
@@ -324,10 +333,16 @@ button#avanti.selected-avanti {
 }
 
 #results h2 {
-  font-weight: bold;
   margin-bottom: 5px;
 }
 
+.align-sx {
+  text-align: left;
+}
+
+.align-dx {
+  text-align: right;
+}
 
 .result-grafic {
   width: 400px;
@@ -336,7 +351,8 @@ button#avanti.selected-avanti {
   text-align: center;
   font: inherit;
   vertical-align: middle;
-  margin-block: 50px;
+  margin-block: 60px;
+  margin-inline: 100px
 }
 
 .result-grafic svg {
@@ -366,29 +382,34 @@ button#avanti.selected-avanti {
   stroke-dasharray: 702.4 1004.8;
 }
 
+.azzurro {
+  color: #00FFFF;
+}
+
+.rosso {
+  color: #ff2100f5;
+}
+
 .resutGrafic-text {
   position: absolute;
-  margin-top: 130px;
+  margin-top: 125px;
   margin-left: 100px;
 }
 
 .resutGrafic-text p {
   max-width: 200px;
+  font-weight: 200;
+  line-height: 1.2;
 }
 
-.cont-result {
-  vertical-align: middle;
-}
-
-.result-grafic p:first-child {
-  margin-bottom: 20px;
-  border-left: red;
+.exam-not-approved {
+  padding-top: 85px;
+  padding-inline: 50px;
 }
 
 .answer-result {
   max-width: 200px;
 }
-
 
 #results button {
   width: 220px;
@@ -398,23 +419,17 @@ button#avanti.selected-avanti {
   color: white;
   font-size: 1.3rem;
   font-weight: bold;
-  box-shadow: 0px 0px 4px 3px #085c9e;
+  box-shadow: 0px 0px 11px 3px #00626a;
   cursor: pointer;
   font-family: "Outfit", sans-serif;
 }
 
-
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
-
 #results button:hover {
   background-color: white;
-  color: #d20094;
-}
-
-.feedback-main {
-  margin-top: 170px;
+  color: #C2128D;
 }
 
 #result,
@@ -425,6 +440,10 @@ button#avanti.selected-avanti {
 
 #feedback #img-stelle img {
   filter: grayscale(50%) brightness(40%);
+}
+
+#feedback-main {
+  margin-top: 175px
 }
 
 #feedback h2 {
