@@ -278,16 +278,26 @@ button#avanti.selected-avanti {
 }
 
 .result-grafic {
-  border: 40px solid white;
+  border-radius: 50%;
+  /*1*/
+  border: 40px solid transparent;
+  background-image: url(../img/bg.jpg), conic-gradient(from 0deg at center, cyan 60%, magenta 40%);
+  background-position: center 42%;
+  /* background-size: auto 100vh; */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin: 100px auto;
   border-radius: 50%;
   height: 320px;
   width: 320px;
   margin-inline: 100px;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-inline: 10px;
   box-shadow: 5px 5px 8px #d20094;
   margin-block: 50px;
 }
+
+
 
 .result-grafic p:first-child {
   margin-bottom: 20px;
