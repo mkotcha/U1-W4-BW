@@ -111,7 +111,7 @@ h4 {
 #welcome form input+label {
   position: relative;
   top: 20px;
-  padding-left: 30px;
+  padding-left: 35px;
   cursor: pointer;
 }
 
@@ -129,7 +129,8 @@ h4 {
 
 /* Stile del segno di spunta quando il checkbox è selezionato */
 #welcome form input:checked+label::before {
-  background-color: white;
+  background-color: #00ffff;
+  box-shadow: 0px 0px 20px 4px #53e0e0;
 }
 
 /* ----------------------------------- FINE PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
@@ -255,6 +256,11 @@ button#avanti {
   right: 125px;
 }
 
+#exam p,
+button#avanti {
+  bottom: 100px;
+}
+
 button#avanti.selected-avanti {
   background-color: #00ffff;
   color: black;
@@ -281,16 +287,26 @@ button#avanti.selected-avanti {
 }
 
 .result-grafic {
-  border: 40px solid white;
+  border-radius: 50%;
+  /*1*/
+  border: 40px solid transparent;
+  background-image: url(../img/bg.jpg), conic-gradient(from 0deg at center, cyan 60%, magenta 40%);
+  background-position: center 42%;
+  /* background-size: auto 100vh; */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin: 100px auto;
   border-radius: 50%;
   height: 320px;
   width: 320px;
   margin-inline: 100px;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-inline: 10px;
   box-shadow: 5px 5px 8px #d20094;
   margin-block: 50px;
 }
+
+
 
 .result-grafic p:first-child {
   margin-bottom: 20px;
@@ -326,7 +342,8 @@ button#avanti.selected-avanti {
   color: #d20094;
 }
 
-#result, #feedback {
+#result,
+#feedback {
   font-family: "Outfit", sans-serif;
   text-align: center;
 }
