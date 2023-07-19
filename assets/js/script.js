@@ -490,6 +490,8 @@ setQuestion();
 
 const getResult = () => {
 	const correctCont = document.querySelector(".corrects-result");
+	const resultsGraphic = document.querySelector(".result-grafic");
+	const textExamResult = document.querySelector(".result-grafic p strong");
 	const correctPercent = (100 / numberQuestion) * correct;
 	const incorrectPercent = (100 / numberQuestion) * incorrect;
 
@@ -500,14 +502,28 @@ const getResult = () => {
 	incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent.toFixed(2)}%</h2>
   	<h4>${incorrect}/${numberQuestion} questions</h4>`;
 
-	document.querySelector("#exam").style.display = "none";
-	document.querySelector("#results").style.display = "inline-block";
+	document.querySelector("#exam").classList.add = "hidden";
+	document.querySelector("#results").classList.add = "inline-block";
 	document.querySelector("main").classList.add("result-main");
-	document.querySelector("#countdown").style.display = "none";
+	document.querySelector("#countdown").classList.add = "hidden";
 
-	const resultsGraphic = document.querySelector(".result-grafic");
+	if (correctPercent > 60) {
+		textExamResult.innerText = "Congratulations! You passed the exam.";
+	} else {
+		textExamResult.innerText = "Sorry! you didn't pass the exam.";
+	}
 
 	if (correctPercent <= 0) {
+		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
+			2
+		)}%, magenta 0%`;
+	} else {
+		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
+			2
+		)}%, magenta 10%`;
+	}
+
+	if (correctPercent < 60) {
 		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
 			2
 		)}%, magenta 0%`;
