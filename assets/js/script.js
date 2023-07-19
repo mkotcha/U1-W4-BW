@@ -422,6 +422,48 @@ const numberQuestion = 7;
 
 const difficult = "easy";
 let currentAnswer = "";
+let counterInterval;
+let counterTimeout;
+
+const dropSecond = () => {
+  const radius = document.querySelector("circle").attributes.r.value;
+  const circ = radius * 2 * Math.PI;
+  const step = circ / timerStart;
+  const delta = step * (timerStart - timer);
+  const circle = document.querySelector("circle + circle");
+  const offset = 16;
+  circle.style["stroke-dasharray"] = `${circ - delta - offset} ${delta + offset} `;
+  timer--;
+  timerElm.innerText = timer;
+  if (timer < 20) {
+    circle.style.transition = "stroke 20s";
+    circle.style.stroke = "#4b081c";
+  }
+};
+
+const dropQuestion = () => {
+  currentAnswer = "";
+  incorrect++;
+  if (correct + incorrect === numberQuestion) {
+    getResult();
+  } else {
+    setQuestion();
+  }
+};
+
+const setCounter = () => {
+  timer = timerStart;
+  timerElm.innerText = timer;
+
+  clearInterval(counterInterval);
+  clearTimeout(counterTimeout);
+  counterInterval = setInterval(dropSecond, 1000);
+  counterTimeout = setTimeout(dropQuestion, timerStart * 1000);
+  const circle = document.querySelector("circle + circle");
+  circle.style["stroke-dasharray"] = `320 6`;
+  circle.style.transition = "stroke 0.1s";
+  circle.style.stroke = "#d20094";
+};
 
 const getQuestion = (arr, difficult) => {
   let notFound = true;
