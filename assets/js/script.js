@@ -563,7 +563,6 @@ const getResult = () => {
   const textExamResult = document.querySelector(".resutGrafic-text p");
   const correctPercent = (100 / numberQuestion) * correct;
   const incorrectPercent = (100 / numberQuestion) * incorrect;
-  const resultsGraphic = document.querySelector(".result-grafic circle+circle");
 
   correctCont.innerHTML = `<div class='align-sx'><h2>Correct</h2> <h2><strong>${correctPercent.toFixed(
     2
