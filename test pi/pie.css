@@ -18,15 +18,15 @@ body {
 }
 
 .result-grafic {
-  border-radius: 50%; /*1*/
+  border-radius: 50%;
+  /*1*/
   border: 40px solid transparent;
-  background-image: url(../assets/img/bg.jpg), conic-gradient(from 0deg at center, cyan 67%, magenta 10%);
+  background-image: url('../assets/img/bg.jpg'), conic-gradient(from 0deg at center, cyan 0%, magenta 0%);
   background-position: center 42%;
   /* background-size: auto 100vh; */
   background-origin: border-box;
   background-clip: padding-box, border-box;
   margin: 100px auto;
-
   border-radius: 50%;
   height: 320px;
   width: 320px;
@@ -45,7 +45,7 @@ circle {
   stroke-dasharray: 189 189;
 }
 
-circle + circle {
+circle+circle {
   fill: transparent;
   stroke: magenta;
   stroke-width: 30;
@@ -53,7 +53,7 @@ circle + circle {
   transition: stroke-dasharray 2s;
 }
 
-circle + circle:hover {
+circle+circle:hover {
   stroke-dasharray: 189 189;
 }
 
