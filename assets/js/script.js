@@ -540,21 +540,15 @@ const getResult = () => {
 	const correctPercent = (100 / numberQuestion) * correct;
 	const incorrectPercent = (100 / numberQuestion) * incorrect;
 
-	correctCont.innerHTML = `<div class='align-sx'><h2>Correct</h2> <h2><strong>${correctPercent.toFixed(
-		2
-	)}%</strong></h2>
-  	<h4>${correct}/${numberQuestion} questions</h4></div>`;
+	correctCont.innerHTML = `<h2>Correct</h2> <h2><strong>${correctPercent.toFixed(2)}%</strong></h2>
+  	<h4>${correct}/${numberQuestion} questions</h4>`;
 
 	const incorrectCont = document.querySelector(".wrongs-result");
-	incorrectCont.innerHTML = `<div class='align-dx'><h2>Wrong</h2> <h2><strong>${incorrectPercent.toFixed(
-		2
-	)}%</strong></h2>
-  	<h4>${incorrect}/${numberQuestion} questions</h4></div>`;
+	incorrectCont.innerHTML = `<h2>Wrong</h2> <h2><strong>${incorrectPercent.toFixed(2)}%</strong></h2>
+  	<h4>${incorrect}/${numberQuestion} questions</h4>`;
 
 	document.querySelector("#exam").style.display = "none";
 	document.querySelector("#results").style.display = "inline-block";
-	document.querySelector("main").classList.remove("main-exam");
-	document.querySelector("main").classList.add("result-main");
 	document.querySelector("#countdown").style.display = "none";
 
 	const correctToStroke = (1004.8 * correctPercent.toFixed(2)) / 100;

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 *,
 *::after,
@@ -27,7 +27,9 @@ header img {
 }
 
 main {
+  text-align: center;
   color: #dadae0;
+  width: 100%;
 }
 
 h1,
@@ -187,13 +189,14 @@ header circle+circle {
   transform-origin: 50%;
   stroke: #d20094;
   stroke-width: 16;
-  stroke-dasharray: 320 6;
+  stroke-dasharray: 376.8 0;
   stroke-linecap: round;
   transition: stroke-dasharray 2s;
-  transition: stroke 20s ease-in;
 }
 
-
+header circle+circle:hover {
+  stroke-dasharray: 0 376.8;
+}
 
 #countdown-text {
   position: absolute;
@@ -217,14 +220,12 @@ header circle+circle {
   font-size: 0.5rem;
 }
 
-.main-exam {
-  margin-top: 185px;
-  max-width: 800px;
-  margin-inline: auto;
-}
 
 #exam {
   text-align: center;
+  margin-top: 185px;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 .exam-form-padding-top {
@@ -321,38 +322,32 @@ button#avanti.selected-avanti {
 
 /* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
 
-.result-main {
-  max-width: 1010px;
-  margin-inline: auto;
-  margin-top: 90px;
-}
-
 #results {
   text-align: center;
   display: none;
+  max-width: 930px;
+  margin-inline: auto;
+  margin-top: 90px;
+  vertical-align: middle;
 }
 
 #results h2 {
   margin-bottom: 5px;
 }
 
-.align-sx {
-  text-align: left;
-}
-
-.align-dx {
-  text-align: right;
+.cont-results {
+  margin-top: 50px;
 }
 
 .result-grafic {
   width: 400px;
-  height: 400px;
+  height: 500px;
   color: white;
   text-align: center;
-  font: inherit;
+  display: inline-block;
+  vertical-align: sub;
+  margin-inline: 50px;
   vertical-align: middle;
-  margin-block: 60px;
-  margin-inline: 100px
 }
 
 .result-grafic svg {
@@ -362,7 +357,6 @@ button#avanti.selected-avanti {
 }
 
 .result-grafic circle {
-
   stroke-width: 60;
   stroke-dasharray: 1004.8;
   fill: transparent;
@@ -373,33 +367,22 @@ button#avanti.selected-avanti {
   transform: rotate(90deg) scaleX(-1);
   transform-origin: 50%;
   stroke: #00FFFF;
-  stroke-width: 60;
+  stroke-width: 61;
   stroke-dasharray: 1004.8;
-
 }
 
 .result-grafic circle+circle {
   stroke-dasharray: 702.4 1004.8;
 }
 
-.azzurro {
-  color: #00FFFF;
-}
-
-.rosso {
-  color: #ff2100f5;
-}
-
 .resutGrafic-text {
   position: absolute;
-  margin-top: 125px;
+  margin-top: 130px;
   margin-left: 100px;
 }
 
 .resutGrafic-text p {
   max-width: 200px;
-  font-weight: 200;
-  line-height: 1.2;
 }
 
 .exam-not-approved {
@@ -409,6 +392,15 @@ button#avanti.selected-avanti {
 
 .answer-result {
   max-width: 200px;
+  display: inline-block;
+}
+
+.corrects-result {
+  text-align: left;
+}
+
+.wrongs-result {
+  text-align: right;
 }
 
 #results button {
@@ -429,7 +421,7 @@ button#avanti.selected-avanti {
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
 #results button:hover {
   background-color: white;
-  color: #C2128D;
+  color: #d20094;
 }
 
 #result,
@@ -439,7 +431,7 @@ button#avanti.selected-avanti {
 }
 
 #feedback #img-stelle img {
-  filter: grayscale(50%) brightness(40%);
+  filter: grayscale(100%) brightness(20%);
 }
 
 #feedback-main {
@@ -469,11 +461,6 @@ button#avanti.selected-avanti {
 
 #feedback #img-stelle>img.selected-stars {
   filter: none;
-}
-
-#feedback #img-stelle img.clicked-star {
-  /* filter: none; */
-  filter: drop-shadow(0 0 10px white);
 }
 
 #img-stelle img:not(:last-child) {
