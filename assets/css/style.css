@@ -7,6 +7,8 @@
   box-sizing: border-box;
 }
 
+/* ----------------------------------- GENERALE -----------------------------------  */
+
 body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
@@ -37,7 +39,7 @@ h3 {
 
 h1 {
   color: white;
-  font-size: 5rem;
+  font-size: 5.5rem;
   line-height: 0.8;
   margin-bottom: 55px;
 }
@@ -51,7 +53,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: bold;
   margin-bottom: 16px;
 }
@@ -60,12 +62,32 @@ h4 {
   font-size: 1.2rem;
 }
 
+/* ----------------------------------- INIZIO WELCOME STYLE -----------------------------------  */
+
+#welcome-main {
+  max-width: 921px;
+  margin-inline: auto;
+}
+
+#welcome h1 {
+  max-width: 50%;
+  padding-top: 50px;
+}
+
 #welcome h3 {
   color: #d20094;
 }
 
+#welcome p,
+#welcome ul,
+#welcome label {
+  font-size: 19px;
+}
+
 #welcome p {
   margin-bottom: 50px;
+  max-width: 600px;
+  line-height: 1.3;
 }
 
 #welcome ul {
@@ -78,9 +100,40 @@ h4 {
   display: inline-block;
 }
 
-form *:not(button) {
-  padding-top: 10px;
+/* ----------------------------------- PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
+
+/* Nascondi il box di default */
+#welcome form input {
+  display: none;
 }
+
+/* Stile personalizzato del checkbox */
+#welcome form input+label {
+  position: relative;
+  top: 20px;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+/* Stile del segno di spunta quando il checkbox è selezionato */
+#welcome form input+label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+/* Stile del segno di spunta quando il checkbox è selezionato */
+#welcome form input:checked+label::before {
+  background-color: #00ffff;
+  box-shadow: 0px 0px 20px 4px #53e0e0;
+}
+
+/* ----------------------------------- FINE PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
 
 #proceed {
   float: right;
@@ -91,7 +144,14 @@ form *:not(button) {
   font-weight: bold;
   border: none;
   box-shadow: 0px 0px 20px 4px #53e0e0;
+  cursor: pointer;
 }
+
+/* ----------------------------------- FINE WELCOME STYLE -----------------------------------  */
+
+/* commento inutile */
+
+/* ----------------------------------- INIZIO EXAM STYLE -----------------------------------  */
 
 #countdown {
   float: right;
@@ -125,8 +185,8 @@ form *:not(button) {
 }
 
 #exam h2 {
-  max-width: 500px;
-  margin: 0 auto 60px;
+  max-width: 700px;
+  margin: 0 auto 120px;
 }
 
 #exam button {
@@ -143,8 +203,13 @@ form *:not(button) {
   margin: 0 20px 20px;
 }
 
+#exam button:hover:not(:last-child) {
+  background-color: #8e0665;
+}
+
 #exam button:hover {
   background-color: #8e0665;
+  cursor: pointer;
 }
 
 #exam button.button-clicked {
@@ -153,14 +218,8 @@ form *:not(button) {
 
 #exam p {
   display: inline-block;
+  position: absolute;
 }
-
-/* #exam button:last-child {
-  float: right;
-  margin-right: 0;
-  border-radius: 0;
-  width: 200px;
-} */
 
 .container-buttons {
   max-width: 800px;
@@ -168,7 +227,6 @@ form *:not(button) {
 }
 
 .form-footer {
-  /* border: 1px solid red; */
   margin-top: 50px;
   text-align: left;
 }
@@ -178,65 +236,67 @@ form *:not(button) {
 }
 
 button#avanti {
-  float: right;
   margin: 0;
-
   font-size: 1rem;
   font-weight: bold;
   border-radius: 0;
   width: 200px;
   min-height: 50px;
   padding: 0;
+  position: absolute;
+  right: 125px;
 }
 
-button#avanti:hover {
+#exam p,
+button#avanti {
+  bottom: 100px;
+}
+
+button#avanti.selected-avanti {
   background-color: #00ffff;
+  color: black;
+  font-weight: bold;
 }
 
-/* --------------------------------------------------------- */
+/* ----------------------------------- FINE EXAM STYLE -----------------------------------  */
 
+/* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
+
+.result-main {
+  max-width: 930px;
+  margin-inline: auto;
+}
 
 #results {
   text-align: center;
   display: none;
+  padding-top: 80px;
 }
 
 #results h2 {
   font-weight: bold;
 }
 
-.cont-result {
-  vertical-align: middle;
-  text-align: center;
-}
-
 .result-grafic {
-  border: 40px solid white;
+  border-radius: 50%;
+  /*1*/
+  border: 40px solid transparent;
+  background-image: url(../img/bg.jpg), conic-gradient(from 0deg at center, cyan 60%, magenta 40%);
+  background-position: center 42%;
+  /* background-size: auto 100vh; */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin: 100px auto;
   border-radius: 50%;
   height: 320px;
   width: 320px;
-  padding-top: 50px;
+  margin-inline: 100px;
+  padding-top: 40px;
   padding-inline: 10px;
-  margin: 50px;
   box-shadow: 5px 5px 8px #d20094;
-  display: inline-block;
+  margin-block: 50px;
 }
 
-.result-grafic::after {
-  content: '';
-  border: 40px solid blue;
-  border-radius: 50%;
-  height: 320px;
-  width: 320px;
-  padding-top: 50px;
-  padding-inline: 10px;
-  box-shadow: 5px 5px 8px #d20094;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -89%);
-}
 
 .result-grafic p:first-child {
   margin-bottom: 20px;
@@ -245,11 +305,10 @@ button#avanti:hover {
 
 .answer-result {
   max-width: 200px;
-  display: inline-block;
 }
 
-.answer-result:last-child {
-  text-align: right;
+.inline-block {
+  display: inline-block;
 }
 
 #results button {
@@ -264,14 +323,17 @@ button#avanti:hover {
   cursor: pointer;
 }
 
+
+
+/* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
+
+/* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
 #results button:hover {
   background-color: white;
   color: #d20094;
 }
 
-
-/* --------------------------------------------------------- */
-
+#result,
 #feedback {
   font-family: "Outfit", sans-serif;
   text-align: center;
@@ -282,14 +344,14 @@ button#avanti:hover {
 }
 
 #feedback h2 {
-  padding-top: 25px;
+  padding-top: 100px;
   margin-bottom: 25px;
   font-weight: bold;
 }
 
 #feedback p {
-  font-size: 1.5rem;
-  max-width: 600px;
+  font-size: 1.8rem;
+  max-width: 720px;
   margin-inline: auto;
 }
 
@@ -299,13 +361,21 @@ button#avanti:hover {
 }
 
 #img-stelle {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 70px;
+}
+
+#feedback #img-stelle>img.selected-stars {
+  filter: none;
+}
+
+#img-stelle img:not(:last-child) {
+  padding-right: 20px;
 }
 
 #feedback form {
   margin-top: 50px;
-  max-width: 650px;
+  max-width: 770px;
   margin-inline: auto;
   background-color: transparent;
 }
@@ -316,10 +386,13 @@ button#avanti:hover {
   width: 100%;
   border-bottom: 1px solid #c2128d;
   padding: 0 0 10px 25px;
+  font-size: 21px;
 }
 
 #feedback form button {
   text-align: center;
   float: unset;
-  margin-top: 60px;
+  margin-top: 65px;
 }
+
+/* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */

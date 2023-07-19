@@ -488,36 +488,34 @@ const setQuestion = () => {
 
 setQuestion();
 
-function decimalAdjust(type, value, exp) {
-	type = String(type);
-	if (!["round", "floor", "ceil"].includes(type)) {
-		throw new TypeError("The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'.");
-	}
-	exp = Number(exp);
-	value = Number(value);
-	if (exp % 1 !== 0 || Number.isNaN(value)) {
-		return NaN;
-	} else if (exp === 0) {
-		return Math[type](value);
-	}
-	const [magnitude, exponent = 0] = value.toString().split("e");
-	const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
-	// Shift back
-	const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
-	return Number(`${newMagnitude}e${+newExponent + exp}`);
-}
-
 const getResult = () => {
-	const round10 = (value, exp) => decimalAdjust("round", value, exp);
-	const correctPercent = round10((100 / numberQuestion) * correct, -1);
-	const incorrectPercent = round10((100 / numberQuestion) * incorrect, -1);
-
 	const correctCont = document.querySelector(".corrects-result");
-	correctCont.innerHTML = `<h2>Correct ${correctPercent}%</h2><h4>${correct}/${numberQuestion} questions</h4>`;
+	const correctPercent = (100 / numberQuestion) * correct;
+	const incorrectPercent = (100 / numberQuestion) * incorrect;
+
+	correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>
+  	<h4>${correct}/${numberQuestion} questions</h4>`;
+
 	const incorrectCont = document.querySelector(".wrongs-result");
-	incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent}%</h2><h4>${incorrect}/${numberQuestion} questions</h4>`;
+	incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent.toFixed(2)}%</h2>
+  	<h4>${incorrect}/${numberQuestion} questions</h4>`;
+
 	document.querySelector("#exam").style.display = "none";
 	document.querySelector("#results").style.display = "inline-block";
+	document.querySelector("main").classList.add("result-main");
+	document.querySelector("#countdown").style.display = "none";
+
+	const resultsGraphic = document.querySelector(".result-grafic");
+
+	if (correctPercent <= 0) {
+		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
+			2
+		)}%, magenta 0%`;
+	} else {
+		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
+			2
+		)}%, magenta 10%`;
+	}
 };
 
 const getFeedback = () => {
