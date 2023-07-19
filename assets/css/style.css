@@ -153,8 +153,8 @@ h4 {
 
 #countdown {
   float: right;
-  border: 12px solid #00ffff;
-  border-radius: 50%;
+  /* border: 12px solid #00ffff; */
+  /* border-radius: 50%; */
   width: 120px;
   height: 120px;
   color: white;
@@ -162,18 +162,52 @@ h4 {
   font-family: "Outfit", sans-serif;
 }
 
-#countdown p:first-child {
+svg {
+  width: 120px;
+  height: 120px;
+}
+
+circle {
+  stroke: #969696;
+  stroke-width: 16;
+  stroke-dasharray: 376.8;
+  fill: transparent;
+  /* transform-origin: top; */
+}
+
+circle + circle {
+  transform: rotate(90deg) scaleX(-1);
+  transform-origin: 50%;
+  stroke: #d20094;
+  stroke-width: 16;
+  stroke-dasharray: 376.8 0;
+  stroke-linecap: round;
+  transition: stroke-dasharray 2s;
+}
+
+circle + circle:hover {
+  stroke-dasharray: 0 376.8;
+}
+
+#countdown-text {
+  position: absolute;
+  margin: 13px 39px;
+  /* top: 50px;
+  left: 50px; */
+}
+
+#countdown-text p:first-child {
   font-size: 0.5rem;
   /* font-weight: bold; */
   padding-top: 20px;
 }
 
-#countdown p:nth-child(2) {
+#countdown-text p:nth-child(2) {
   font-size: 2.4rem;
   /* font-weight: 500; */
 }
 
-#countdown p:last-child {
+#countdown-text p:last-child {
   font-size: 0.5rem;
 }
 
