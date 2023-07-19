@@ -469,11 +469,11 @@ const setQuestion = () => {
 	}
 
 	if (test.type === "boolean") {
-		document.querySelector("#exam").classList.add("padding-top");
+		document.querySelector("#exam").classList.add("div-exam-padding-top");
 		btn[2].style.display = "none";
 		btn[3].style.display = "none";
 	} else {
-		document.querySelector("#exam").classList.remove("padding-top");
+		document.querySelector("#exam").classList.remove("div-exam-padding-top");
 		btn[2].style.display = "inline-block";
 		btn[3].style.display = "inline-block";
 	}
@@ -503,16 +503,13 @@ const getResult = () => {
 	incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent.toFixed(2)}%</h2>
   	<h4>${incorrect}/${numberQuestion} questions</h4>`;
 
-	document.querySelector("#exam").classList.add = "hidden";
-	document.querySelector("#results").classList.add = "inline-block";
+	document.querySelector("#exam").style.display = "none";
+	document.querySelector("#results").style.display = "inline-block";
+	document.querySelector("main").classList.remove("main-exam");
 	document.querySelector("main").classList.add("result-main");
-	document.querySelector("#countdown").classList.add = "hidden";
+	document.querySelector("#countdown").style.display = "none";
 
-	if (correctPercent > 60) {
-		textExamResult.innerText = "Congratulations! You passed the exam.";
-	} else {
-		textExamResult.innerText = "Sorry! you didn't pass the exam.";
-	}
+	const resultsGraphic = document.querySelector(".result-grafic");
 
 	if (correctPercent > 60) {
 		textExamResult.innerHTML = "<strong>Congratulations! You passed the exam.</strong>";

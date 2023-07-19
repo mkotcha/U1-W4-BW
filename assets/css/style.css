@@ -13,14 +13,13 @@ body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding-inline: 125px;
-  padding-top: 40px;
   font-family: "Inter", sans-serif;
   height: 100vh;
 }
 
 header {
-  margin-bottom: 50px;
+  padding-inline: 125px;
+  padding-top: 40px;
 }
 
 header img {
@@ -54,7 +53,6 @@ h2 {
 
 h3 {
   font-size: 2.1rem;
-  font-weight: bold;
   margin-bottom: 16px;
 }
 
@@ -75,11 +73,11 @@ h4 {
 #welcome-main {
   max-width: 921px;
   margin-inline: auto;
+  margin-top: 115px;
 }
 
 #welcome h1 {
   max-width: 50%;
-  padding-top: 50px;
 }
 
 #welcome h3 {
@@ -185,7 +183,7 @@ circle {
   /* transform-origin: top; */
 }
 
-circle + circle {
+circle+circle {
   transform: rotate(90deg) scaleX(-1);
   transform-origin: 50%;
   stroke: #d20094;
@@ -195,7 +193,7 @@ circle + circle {
   transition: stroke-dasharray 2s;
 }
 
-circle + circle:hover {
+circle+circle:hover {
   stroke-dasharray: 0 376.8;
 }
 
@@ -222,15 +220,15 @@ circle + circle:hover {
 }
 
 .main-exam {
-  padding-top: 115px;
+  margin-top: 160px;
 }
 
 #exam {
   text-align: center;
 }
 
-.padding-top {
-  padding-top: 30px;
+.div-exam-padding-top {
+  padding-top: 40px;
 }
 
 #exam h2 {
@@ -278,13 +276,15 @@ circle + circle:hover {
   text-align: left;
 }
 
-#exam p, button#avanti {
+#exam p,
+button#avanti {
   position: absolute;
   bottom: 100px;
 }
 
 .form-footer p {
   padding-top: 30px;
+  left: 125px
 }
 
 button#avanti {
@@ -316,12 +316,13 @@ button#avanti.selected-avanti {
 .result-main {
   max-width: 930px;
   margin-inline: auto;
+  margin-top: 50px;
 }
 
 #results {
   text-align: center;
   display: none;
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
 #results h2 {
@@ -331,23 +332,28 @@ button#avanti.selected-avanti {
 .result-grafic {
   border-radius: 50%;
   /*1*/
-  border: 40px solid transparent;
+  border: 45px solid transparent;
   background-image: url(../img/bg.jpg), conic-gradient(from 0deg at center, cyan 60%, magenta 40%);
   background-position: center 42%;
   /* background-size: auto 100vh; */
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  margin: 100px auto;
+  margin: 55px 100px 65px;
   border-radius: 50%;
   height: 320px;
   width: 320px;
-  margin-inline: 100px;
-  padding-top: 40px;
-  padding-inline: 10px;
+  padding-inline: 25px;
+  padding-top: 47px;
   box-shadow: 5px 5px 8px #d20094;
-  margin-block: 50px;
 }
 
+.result-grafic-padding-top {
+  padding-top: 60px;
+}
+
+.cont-result {
+  vertical-align: middle;
+}
 
 .result-grafic p:first-child {
   margin-bottom: 20px;
@@ -360,25 +366,30 @@ button#avanti.selected-avanti {
 
 
 #results button {
-  width: 200px;
-  height: 50px;
+  width: 220px;
+  height: 60px;
   background-color: transparent;
-  border: 2px solid white;
+  border: 3px solid white;
   color: white;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  box-shadow: 2px 2px 4px #fff;
+  box-shadow: 0px 0px 4px 3px #085c9e;
   cursor: pointer;
+  font-family: "Outfit", sans-serif;
 }
-
 
 
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
+
 #results button:hover {
   background-color: white;
   color: #d20094;
+}
+
+.feedback-main {
+  margin-top: 170px;
 }
 
 #result,
@@ -392,7 +403,6 @@ button#avanti.selected-avanti {
 }
 
 #feedback h2 {
-  padding-top: 100px;
   margin-bottom: 25px;
   font-weight: bold;
 }
@@ -441,6 +451,7 @@ button#avanti.selected-avanti {
   text-align: center;
   float: unset;
   margin-top: 65px;
+  color: black;
 }
 
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
