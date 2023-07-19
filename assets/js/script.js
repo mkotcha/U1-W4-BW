@@ -565,12 +565,16 @@ const getResult = () => {
   const incorrectPercent = (100 / numberQuestion) * incorrect;
   const resultsGraphic = document.querySelector(".result-grafic circle+circle");
 
-  correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>
-  	<h4>${correct}/${numberQuestion} questions</h4>`;
+  correctCont.innerHTML = `<div class='align-sx'><h2>Correct</h2> <h2><strong>${correctPercent.toFixed(
+    2
+  )}%</strong></h2>
+  	<h4>${correct}/${numberQuestion} questions</h4></div>`;
 
   const incorrectCont = document.querySelector(".wrongs-result");
-  incorrectCont.innerHTML = `<h2>Wrong ${incorrectPercent.toFixed(2)}%</h2>
-  	<h4>${incorrect}/${numberQuestion} questions</h4>`;
+  incorrectCont.innerHTML = `<div class='align-dx'><h2>Wrong</h2> <h2><strong>${incorrectPercent.toFixed(
+    2
+  )}%</strong></h2>
+  	<h4>${incorrect}/${numberQuestion} questions</h4></div>`;
 
   document.querySelector("#exam").style.display = "none";
   document.querySelector("#results").style.display = "inline-block";
@@ -582,10 +586,10 @@ const getResult = () => {
 
   if (correctPercent > 60) {
     textExamResult.innerHTML =
-      "<strong>Congratulations!<br> You passed the exam.</strong>";
+      "<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><p><br>We'll send you the certificate in few moments. Check your email (including promotion / spam folder)</p>";
   } else {
     textExamResult.innerHTML =
-      "<strong>Sorry!<br> you didn't pass the exam.</strong>";
+      "<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><p><br>We'll send you the result of the exam in few moments. Check your email (including promotion / spam folder)</p>";
   }
 
   document.querySelector(
