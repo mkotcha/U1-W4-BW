@@ -416,7 +416,7 @@ const question = [
 
 let correct = 0;
 let incorrect = 0;
-const timerStart = 30;
+const timerStart = 60;
 let timer = timerStart;
 const timerElm = document.querySelector("#countdown-text p:nth-child(2)");
 
