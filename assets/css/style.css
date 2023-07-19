@@ -264,11 +264,7 @@ header circle+circle {
   margin: 0 20px 20px;
 }
 
-#exam button:hover:not(:last-child) {
-  background-color: #8e0665;
-}
-
-#exam button:hover {
+#exam .container-buttons button:hover {
   background-color: #8e0665;
   cursor: pointer;
 }
@@ -310,6 +306,7 @@ button#avanti {
   min-height: 50px;
   padding: 0;
   right: 125px;
+  cursor: pointer;
 }
 
 #exam p,
@@ -328,7 +325,7 @@ button#avanti.selected-avanti {
 /* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
 
 .result-main {
-  max-width: 1010px;
+  max-width: 940px;
   margin-inline: auto;
   margin-top: 90px;
 }
