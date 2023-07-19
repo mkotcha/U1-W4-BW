@@ -492,9 +492,10 @@ setQuestion();
 
 const getResult = () => {
 	const correctCont = document.querySelector(".corrects-result");
-	const textExamResult = document.querySelector(".result-grafic p");
+	const textExamResult = document.querySelector(".resutGrafic-text p");
 	const correctPercent = (100 / numberQuestion) * correct;
 	const incorrectPercent = (100 / numberQuestion) * incorrect;
+	const resultsGraphic = document.querySelector(".result-grafic circle+circle");
 
 	correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>
   	<h4>${correct}/${numberQuestion} questions</h4>`;
@@ -509,33 +510,15 @@ const getResult = () => {
 	document.querySelector("main").classList.add("result-main");
 	document.querySelector("#countdown").style.display = "none";
 
-	const resultsGraphic = document.querySelector(".result-grafic");
+	const correctToStroke = (1004.8 * correctPercent.toFixed(2)) / 100;
 
 	if (correctPercent > 60) {
-		textExamResult.innerHTML = "<strong>Congratulations! You passed the exam.</strong>";
+		textExamResult.innerHTML = "<strong>Congratulations!<br> You passed the exam.</strong>";
 	} else {
 		textExamResult.innerHTML = "<strong>Sorry!<br> you didn't pass the exam.</strong>";
 	}
 
-	if (correctPercent <= 0) {
-		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
-			2
-		)}%, magenta 0%`;
-	} else {
-		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
-			2
-		)}%, magenta 10%`;
-	}
-
-	if (correctPercent < 60) {
-		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
-			2
-		)}%, magenta 0%`;
-	} else {
-		resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
-			2
-		)}%, magenta 10%`;
-	}
+	document.querySelector(".result-grafic circle+circle").style.strokeDasharray = `${correctToStroke} 1004.8`;
 };
 
 const getFeedback = () => {

@@ -170,12 +170,12 @@ h4 {
   font-family: "Outfit", sans-serif;
 }
 
-svg {
+header svg {
   width: 120px;
   height: 120px;
 }
 
-circle {
+header circle {
   stroke: #969696;
   stroke-width: 16;
   stroke-dasharray: 376.8;
@@ -183,7 +183,7 @@ circle {
   /* transform-origin: top; */
 }
 
-circle+circle {
+header circle+circle {
   transform: rotate(90deg) scaleX(-1);
   transform-origin: 50%;
   stroke: #d20094;
@@ -193,7 +193,7 @@ circle+circle {
   transition: stroke-dasharray 2s;
 }
 
-circle+circle:hover {
+header circle+circle:hover {
   stroke-dasharray: 0 376.8;
 }
 
@@ -322,33 +322,59 @@ button#avanti.selected-avanti {
 #results {
   text-align: center;
   display: none;
-  padding-top: 70px;
 }
 
 #results h2 {
   font-weight: bold;
+  margin-bottom: 5px;
 }
+
 
 .result-grafic {
-  border-radius: 50%;
-  /*1*/
-  border: 45px solid transparent;
-  background-image: url(../img/bg.jpg), conic-gradient(from 0deg at center, cyan 60%, magenta 40%);
-  background-position: center 42%;
-  /* background-size: auto 100vh; */
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  margin: 55px 100px 65px;
-  border-radius: 50%;
-  height: 320px;
-  width: 320px;
-  padding-inline: 25px;
-  padding-top: 47px;
-  box-shadow: 5px 5px 8px #d20094;
+  width: 400px;
+  height: 400px;
+  color: white;
+  text-align: center;
+  font: inherit;
+  vertical-align: middle;
+  margin-block: 50px;
 }
 
-.result-grafic-padding-top {
-  padding-top: 60px;
+.result-grafic svg {
+  stroke: #C2128D;
+  width: 400px;
+  height: 400px;
+}
+
+.result-grafic circle {
+
+  stroke-width: 60;
+  stroke-dasharray: 1004.8;
+  fill: transparent;
+  /* transform-origin: top; */
+}
+
+.result-grafic circle+circle {
+  transform: rotate(90deg) scaleX(-1);
+  transform-origin: 50%;
+  stroke: #00FFFF;
+  stroke-width: 60;
+  stroke-dasharray: 1004.8;
+
+}
+
+.result-grafic circle+circle {
+  stroke-dasharray: 702.4 1004.8;
+}
+
+.resutGrafic-text {
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 100px;
+}
+
+.resutGrafic-text p {
+  max-width: 200px;
 }
 
 .cont-result {
