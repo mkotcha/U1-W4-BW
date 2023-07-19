@@ -535,11 +535,11 @@ const setQuestion = () => {
   }
 
   if (test.type === "boolean") {
-    document.querySelector("#exam").classList.add("padding-top");
+    document.querySelector("#exam").classList.add("div-exam-padding-top");
     btn[2].style.display = "none";
     btn[3].style.display = "none";
   } else {
-    document.querySelector("#exam").classList.remove("padding-top");
+    document.querySelector("#exam").classList.remove("div-exam-padding-top");
     btn[2].style.display = "inline-block";
     btn[3].style.display = "inline-block";
   }
@@ -586,6 +586,16 @@ const getResult = () => {
   }
 
   if (correctPercent <= 0) {
+    resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
+      2
+    )}%, magenta 0%`;
+  } else {
+    resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
+      2
+    )}%, magenta 10%`;
+  }
+
+  if (correctPercent < 60) {
     resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
       2
     )}%, magenta 0%`;
