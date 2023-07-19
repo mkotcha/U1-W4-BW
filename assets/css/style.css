@@ -13,14 +13,13 @@ body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding-inline: 125px;
-  padding-top: 40px;
   font-family: "Inter", sans-serif;
   height: 100vh;
 }
 
 header {
-  margin-bottom: 50px;
+  padding-inline: 125px;
+  padding-top: 40px;
 }
 
 header img {
@@ -54,7 +53,6 @@ h2 {
 
 h3 {
   font-size: 2.1rem;
-  font-weight: bold;
   margin-bottom: 16px;
 }
 
@@ -62,16 +60,24 @@ h4 {
   font-size: 1.2rem;
 }
 
+.hidden {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 /* ----------------------------------- INIZIO WELCOME STYLE -----------------------------------  */
 
 #welcome-main {
   max-width: 921px;
   margin-inline: auto;
+  margin-top: 115px;
 }
 
 #welcome h1 {
   max-width: 50%;
-  padding-top: 50px;
 }
 
 #welcome h3 {
@@ -108,7 +114,7 @@ h4 {
 }
 
 /* Stile personalizzato del checkbox */
-#welcome form input + label {
+#welcome form input+label {
   position: relative;
   top: 20px;
   padding-left: 35px;
@@ -116,7 +122,7 @@ h4 {
 }
 
 /* Stile del segno di spunta quando il checkbox è selezionato */
-#welcome form input + label::before {
+#welcome form input+label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -128,7 +134,7 @@ h4 {
 }
 
 /* Stile del segno di spunta quando il checkbox è selezionato */
-#welcome form input:checked + label::before {
+#welcome form input:checked+label::before {
   background-color: #00ffff;
   box-shadow: 0px 0px 20px 4px #53e0e0;
 }
@@ -164,12 +170,12 @@ h4 {
   font-family: "Outfit", sans-serif;
 }
 
-svg {
+header svg {
   width: 120px;
   height: 120px;
 }
 
-circle {
+header circle {
   stroke: #969696;
   stroke-width: 16;
   stroke-dasharray: 376.8;
@@ -177,7 +183,7 @@ circle {
   /* transform-origin: top; */
 }
 
-circle + circle {
+header circle+circle {
   transform: rotate(90deg) scaleX(-1);
   transform-origin: 50%;
   stroke: #d20094;
@@ -188,10 +194,7 @@ circle + circle {
   transition: stroke 20s ease-in;
 }
 
-circle + circle:hover {
-  /* stroke-dasharray: 6 320; */
-  stroke: #4b081c;
-}
+
 
 #countdown-text {
   position: absolute;
@@ -216,15 +219,15 @@ circle + circle:hover {
 }
 
 .main-exam {
-  padding-top: 115px;
+  margin-top: 160px;
 }
 
 #exam {
   text-align: center;
 }
 
-.padding-top {
-  padding-top: 30px;
+.div-exam-padding-top {
+  padding-top: 40px;
 }
 
 #exam h2 {
@@ -280,6 +283,7 @@ button#avanti {
 
 .form-footer p {
   padding-top: 30px;
+  left: 125px
 }
 
 button#avanti {
@@ -311,68 +315,106 @@ button#avanti.selected-avanti {
 .result-main {
   max-width: 930px;
   margin-inline: auto;
+  margin-top: 50px;
 }
 
 #results {
   text-align: center;
   display: none;
-  padding-top: 80px;
 }
 
 #results h2 {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
+
 .result-grafic {
-  border-radius: 50%;
-  /*1*/
-  border: 40px solid transparent;
-  background-image: url(../img/bg.jpg), conic-gradient(from 0deg at center, cyan 60%, magenta 40%);
-  background-position: center 42%;
-  /* background-size: auto 100vh; */
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  margin: 100px auto;
-  border-radius: 50%;
-  height: 320px;
-  width: 320px;
-  margin-inline: 100px;
-  padding-top: 40px;
-  padding-inline: 10px;
-  box-shadow: 5px 5px 8px #d20094;
+  width: 400px;
+  height: 400px;
+  color: white;
+  text-align: center;
+  font: inherit;
+  vertical-align: middle;
   margin-block: 50px;
+}
+
+.result-grafic svg {
+  stroke: #C2128D;
+  width: 400px;
+  height: 400px;
+}
+
+.result-grafic circle {
+
+  stroke-width: 60;
+  stroke-dasharray: 1004.8;
+  fill: transparent;
+  /* transform-origin: top; */
+}
+
+.result-grafic circle+circle {
+  transform: rotate(90deg) scaleX(-1);
+  transform-origin: 50%;
+  stroke: #00FFFF;
+  stroke-width: 60;
+  stroke-dasharray: 1004.8;
+
+}
+
+.result-grafic circle+circle {
+  stroke-dasharray: 702.4 1004.8;
+}
+
+.resutGrafic-text {
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 100px;
+}
+
+.resutGrafic-text p {
+  max-width: 200px;
+}
+
+.cont-result {
+  vertical-align: middle;
 }
 
 .result-grafic p:first-child {
   margin-bottom: 20px;
+  border-left: red;
 }
 
 .answer-result {
   max-width: 200px;
 }
 
-.inline-block {
-  display: inline-block;
-}
 
 #results button {
-  width: 200px;
-  height: 50px;
+  width: 220px;
+  height: 60px;
   background-color: transparent;
-  border: 2px solid white;
+  border: 3px solid white;
   color: white;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  box-shadow: 2px 2px 4px #fff;
+  box-shadow: 0px 0px 4px 3px #085c9e;
   cursor: pointer;
+  font-family: "Outfit", sans-serif;
 }
+
 
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
+
 #results button:hover {
   background-color: white;
   color: #d20094;
+}
+
+.feedback-main {
+  margin-top: 170px;
 }
 
 #result,
@@ -386,7 +428,6 @@ button#avanti.selected-avanti {
 }
 
 #feedback h2 {
-  padding-top: 100px;
   margin-bottom: 25px;
   font-weight: bold;
 }
@@ -407,7 +448,7 @@ button#avanti.selected-avanti {
   margin-bottom: 70px;
 }
 
-#feedback #img-stelle > img.selected-stars {
+#feedback #img-stelle>img.selected-stars {
   filter: none;
 }
 
@@ -440,6 +481,7 @@ button#avanti.selected-avanti {
   text-align: center;
   float: unset;
   margin-top: 65px;
+  color: black;
 }
 
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */

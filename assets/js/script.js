@@ -509,13 +509,18 @@ const setQuestion = () => {
     randQuestion.push(arrQuestion[index]);
     arrQuestion.splice(index, 1);
   }
+  while (arrQuestion.length > 0) {
+    index = Math.floor(Math.random() * arrQuestion.length);
+    randQuestion.push(arrQuestion[index]);
+    arrQuestion.splice(index, 1);
+  }
 
   if (test.type === "boolean") {
-    document.querySelector("#exam").classList.add("padding-top");
+    document.querySelector("#exam").classList.add("div-exam-padding-top");
     btn[2].style.display = "none";
     btn[3].style.display = "none";
   } else {
-    document.querySelector("#exam").classList.remove("padding-top");
+    document.querySelector("#exam").classList.remove("div-exam-padding-top");
     btn[2].style.display = "inline-block";
     btn[3].style.display = "inline-block";
   }
@@ -524,7 +529,14 @@ const setQuestion = () => {
     btn[i].innerHTML = randQuestion[i];
     btn[i].onclick = setClicked;
   }
+  for (let i = 0; i < randQuestion.length; i++) {
+    btn[i].innerHTML = randQuestion[i];
+    btn[i].onclick = setClicked;
+  }
 
+  document.querySelector(".form-footer p").innerHTML = `QUESTION ${
+    correct + incorrect + 1
+  } <span>/ ${numberQuestion}</span>`;
   document.querySelector(".form-footer p").innerHTML = `QUESTION ${
     correct + incorrect + 1
   } <span>/ ${numberQuestion}</span>`;
@@ -541,6 +553,7 @@ const getResult = () => {
   const incorrectPercent = (100 / numberQuestion) * incorrect;
 
   correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>
+  correctCont.innerHTML = `<h2>Correct ${correctPercent.toFixed(2)}%</h2>
   	<h4>${correct}/${numberQuestion} questions</h4>`;
 
   const incorrectCont = document.querySelector(".wrongs-result");
@@ -553,23 +566,15 @@ const getResult = () => {
   document.querySelector("main").classList.add("result-main");
   document.querySelector("#countdown").style.display = "none";
 
-  const resultsGraphic = document.querySelector(".result-grafic");
+  const correctToStroke = (1004.8 * correctPercent.toFixed(2)) / 100;
 
   if (correctPercent > 60) {
-    textExamResult.innerHTML = "<strong>Congratulations! You passed the exam.</strong>";
+    textExamResult.innerHTML = "<strong>Congratulations!<br> You passed the exam.</strong>";
   } else {
     textExamResult.innerHTML = "<strong>Sorry!<br> you didn't pass the exam.</strong>";
   }
 
-  if (correctPercent <= 0) {
-    resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
-      2
-    )}%, magenta 0%`;
-  } else {
-    resultsGraphic.style.backgroundImage = `url('assets/img/bg.jpg'),conic-gradient(from 0deg at center, cyan ${correctPercent.toFixed(
-      2
-    )}%, magenta 10%`;
-  }
+  document.querySelector(".result-grafic circle+circle").style.strokeDasharray = `${correctToStroke} 1004.8`;
 };
 
 const getFeedback = () => {
