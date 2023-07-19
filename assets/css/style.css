@@ -218,8 +218,8 @@ header circle+circle {
 }
 
 .main-exam {
-  margin-top: 185px;
-  max-width: 800px;
+  margin-top: 135px;
+  max-width: 900px;
   margin-inline: auto;
 }
 
@@ -235,8 +235,18 @@ header circle+circle {
   padding-top: 30px;
 }
 
+#domanda {
+  min-height: 300px;
+  display: table;
+  width: 100%;
+}
+
+#domanda h2 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 #exam h2 {
-  max-width: 700px;
   margin-inline: auto;
 }
 
@@ -284,10 +294,6 @@ header circle+circle {
 button#avanti {
   position: absolute;
   bottom: 100px;
-}
-
-#exam form {
-  margin-top: 60px;
 }
 
 .form-footer p {
