@@ -457,6 +457,7 @@ const dropQuestion = () => {
 const setCounter = () => {
   timer = timerStart;
   timerElm.innerText = timer;
+
   clearInterval(counterInterval);
   clearTimeout(counterTimeout);
   counterInterval = setInterval(dropSecond, 1000);
