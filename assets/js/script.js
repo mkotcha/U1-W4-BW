@@ -491,6 +491,7 @@ const setClicked = function (event) {
 
 const setQuestion = () => {
   setCounter();
+
   document.querySelectorAll(".container-buttons button").forEach(elem => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
   btnAvanti.disabled = true;
