@@ -535,11 +535,13 @@ const setQuestion = () => {
   }
 
   if (test.type === "boolean") {
-    document.querySelector("#exam").classList.add("div-exam-padding-top");
+    document.querySelector("#exam form").classList.add("exam-form-padding-top");
     btn[2].style.display = "none";
     btn[3].style.display = "none";
   } else {
-    document.querySelector("#exam").classList.remove("div-exam-padding-top");
+    document
+      .querySelector("#exam form")
+      .classList.remove("exam-form-padding-top");
     btn[2].style.display = "inline-block";
     btn[3].style.display = "inline-block";
   }
@@ -579,10 +581,12 @@ const getResult = () => {
 
   if (correctPercent > 60) {
     textExamResult.innerHTML =
-      "<strong>Congratulations! You passed the exam.</strong>";
+      "<strong>Congratulations!<br><span class='azzurro'>You passed the exam.<span></strong><p><br>We'll send you the certificate in few moments. Check your email (including promotion / spam folder)</p>";
+    document.querySelector(".result-grafic").classList.add("exam-approved");
   } else {
     textExamResult.innerHTML =
-      "<strong>Sorry!<br> you didn't pass the exam.</strong>";
+      "<strong>Sorry!<br>You didn't pass the exam.</strong>";
+    document.querySelector(".result-grafic").classList.add("exam-not-approved");
   }
 
   if (correctPercent <= 0) {
