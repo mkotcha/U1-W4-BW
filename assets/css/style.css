@@ -178,9 +178,16 @@ h4 {
   font-size: 0.5rem;
 }
 
+.main-exam {
+  padding-top: 115px;
+}
+
 #exam {
   text-align: center;
-  margin-top: 160px;
+}
+
+.padding-top {
+  padding-top: 30px;
 }
 
 #exam h2 {
@@ -217,7 +224,6 @@ h4 {
 
 #exam p {
   display: inline-block;
-  position: absolute;
 }
 
 .container-buttons {
@@ -226,8 +232,12 @@ h4 {
 }
 
 .form-footer {
-  margin-top: 50px;
   text-align: left;
+}
+
+#exam p, button#avanti {
+  position: absolute;
+  bottom: 100px;
 }
 
 .form-footer p {
@@ -242,12 +252,7 @@ button#avanti {
   width: 200px;
   min-height: 50px;
   padding: 0;
-  position: absolute;
   right: 125px;
-}
-
-#exam p, button#avanti {
-  bottom: 100px;
 }
 
 button#avanti.selected-avanti {

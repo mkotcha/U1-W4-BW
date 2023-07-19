@@ -535,9 +535,11 @@ const setQuestion = () => {
   }
 
   if (test.type === "boolean") {
+    document.querySelector("#exam").classList.add("padding-top");
     btn[2].style.display = "none";
     btn[3].style.display = "none";
   } else {
+    document.querySelector("#exam").classList.remove("padding-top");
     btn[2].style.display = "inline-block";
     btn[3].style.display = "inline-block";
   }
@@ -587,6 +589,7 @@ const getResult = () => {
 
   document.querySelector("#exam").style.display = "none";
   document.querySelector("#results").style.display = "inline-block";
+  document.querySelector("main").classList.remove("main-exam");
   document.querySelector("main").classList.add("result-main");
   document.querySelector("#countdown").style.display = "none";
 };
