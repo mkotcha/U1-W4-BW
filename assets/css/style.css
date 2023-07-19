@@ -108,7 +108,7 @@ h4 {
 }
 
 /* Stile personalizzato del checkbox */
-#welcome form input+label {
+#welcome form input + label {
   position: relative;
   top: 20px;
   padding-left: 35px;
@@ -116,7 +116,7 @@ h4 {
 }
 
 /* Stile del segno di spunta quando il checkbox è selezionato */
-#welcome form input+label::before {
+#welcome form input + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -128,7 +128,7 @@ h4 {
 }
 
 /* Stile del segno di spunta quando il checkbox è selezionato */
-#welcome form input:checked+label::before {
+#welcome form input:checked + label::before {
   background-color: #00ffff;
   box-shadow: 0px 0px 20px 4px #53e0e0;
 }
@@ -182,13 +182,15 @@ circle + circle {
   transform-origin: 50%;
   stroke: #d20094;
   stroke-width: 16;
-  stroke-dasharray: 376.8 0;
+  stroke-dasharray: 320 6;
   stroke-linecap: round;
   transition: stroke-dasharray 2s;
+  transition: stroke 20s;
 }
 
 circle + circle:hover {
-  stroke-dasharray: 0 376.8;
+  /* stroke-dasharray: 6 320; */
+  stroke: #4b081c;
 }
 
 #countdown-text {
@@ -270,7 +272,8 @@ circle + circle:hover {
   text-align: left;
 }
 
-#exam p, button#avanti {
+#exam p,
+button#avanti {
   position: absolute;
   bottom: 100px;
 }
@@ -340,8 +343,6 @@ button#avanti.selected-avanti {
   margin-block: 50px;
 }
 
-
-
 .result-grafic p:first-child {
   margin-bottom: 20px;
 }
@@ -366,8 +367,6 @@ button#avanti.selected-avanti {
   cursor: pointer;
 }
 
-
-
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
@@ -383,7 +382,7 @@ button#avanti.selected-avanti {
 }
 
 #feedback #img-stelle img {
-  filter: grayscale(100%) brightness(20%);
+  filter: grayscale(50%) brightness(40%);
 }
 
 #feedback h2 {
@@ -408,8 +407,13 @@ button#avanti.selected-avanti {
   margin-bottom: 70px;
 }
 
-#feedback #img-stelle>img.selected-stars {
+#feedback #img-stelle > img.selected-stars {
   filter: none;
+}
+
+#feedback #img-stelle img.clicked-star {
+  /* filter: none; */
+  filter: drop-shadow(0 0 10px white);
 }
 
 #img-stelle img:not(:last-child) {
