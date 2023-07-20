@@ -96,24 +96,29 @@ h4 {
   cursor: pointer;
 }
 
-#rate-us {
-  float: left;
-}
-
-#your-answers {
-  float: right;
-}
-
-#more-info {
+#more-info, #rate-us, #your-answers {
   float: unset;
+}
+
+#rate-us {
+  margin-right: 126px;
+}
+
+#rate-us, #your-answers {
+  width: 290px;
+  height: 62px;
 }
 
 .azzurro {
   color: #00ffff;
 }
 
-.rosso {
+.rosso, .fa-solid.fa-xmark {
   color: red;
+}
+
+.fa-solid.fa-check {
+  color: #00ff00;
 }
 
 /* ----------------------------------- INIZIO WELCOME STYLE -----------------------------------  */
@@ -179,6 +184,17 @@ h4 {
 .cont-range ul li:not(.cont-range u li:last-child) {
   display: inline-block;
   padding-right: 170px;
+}
+
+#review > div > p.padding-left {
+  padding-left: 8px;
+  font-size: 1.1rem;
+
+}
+
+.font-size-q {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* ----------------------------------- PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
@@ -440,10 +456,9 @@ button#avanti {
 
 #review {
   display: none;
+  max-width: 850px;
   border-radius: 20px;
-  width: 960px;
   margin: 50px auto;
-  padding-inline: 50px;
 }
 
 #review > div {
@@ -470,12 +485,15 @@ button#avanti {
 }
 
 #review > div > p {
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   transition: display 2s;
 }
 
 #review > div > p.hiddenAnswer {
   display: none;
+}
+i.fa-solid.fa-xmark, i.fa-solid.fa-check {
+  padding-inline: 10px;
 }
 
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
