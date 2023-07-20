@@ -412,6 +412,330 @@ const question = [
     correct_answer: "Secret sharing scheme",
     incorrect_answers: ["Hashing algorithm", "Asymmetric encryption", "Stream cipher"],
   },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "The Harvard architecture for micro-controllers added which additional bus?",
+    correct_answer: "Instruction",
+    incorrect_answers: ["Address", "Data", "Control"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What was the name of the security vulnerability found in Bash in 2014?",
+    correct_answer: "Shellshock",
+    incorrect_answers: ["Heartbleed", "Bashbug", "Stagefright"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "How many Hz does the video standard PAL support?",
+    correct_answer: "50",
+    incorrect_answers: ["59", "60", "25"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "The internet domain .fm is the country-code top-level domain for which Pacific Ocean island nation?",
+    correct_answer: "Micronesia",
+    incorrect_answers: ["Fiji", "Tuvalu", "Marshall Islands"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What port does HTTP run on?",
+    correct_answer: "80",
+    incorrect_answers: ["53", "443", "23"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "hard",
+    question: "DHCP stands for Dynamic Host Configuration Port.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question:
+      "Which of these was the name of a bug found in April 2014 in the publicly available OpenSSL cryptography library?",
+    correct_answer: "Heartbleed",
+    incorrect_answers: ["Shellshock", "Corrupted Blood", "Shellscript"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "hard",
+    question: "The IBM PC used an Intel 8008 microprocessor clocked at 4.77 MHz and 8 kilobytes of memory.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Which data structure does FILO apply to?",
+    correct_answer: "Stack",
+    incorrect_answers: ["Queue", "Heap", "Tree"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Which of the following is the oldest of these computers by release date?",
+    correct_answer: "TRS-80",
+    incorrect_answers: ["Commodore 64", "ZX Spectrum", "Apple 3"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question:
+      "What is the name of the process that sends one qubit of information using two bits of classical information?",
+    correct_answer: "Quantum Teleportation",
+    incorrect_answers: ["Super Dense Coding", "Quantum Entanglement", "Quantum Programming"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "America Online (AOL) started out as which of these online service providers?",
+    correct_answer: "Quantum Link",
+    incorrect_answers: ["CompuServe", "Prodigy", "GEnie"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What internet protocol was documented in RFC 1459?",
+    correct_answer: "IRC",
+    incorrect_answers: ["HTTP", "HTTPS", "FTP"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Which of these is not a key value of Agile software development?",
+    correct_answer: "Comprehensive documentation",
+    incorrect_answers: ["Individuals and interactions", "Customer collaboration", "Responding to change"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What does the International System of Quantities refer 1024 bytes as?",
+    correct_answer: "Kibibyte",
+    incorrect_answers: ["Kylobyte", "Kilobyte", "Kelobyte"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Which RAID array type is associated with data mirroring?",
+    correct_answer: "RAID 1",
+    incorrect_answers: ["RAID 0", "RAID 10", "RAID 5"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What was the first company to use the term &quot;Golden Master&quot;?",
+    correct_answer: "Apple",
+    incorrect_answers: ["IBM", "Microsoft", "Google"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question:
+      "Released in 2001, the first edition of Apple&#039;s Mac OS X operating system (version 10.0) was given what animal code name?",
+    correct_answer: "Cheetah",
+    incorrect_answers: ["Puma", "Tiger", "Leopard"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Dutch computer scientist Mark Overmars is known for creating which game development engine?",
+    correct_answer: "Game Maker",
+    incorrect_answers: ["Stencyl", "Construct", "Torque 2D"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What vulnerability ranked #1 on the OWASP Top 10 in 2013?",
+    correct_answer: "Injection ",
+    incorrect_answers: ["Broken Authentication", "Cross-Site Scripting", "Insecure Direct Object References"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
+    correct_answer: "A&#039; + B&#039;",
+    incorrect_answers: ["A&#039;B + B&#039;A", "A&#039;B&#039;", "AB&#039; + AB"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What major programming language does Unreal Engine 4 use?",
+    correct_answer: "C++",
+    incorrect_answers: ["Assembly", "C#", "ECMAScript"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "The acronym &quot;RIP&quot; stands for which of these?",
+    correct_answer: "Routing Information Protocol",
+    incorrect_answers: ["Runtime Instance Processes", "Regular Interval Processes", "Routine Inspection Protocol"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What type of sound chip does the Super Nintendo Entertainment System (SNES) have?",
+    correct_answer: "ADPCM Sampler",
+    incorrect_answers: ["FM Synthesizer", "Programmable Sound Generator (PSG)", "PCM Sampler"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Which of the following computer components can be built using only NAND gates?",
+    correct_answer: "ALU",
+    incorrect_answers: ["CPU", "RAM", "Register"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What is the codename of the eighth generation Intel Core micro-architecture launched in October 2017?",
+    correct_answer: "Coffee Lake",
+    incorrect_answers: ["Sandy Bridge", "Skylake", "Broadwell"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question:
+      "Lenovo acquired IBM&#039;s personal computer division, including the ThinkPad line of laptops and tablets, in what year?",
+    correct_answer: "2005",
+    incorrect_answers: ["1999", "2002", "2008"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "hard",
+    question: "The T-Mobile Sidekick smartphone is a re-branded version of the Danger Hiptop.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Which of these Cherry MX mechanical keyboard switches is both tactile and clicky?",
+    correct_answer: "Cherry MX Blue",
+    incorrect_answers: ["Cherry MX Black", "Cherry MX Red", "Cherry MX Brown"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Which kind of algorithm is Ron Rivest not famous for creating?",
+    correct_answer: "Secret sharing scheme",
+    incorrect_answers: ["Hashing algorithm", "Asymmetric encryption", "Stream cipher"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question: "Which of the following languages is used as a scripting language in the Unity 3D game engine?",
+    correct_answer: "C#",
+    incorrect_answers: ["Java", "C++", "Objective-C"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question: "All of the following programs are classified as raster graphics editors EXCEPT:",
+    correct_answer: "Inkscape",
+    incorrect_answers: ["Paint.NET", "GIMP", "Adobe Photoshop"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question: "What was the first commerically available computer processor?",
+    correct_answer: "Intel 4004",
+    incorrect_answers: ["Intel 486SX", "TMS 1000", "AMD AM386"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "medium",
+    question: "&quot;Windows NT&quot; is a monolithic kernel.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "medium",
+    question: "AMD created the first consumer 64-bit processor.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question: "In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
+    correct_answer: "center",
+    incorrect_answers: ["static", "absolute", "relative"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "medium",
+    question: "Early RAM was directly seated onto the motherboard and could not be easily removed.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "medium",
+    question: "Android versions are named in alphabetical order.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question: "In programming, what do you call functions with the same name but different implementations?",
+    correct_answer: "Overloading",
+    incorrect_answers: ["Overriding", "Abstracting", "Inheriting"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question: "What is the number of keys on a standard Windows Keyboard?",
+    correct_answer: "104",
+    incorrect_answers: ["64", "94", "76"],
+  },
 ];
 
 let correct = 0;
@@ -428,7 +752,7 @@ let currentAnswer = "";
 let counterInterval;
 let counterTimeout;
 
-const goExam = (event) => {
+const goExam = event => {
   event.preventDefault();
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("#exam").style.display = "block";
@@ -511,9 +835,7 @@ const getQuestion = (arr, difficult) => {
 
 const setClicked = function (event) {
   event.preventDefault();
-  document
-    .querySelectorAll(".container-buttons .examButtons")
-    .forEach((elem) => elem.classList.remove("button-clicked"));
+  document.querySelectorAll(".container-buttons .examButtons").forEach(elem => elem.classList.remove("button-clicked"));
 
   event.target.classList.add("button-clicked");
 
@@ -524,9 +846,7 @@ const setClicked = function (event) {
 
 const setQuestion = () => {
   setCounter();
-  document
-    .querySelectorAll(".container-buttons .examButtons")
-    .forEach((elem) => elem.classList.remove("button-clicked"));
+  document.querySelectorAll(".container-buttons .examButtons").forEach(elem => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
   btnAvanti.disabled = true;
   btnAvanti.classList.remove("universal-style-btn-slc");
@@ -564,14 +884,14 @@ const setQuestion = () => {
   console.log(test);
 };
 
-toggleAnswer = (event) => {
+toggleAnswer = event => {
   console.log(event.target);
-  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach((elm) => elm.classList.toggle("hiddenAnswer"));
+  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach(elm => elm.classList.toggle("hiddenAnswer"));
 };
 
 const reviewDiv = document.querySelector("#review");
 const getReview = () => {
-  answers.forEach((elm) => {
+  answers.forEach(elm => {
     const div = document.createElement("div");
     const questionTest = elm.question;
     const answer = elm.answer;
@@ -655,7 +975,7 @@ const getFeedback = () => {
   window.location.href = "feedback.html";
 };
 
-const nextQuestion = (event) => {
+const nextQuestion = event => {
   event.preventDefault();
   test.answer = currentAnswer;
   if (test.correct_answer === currentAnswer) {
