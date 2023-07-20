@@ -271,7 +271,7 @@ header circle + circle {
   stroke-width: 16;
   stroke-dasharray: 376.8 0;
   stroke-linecap: round;
-  transition: stroke-dasharray 2s;
+  transition: stroke-dasharray 1s;
 }
 
 #countdown-text {

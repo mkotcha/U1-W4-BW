@@ -809,7 +809,7 @@ const dropSecond = () => {
   timer--;
   timerElm.innerText = timer;
   if (timer < 20) {
-    circle.style.transition = "stroke 20s";
+    circle.style.transition = "stroke 20s, stroke-dasharray 2s;";
     circle.style.stroke = "#ff0000";
   }
 };
@@ -836,7 +836,7 @@ const setCounter = () => {
   counterTimeout = setTimeout(dropQuestion, timerStart * 1000);
   const circle = document.querySelector("circle + circle");
   circle.style["stroke-dasharray"] = `320 6`;
-  circle.style.transition = "stroke 0.1s";
+  circle.style.transition = "stroke-dasharray 2s, stroke 0.1s";
   circle.style.stroke = "#d20094";
 };
 
