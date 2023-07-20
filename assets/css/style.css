@@ -214,6 +214,7 @@ h4 {
   color: white;
   text-align: center;
   font-family: "Outfit", sans-serif;
+  display: none;
 }
 
 header svg {
@@ -517,6 +518,11 @@ button#avanti.selected-avanti {
 
 #feedback #img-stelle>img.selected-stars {
   filter: none;
+
+}
+
+#feedback #img-stelle img.clicked-star {
+  filter: drop-shadow(0 0 10px white);
 }
 
 #img-stelle img:not(:last-child) {

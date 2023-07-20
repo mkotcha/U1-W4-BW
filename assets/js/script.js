@@ -433,6 +433,7 @@ const goExam = (event) => {
 	event.preventDefault();
 	document.querySelector("#welcome").style.display = "none";
 	document.querySelector("#exam").style.display = "block";
+	document.querySelector("#countdown").style.display = "block";
 	levelSelected = event.target.elements.rangeValue.value;
 	switch (levelSelected) {
 		case "1":
