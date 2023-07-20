@@ -13,6 +13,7 @@ body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   font-family: "Inter", sans-serif;
   min-height: 100vh;
 }
@@ -96,7 +97,9 @@ h4 {
   cursor: pointer;
 }
 
-#more-info, #rate-us, #your-answers {
+#more-info,
+#rate-us,
+#your-answers {
   float: unset;
 }
 
@@ -104,8 +107,9 @@ h4 {
   margin-right: 126px;
 }
 
-#rate-us, #your-answers {
-  width: 290px;
+#rate-us,
+#your-answers {
+  width: 320px;
   height: 62px;
 }
 
@@ -113,7 +117,8 @@ h4 {
   color: #00ffff;
 }
 
-.rosso, .fa-solid.fa-xmark {
+.rosso,
+.fa-solid.fa-xmark {
   color: red;
 }
 
@@ -189,7 +194,6 @@ h4 {
 #review > div > p.padding-left {
   padding-left: 8px;
   font-size: 1.1rem;
-
 }
 
 .font-size-q {
@@ -475,7 +479,8 @@ button#avanti {
 #review > div > p.hiddenAnswer {
   display: none;
 }
-i.fa-solid.fa-xmark, i.fa-solid.fa-check {
+i.fa-solid.fa-xmark,
+i.fa-solid.fa-check {
   padding-inline: 10px;
 }
 
