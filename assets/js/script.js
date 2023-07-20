@@ -578,6 +578,15 @@ const setClicked = function (event) {
   currentAnswer = event.target.innerHTML;
 };
 
+const areYouSure = (event) => {
+  const booleano = confirm("Are you sure to leave the page?");
+  if (booleano) {
+    window.location.href = "exam.html";
+  } else {
+    event.preventDefault();
+  }
+};
+
 const setQuestion = () => {
   setCounter();
   document
@@ -620,6 +629,8 @@ const setQuestion = () => {
     correct + incorrect + 1
   } <span>/ ${numberQuestion}</span>`;
   console.log(test);
+
+  document.getElementById("backWelcomePage").onclick = areYouSure;
 };
 
 toggleAnswer = (event) => {
