@@ -147,13 +147,13 @@ h4 {
   float: right;
   background-color: transparent;
   box-shadow: 0px 0px 11px 3px #00626a;
+  border: 3px solid white;
+  color: white;
   padding-inline: 55px;
   padding-block: 16px;
   font-size: 1.4rem;
   font-weight: 800;
-  border: 2px solid white;
   font-family: 'Outfit', sans-serif;
-  color: white;
 }
 
 #proceed.proceed-checked {
@@ -309,14 +309,20 @@ button#avanti {
 
 button#avanti {
   margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
   border-radius: 0;
   width: 200px;
   min-height: 50px;
-  padding: 0;
   right: 125px;
   cursor: pointer;
+  background-color: transparent;
+  box-shadow: 0px 0px 11px 3px #00626a;
+  border: 3px solid white;
+  color: white;
+  padding-inline: 55px;
+  padding-block: 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
 }
 
 #exam p,
@@ -327,6 +333,9 @@ button#avanti {
 button#avanti.selected-avanti {
   background-color: #00ffff;
   color: black;
+  box-shadow: 0px 0px 20px 4px #53e0e0;
+  border: none;
+  cursor: pointer;
   font-weight: bold;
 }
 
