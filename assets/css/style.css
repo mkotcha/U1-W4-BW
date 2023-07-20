@@ -26,7 +26,8 @@ header img {
   width: 160px;
 }
 
-header, main {
+header,
+main {
   max-width: 960px;
   margin-inline: auto;
 }
@@ -84,10 +85,11 @@ h4 {
   padding-block: 16px;
   font-size: 1.4rem;
   font-weight: 800;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
-.universal-style-btn-slc, #rate-us:hover {
+.universal-style-btn-slc,
+#rate-us:hover {
   background-color: #00ffff;
   color: black;
   box-shadow: 0px 0px 20px 4px #53e0e0;
@@ -96,7 +98,7 @@ h4 {
 }
 
 .azzurro {
-  color: #00FFFF;
+  color: #00ffff;
 }
 
 .rosso {
@@ -425,7 +427,8 @@ button#avanti {
   text-align: right;
 }
 
-#rate-us, #more-info {
+#rate-us,
+#more-info {
   float: unset;
 }
 
@@ -434,7 +437,7 @@ button#avanti {
   border: 2px solid white;
   border-radius: 20px;
   width: 960px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 #review > div {
@@ -443,6 +446,16 @@ button#avanti {
   border-radius: 20px;
   margin: 20px;
 }
+
+#review > div > p {
+  padding: 10px;
+  transition: display 2s;
+}
+
+#review > div > p.hiddenAnswer {
+  display: none;
+}
+
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
