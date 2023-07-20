@@ -28,507 +28,541 @@ header img {
 
 header,
 main {
-  max-width: 960px;
-  margin-inline: auto;
-}
 
-main {
-  text-align: center;
-  color: #dadae0;
-  width: 100%;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Outfit", sans-serif;
-}
-
-h1 {
-  color: white;
-  font-size: 5.5rem;
-  line-height: 0.8;
-  margin-bottom: 55px;
-}
-
-strong {
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 3.2rem;
-}
-
-h3 {
-  font-size: 2.1rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-.hidden {
-  display: block;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.universal-style-btn-ns {
-  float: right;
-  background-color: transparent;
-  box-shadow: 0px 0px 11px 3px #00626a;
-  border: 3px solid white;
-  color: white;
-  padding-inline: 55px;
-  padding-block: 16px;
-  font-size: 1.4rem;
-  font-weight: 800;
-  font-family: 'Outfit', sans-serif;
-}
-
-.universal-style-btn-slc,
-#rate-us:hover {
-  background-color: #00ffff;
-  color: black;
-  box-shadow: 0px 0px 20px 4px #53e0e0;
-  border: none;
-  cursor: pointer;
-}
-
-.azzurro {
-  color: #00FFFF;
-}
-
-.rosso {
-  color: red;
-}
-
-/* ----------------------------------- INIZIO WELCOME STYLE -----------------------------------  */
-
-#welcome {
-  text-align: left;
-  margin-inline: auto;
-  margin-top: 100px;
-}
-
-#welcome h1 {
-  max-width: 50%;
-}
-
-#welcome h3 {
-  color: #d20094;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-#welcome p,
-#welcome ul,
-#welcome label {
-  font-size: 19px;
-}
-
-#welcome p {
-  margin-bottom: 55px;
-  max-width: 600px;
-  line-height: 1.3;
-}
-
-.instrucrion-list {
-  padding-left: 30px;
-}
-
-#welcome ul {
-  line-height: 1.6;
-  margin-bottom: 50px;
-}
-
-#welcome form * {
-  display: inline-block;
-}
-
-#welcome .cont-range {
-  margin-bottom: 50px;
-  width: 700px;
-  text-align: left;
-}
-
-.cont-range input#rangeValue {
-  display: block;
-  appearance: none;
-  width: 500px;
-  height: 6px;
-  border-radius: 10px;
-  border: 1px solid white;
-  outline: none;
-  box-shadow: 0 1px 3px white;
-}
-
-.cont-range ul li:not(.cont-range u li:last-child) {
-  display: inline-block;
-  padding-right: 170px;
-}
-
-/* ----------------------------------- PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
-
-/* Nascondi il box di default */
-#welcome form input {
-  display: none;
-}
-
-/* Stile personalizzato del checkbox */
-#welcome form input+label {
-  position: relative;
-  top: 20px;
-  padding-left: 35px;
-  cursor: pointer;
-}
-
-/* Stile del segno di spunta quando il checkbox è selezionato */
-#welcome form input+label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  background-color: transparent;
-}
-
-/* Stile del segno di spunta quando il checkbox è selezionato */
-#welcome form input:checked+label::before {
-  background-color: #00ffff;
-  box-shadow: 0px 0px 20px 4px #53e0e0;
-  border: none;
-}
-
-/* ---------------------- FINE PERSONALIZZAZIONE / WELCOME DEL CHECKBOX ----------------------  */
-
-/* ----------------------------------- INIZIO EXAM STYLE -----------------------------------  */
-
-#countdown {
-  float: right;
-  /* border: 12px solid #00ffff; */
-  /* border-radius: 50%; */
-  width: 120px;
-  height: 120px;
-  color: white;
-  text-align: center;
-  font-family: "Outfit", sans-serif;
-  display: none;
-}
-
-header svg {
-  width: 120px;
-  height: 120px;
-}
-
-header circle {
-  stroke: #969696;
-  stroke-width: 16;
-  stroke-dasharray: 376.8;
-  fill: transparent;
-  /* transform-origin: top; */
-}
-
-header circle+circle {
-  transform: rotate(90deg) scaleX(-1);
-  transform-origin: 50%;
-  stroke: #d20094;
-  stroke-width: 16;
-  stroke-dasharray: 376.8 0;
-  stroke-linecap: round;
-  transition: stroke-dasharray 2s;
-}
-
-#countdown-text {
-  position: absolute;
-  margin: 13px 39px;
-  /* top: 50px;
-  left: 50px; */
-}
-
-#countdown-text p:first-child {
-  font-size: 0.5rem;
-  /* font-weight: bold; */
-  padding-top: 20px;
-}
-
-#countdown-text p:nth-child(2) {
-  font-size: 2.4rem;
-  /* font-weight: 500; */
-}
-
-#countdown-text p:last-child {
-  font-size: 0.5rem;
-}
-
-#exam {
-  text-align: center;
-  margin-top: 135px;
-  max-width: 900px;
-  margin-inline: auto;
-  display: none;
-}
-
-.exam-form-padding-top {
-  padding-top: 60px;
-}
-
-.padding-top {
-  padding-top: 30px;
-}
-
-#domanda {
-  min-height: 300px;
-  display: table;
-  width: 100%;
-}
-
-#domanda h2 {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-#exam h2 {
-  margin-inline: auto;
-}
-
-#exam .buttons {
-  font-size: 1rem;
-  width: 340px;
-  min-height: 70px;
-  /* background: rgba(255, 255, 255, 0.05);*/
-  color: black;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-  margin: 0 20px 20px;
-
-  .transparent-box {
-    width: 300px;
-    height: 200px;
-    border: 10px solid transparent;
-    border-image: linear-gradient(45deg, #f06, #9f6) 1;
-    border-radius: 40px;
-    background: linear-gradient(45deg,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.5));
-    padding: 20px;
-
-
-  }
-
-  #exam .container-buttons button:not(#avanti):hover {
-    background-color: #8e0665;
-    cursor: pointer;
-
-  }
-
-  #exam button:not(#avanti).button-clicked {
-    background-color: #d20094;
-  }
-
-  #exam p {
-    display: inline-block;
-  }
-
-  .container-buttons {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .form-footer {
-    text-align: left;
-  }
-
-  #exam p,
-  button#avanti {
-    position: relative;
-    top: 120px;
-  }
-
-  .form-footer p {
-    padding-top: 30px;
-  }
-
-  /* ----------------------------------- FINE EXAM STYLE -----------------------------------  */
-
-  /* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
-
-  #results {
-    text-align: center;
-    display: none;
-    max-width: 940px;
+  header,
+  main {
+    max-width: 960px;
     margin-inline: auto;
-    margin-top: 90px;
-    vertical-align: middle;
   }
 
-  #results h2 {
-    margin-bottom: 5px;
-  }
-
-  .cont-results {
-    margin-top: 50px;
-  }
-
-  .result-grafic {
-    width: 400px;
-    height: 500px;
-    color: white;
+  main {
     text-align: center;
-    display: inline-block;
-    vertical-align: sub;
-    margin-inline: 50px;
-    vertical-align: middle;
+    color: #dadae0;
+    width: 100%;
   }
 
-  .result-grafic svg {
-    stroke: #c2128d;
-    width: 400px;
-    height: 400px;
+  h1,
+  h2,
+  h3 {
+    font-family: "Outfit", sans-serif;
   }
 
-  .result-grafic circle {
-    stroke-width: 60;
-    stroke-dasharray: 1004.8;
-    fill: transparent;
-    /* transform-origin: top; */
+  h1 {
+    color: white;
+    font-size: 5.5rem;
+    line-height: 0.8;
+    margin-bottom: 55px;
   }
 
-  .result-grafic circle+circle {
-    transform: rotate(90deg) scaleX(-1);
-    transform-origin: 50%;
-    stroke: #00ffff;
-    stroke-width: 61;
-    stroke-dasharray: 1004.8;
+  strong {
+    font-weight: bold;
   }
 
-  .result-grafic circle+circle {
-    stroke-dasharray: 702.4 1004.8;
+  h2 {
+    font-size: 3.2rem;
   }
 
-  .resutGrafic-text {
-    position: absolute;
-    margin-top: 130px;
-    margin-left: 100px;
+  h3 {
+    font-size: 2.1rem;
   }
 
-  .resutGrafic-text p {
-    max-width: 200px;
+  h4 {
+    font-size: 1.2rem;
   }
 
-  .exam-not-approved {
-    padding-top: 85px;
-    padding-inline: 50px;
+  .hidden {
+    display: block;
   }
 
-  .answer-result {
-    max-width: 200px;
+  .inline-block {
     display: inline-block;
   }
 
-  .corrects-result {
-    text-align: left;
+  .universal-style-btn-ns {
+    float: right;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding-inline: 55px;
+    padding-block: 16px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-family: "Outfit", sans-serif;
   }
 
-  .wrongs-result {
-    text-align: right;
+  .universal-style-btn-slc,
+  #rate-us:hover,
+  #your-answers:hover {
+    background-color: #00ffff;
+    box-shadow: 0px 0px 20px 4px #53e0e0;
+    color: black;
+    cursor: pointer;
   }
 
-  #rate-us,
+  #rate-us {
+    float: left;
+  }
+
+  #your-answers {
+    float: right;
+  }
+
   #more-info {
     float: unset;
   }
 
-  #review {
+  .azzurro {
+    color: #00ffff;
+  }
+
+  .rosso {
+    color: red;
+  }
+
+  /* ----------------------------------- INIZIO WELCOME STYLE -----------------------------------  */
+
+  #welcome {
+    text-align: left;
+    margin-inline: auto;
+    margin-top: 100px;
+  }
+
+  #welcome h1 {
+    max-width: 50%;
+  }
+
+  #welcome h3 {
+    color: #d20094;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  #welcome p,
+  #welcome ul,
+  #welcome label {
+    font-size: 19px;
+  }
+
+  #welcome p {
+    margin-bottom: 55px;
+    max-width: 600px;
+    line-height: 1.3;
+  }
+
+  .instrucrion-list {
+    padding-left: 30px;
+  }
+
+  #welcome ul {
+    line-height: 1.6;
+    margin-bottom: 50px;
+  }
+
+  #welcome form * {
+    display: inline-block;
+  }
+
+  #welcome .cont-range {
+    margin-bottom: 50px;
+    width: 700px;
+    text-align: left;
+  }
+
+  .cont-range input#rangeValue {
+    display: block;
+    appearance: none;
+    width: 500px;
+    height: 6px;
+    border-radius: 10px;
+    border: 1px solid white;
+    outline: none;
+    box-shadow: 0 1px 3px white;
+  }
+
+  .cont-range ul li:not(.cont-range u li:last-child) {
+    display: inline-block;
+    padding-right: 170px;
+  }
+
+  /* ----------------------------------- PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
+
+  /* Nascondi il box di default */
+  #welcome form input {
     display: none;
+  }
+
+  /* Stile personalizzato del checkbox */
+  #welcome form input+label {
+    position: relative;
+    top: 20px;
+    padding-left: 35px;
+    cursor: pointer;
+  }
+
+  /* Stile del segno di spunta quando il checkbox è selezionato */
+  #welcome form input+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
     border: 2px solid white;
-    border-radius: 20px;
-    width: 960px;
-    margin: 0 auto;
-  }
-
-  #review>div {
-    background-color: darkviolet;
-    border: 2px solid white;
-    border-radius: 20px;
-    margin: 20px;
-  }
-
-  /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
-
-  /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
-
-  #result,
-  #feedback {
-    font-family: "Outfit", sans-serif;
-    text-align: center;
-  }
-
-  #feedback #img-stelle img {
-    filter: grayscale(100%) brightness(20%);
-  }
-
-  #feedback-main {
-    margin-top: 175px;
-  }
-
-  #feedback h2 {
-    margin-bottom: 25px;
-    font-weight: bold;
-  }
-
-  #feedback p {
-    font-size: 1.8rem;
-    max-width: 720px;
-    margin-inline: auto;
-  }
-
-  /* Per vedere le stelle in azzurro */
-  .selected-stars {
-    filter: none;
-  }
-
-  #img-stelle {
-    margin-top: 40px;
-    margin-bottom: 70px;
-  }
-
-  #feedback #img-stelle>img.selected-stars {
-    filter: none;
-  }
-
-  #feedback #img-stelle img.clicked-star {
-    filter: drop-shadow(0 0 10px white);
-  }
-
-  #img-stelle img:not(:last-child) {
-    padding-right: 20px;
-  }
-
-  #feedback form {
-    margin-top: 50px;
-    max-width: 770px;
-    margin-inline: auto;
     background-color: transparent;
   }
 
-  #feedback form input {
-    all: unset;
-    text-align: left;
+  /* Stile del segno di spunta quando il checkbox è selezionato */
+  #welcome form input:checked+label::before {
+    background-color: #00ffff;
+    box-shadow: 0px 0px 20px 4px #53e0e0;
+    border: none;
+  }
+
+  /* ---------------------- FINE PERSONALIZZAZIONE / WELCOME DEL CHECKBOX ----------------------  */
+
+  /* ----------------------------------- INIZIO EXAM STYLE -----------------------------------  */
+
+  #countdown {
+    float: right;
+    /* border: 12px solid #00ffff; */
+    /* border-radius: 50%; */
+    width: 120px;
+    height: 120px;
+    color: white;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    display: none;
+  }
+
+  header svg {
+    width: 120px;
+    height: 120px;
+  }
+
+  header circle {
+    stroke: #969696;
+    stroke-width: 16;
+    stroke-dasharray: 376.8;
+    fill: transparent;
+    /* transform-origin: top; */
+  }
+
+  header circle+circle {
+    transform: rotate(90deg) scaleX(-1);
+    transform-origin: 50%;
+    stroke: #d20094;
+    stroke-width: 16;
+    stroke-dasharray: 376.8 0;
+    stroke-linecap: round;
+    transition: stroke-dasharray 2s;
+  }
+
+  #countdown-text {
+    position: absolute;
+    margin: 13px 39px;
+    /* top: 50px;
+  left: 50px; */
+  }
+
+  #countdown-text p:first-child {
+    font-size: 0.5rem;
+    /* font-weight: bold; */
+    padding-top: 20px;
+  }
+
+  #countdown-text p:nth-child(2) {
+    font-size: 2.4rem;
+    /* font-weight: 500; */
+  }
+
+  #countdown-text p:last-child {
+    font-size: 0.5rem;
+  }
+
+  #exam {
+    text-align: center;
+    margin-top: 135px;
+    max-width: 900px;
+    margin-inline: auto;
+    display: none;
+  }
+
+  .exam-form-padding-top {
+    padding-top: 60px;
+  }
+
+  .padding-top {
+    padding-top: 30px;
+  }
+
+  #domanda {
+    min-height: 300px;
+    display: table;
     width: 100%;
-    border-bottom: 1px solid #c2128d;
-    padding: 0 0 10px 25px;
-    font-size: 21px;
   }
 
-  #more-info {
-    margin-top: 60px;
+  #domanda h2 {
+    display: table-cell;
+    vertical-align: middle;
   }
 
-  /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
+  #exam h2 {
+    margin-inline: auto;
+  }
 
-  /* commento */
+  #exam .buttons {
+    font-size: 1rem;
+    width: 340px;
+    min-height: 70px;
+    /* background: rgba(255, 255, 255, 0.05);*/
+    color: black;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    margin: 0 20px 20px;
+
+    .transparent-box {
+      width: 300px;
+      height: 200px;
+      border: 10px solid transparent;
+      border-image: linear-gradient(45deg, #f06, #9f6) 1;
+      border-radius: 40px;
+      background: linear-gradient(45deg,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0.5));
+      padding: 20px;
+
+
+    }
+
+    #exam .container-buttons button:not(#avanti):hover {
+      background-color: #8e0665;
+      cursor: pointer;
+
+    }
+
+    #exam button:not(#avanti).button-clicked {
+      background-color: #d20094;
+    }
+
+    #exam p {
+      display: inline-block;
+    }
+
+    .container-buttons {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .form-footer {
+      text-align: left;
+    }
+
+    #exam p,
+    button#avanti {
+      position: relative;
+      top: 120px;
+    }
+
+    .form-footer p {
+      padding-top: 30px;
+    }
+
+    /* ----------------------------------- FINE EXAM STYLE -----------------------------------  */
+
+    /* ----------------------------------- INIZIO RESULT STYLE -----------------------------------  */
+
+    #results {
+      text-align: center;
+      display: none;
+      max-width: 940px;
+      margin-inline: auto;
+      margin-top: 90px;
+      vertical-align: middle;
+    }
+
+    #results h2 {
+      margin-bottom: 5px;
+    }
+
+    .cont-results {
+      margin-top: 50px;
+    }
+
+    .result-grafic {
+      width: 400px;
+      height: 500px;
+      color: white;
+      text-align: center;
+      display: inline-block;
+      vertical-align: sub;
+      margin-inline: 50px;
+      vertical-align: middle;
+    }
+
+    .result-grafic svg {
+      stroke: #c2128d;
+      width: 400px;
+      height: 400px;
+    }
+
+    .result-grafic circle {
+      stroke-width: 60;
+      stroke-dasharray: 1004.8;
+      fill: transparent;
+      /* transform-origin: top; */
+    }
+
+    .result-grafic circle+circle {
+      transform: rotate(90deg) scaleX(-1);
+      transform-origin: 50%;
+      stroke: #00ffff;
+      stroke-width: 61;
+      stroke-dasharray: 1004.8;
+    }
+
+    .result-grafic circle+circle {
+      stroke-dasharray: 702.4 1004.8;
+    }
+
+    .resutGrafic-text {
+      position: absolute;
+      margin-top: 130px;
+      margin-left: 100px;
+    }
+
+    .resutGrafic-text p {
+      max-width: 200px;
+    }
+
+    .exam-not-approved {
+      padding-top: 85px;
+      padding-inline: 50px;
+    }
+
+    .answer-result {
+      max-width: 200px;
+      display: inline-block;
+    }
+
+    .corrects-result {
+      text-align: left;
+    }
+
+    .wrongs-result {
+      text-align: right;
+    }
+
+    #review {
+      display: none;
+      border-radius: 20px;
+      width: 960px;
+      margin: 50px auto;
+      padding-inline: 50px;
+    }
+
+    /* #review > div::before {
+  content: "";
+  height: 50px;
+  width: 200px;
+  border: double 4px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00, #3020ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+} */
+
+    #review>div {
+      border: 2px solid white;
+      border-radius: 20px;
+      margin: 20px;
+      border: double 6px transparent;
+      border-radius: 20px;
+      background-image: linear-gradient(#d20094, #900080), radial-gradient(circle at top left, white, transparent);
+      /* background: linear-gradient(#d20094, #900080); */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+
+    #review>div>p {
+      padding: 10px;
+      transition: display 2s;
+    }
+
+    #review>div>p.hiddenAnswer {
+      display: none;
+    }
+
+    /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
+
+    /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
+
+    #result,
+    #feedback {
+      font-family: "Outfit", sans-serif;
+      text-align: center;
+    }
+
+    #feedback #img-stelle img {
+      filter: grayscale(100%) brightness(20%);
+    }
+
+    #feedback-main {
+      margin-top: 175px;
+    }
+
+    #feedback h2 {
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    #feedback p {
+      font-size: 1.8rem;
+      max-width: 720px;
+      margin-inline: auto;
+    }
+
+    /* Per vedere le stelle in azzurro */
+    .selected-stars {
+      filter: none;
+    }
+
+    #img-stelle {
+      margin-top: 40px;
+      margin-bottom: 70px;
+    }
+
+    #feedback #img-stelle>img.selected-stars {
+      filter: none;
+    }
+
+    #feedback #img-stelle img.clicked-star {
+      filter: drop-shadow(0 0 10px white);
+    }
+
+    #img-stelle img:not(:last-child) {
+      padding-right: 20px;
+    }
+
+    #feedback form {
+      margin-top: 50px;
+      max-width: 770px;
+      margin-inline: auto;
+      background-color: transparent;
+    }
+
+    #feedback form input {
+      all: unset;
+      text-align: left;
+      width: 100%;
+      border-bottom: 1px solid #c2128d;
+      padding: 0 0 10px 25px;
+      font-size: 21px;
+    }
+
+    #more-info {
+      margin-top: 60px;
+    }
+
+    /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
+
+    /* commento */

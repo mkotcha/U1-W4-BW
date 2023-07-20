@@ -5,18 +5,13 @@ const question = [
     difficulty: "easy",
     question: "What does CPU stand for?",
     correct_answer: "Central Processing Unit",
-    incorrect_answers: [
-      "Central Process Unit",
-      "Computer Personal Unit",
-      "Central Processor Unit",
-    ],
+    incorrect_answers: ["Central Process Unit", "Computer Personal Unit", "Central Processor Unit"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "According to the International System of Units, how many bytes are in a kilobyte of RAM?",
+    question: "According to the International System of Units, how many bytes are in a kilobyte of RAM?",
     correct_answer: "1000",
     incorrect_answers: ["512", "1024", "500"],
   },
@@ -24,8 +19,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "hard",
-    question:
-      "What was the name of the security vulnerability found in Bash in 2014?",
+    question: "What was the name of the security vulnerability found in Bash in 2014?",
     correct_answer: "Shellshock",
     incorrect_answers: ["Heartbleed", "Bashbug", "Stagefright"],
   },
@@ -33,8 +27,7 @@ const question = [
     category: "Science: Computers",
     type: "boolean",
     difficulty: "medium",
-    question:
-      "The very first recorded computer &quot;bug&quot; was a moth found inside a Harvard Mark II computer.",
+    question: "The very first recorded computer &quot;bug&quot; was a moth found inside a Harvard Mark II computer.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -42,14 +35,9 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "Which computer hardware device provides an interface for all other connected devices to communicate?",
+    question: "Which computer hardware device provides an interface for all other connected devices to communicate?",
     correct_answer: "Motherboard",
-    incorrect_answers: [
-      "Central Processing Unit",
-      "Hard Disk Drive",
-      "Random Access Memory",
-    ],
+    incorrect_answers: ["Central Processing Unit", "Hard Disk Drive", "Random Access Memory"],
   },
   {
     category: "Science: Computers",
@@ -57,11 +45,7 @@ const question = [
     difficulty: "medium",
     question: "On which computer hardware device is the BIOS chip located?",
     correct_answer: "Motherboard",
-    incorrect_answers: [
-      "Hard Disk Drive",
-      "Central Processing Unit",
-      "Graphics Processing Unit",
-    ],
+    incorrect_answers: ["Hard Disk Drive", "Central Processing Unit", "Graphics Processing Unit"],
   },
   {
     category: "Science: Computers",
@@ -75,8 +59,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "If you were to code software in this language you&#039;d only be able to type 0&#039;s and 1&#039;s.",
+    question: "If you were to code software in this language you&#039;d only be able to type 0&#039;s and 1&#039;s.",
     correct_answer: "Binary",
     incorrect_answers: ["JavaScript", "C++", "Python"],
   },
@@ -85,8 +68,7 @@ const question = [
     type: "multiple",
     difficulty: "easy",
     question: "What does the Prt Sc button do?",
-    correct_answer:
-      "Captures what&#039;s on the screen and copies it to your clipboard",
+    correct_answer: "Captures what&#039;s on the screen and copies it to your clipboard",
     incorrect_answers: [
       "Nothing",
       "Saves a .png file of what&#039;s on the screen in your screenshots folder in photos",
@@ -97,8 +79,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "What is the most preferred image format used for logos in the Wikimedia database?",
+    question: "What is the most preferred image format used for logos in the Wikimedia database?",
     correct_answer: ".svg",
     incorrect_answers: [".png", ".jpeg", ".gif"],
   },
@@ -106,14 +87,9 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "medium",
-    question:
-      "What did the name of the Tor Anonymity Network orignially stand for?",
+    question: "What did the name of the Tor Anonymity Network orignially stand for?",
     correct_answer: "The Onion Router",
-    incorrect_answers: [
-      "The Only Router",
-      "The Orange Router",
-      "The Ominous Router",
-    ],
+    incorrect_answers: ["The Only Router", "The Orange Router", "The Ominous Router"],
   },
   {
     category: "Science: Computers",
@@ -135,8 +111,7 @@ const question = [
     category: "Science: Computers",
     type: "boolean",
     difficulty: "medium",
-    question:
-      "To bypass US Munitions Export Laws, the creator of the PGP published all the source code in book form. ",
+    question: "To bypass US Munitions Export Laws, the creator of the PGP published all the source code in book form. ",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -146,18 +121,13 @@ const question = [
     difficulty: "medium",
     question: "On which day did the World Wide Web go online?",
     correct_answer: "December 20, 1990",
-    incorrect_answers: [
-      "December 17, 1996",
-      "November 12, 1990",
-      "November 24, 1995",
-    ],
+    incorrect_answers: ["December 17, 1996", "November 12, 1990", "November 24, 1995"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "What is the code name for the mobile operating system Android 7.0?",
+    question: "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
     incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
@@ -173,8 +143,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "hard",
-    question:
-      "The internet domain .fm is the country-code top-level domain for which Pacific Ocean island nation?",
+    question: "The internet domain .fm is the country-code top-level domain for which Pacific Ocean island nation?",
     correct_answer: "Micronesia",
     incorrect_answers: ["Fiji", "Tuvalu", "Marshall Islands"],
   },
@@ -206,8 +175,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "medium",
-    question:
-      "What is the name of the default theme that is installed with Windows XP?",
+    question: "What is the name of the default theme that is installed with Windows XP?",
     correct_answer: "Luna",
     incorrect_answers: ["Neptune", "Whistler", "Bliss"],
   },
@@ -215,8 +183,7 @@ const question = [
     category: "Science: Computers",
     type: "boolean",
     difficulty: "easy",
-    question:
-      "In most programming languages, the operator ++ is equivalent to the statement &quot;+= 1&quot;.",
+    question: "In most programming languages, the operator ++ is equivalent to the statement &quot;+= 1&quot;.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -224,8 +191,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "medium",
-    question:
-      "In programming, the ternary operator is mostly defined with what symbol(s)?",
+    question: "In programming, the ternary operator is mostly defined with what symbol(s)?",
     correct_answer: "?:",
     incorrect_answers: ["??", "if then", "?"],
   },
@@ -233,8 +199,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "Which computer language would you associate Django framework with?",
+    question: "Which computer language would you associate Django framework with?",
     correct_answer: "Python",
     incorrect_answers: ["C#", "C++", "Java"],
   },
@@ -266,8 +231,7 @@ const question = [
     category: "Science: Computers",
     type: "boolean",
     difficulty: "medium",
-    question:
-      "The last Windows operating system to be based on the Windows 9x kernel was Windows 98.",
+    question: "The last Windows operating system to be based on the Windows 9x kernel was Windows 98.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -275,8 +239,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "The numbering system with a radix of 16 is more commonly referred to as ",
+    question: "The numbering system with a radix of 16 is more commonly referred to as ",
     correct_answer: "Hexidecimal",
     incorrect_answers: ["Binary", "Duodecimal", "Octal"],
   },
@@ -284,8 +247,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "hard",
-    question:
-      "America Online (AOL) started out as which of these online service providers?",
+    question: "America Online (AOL) started out as which of these online service providers?",
     correct_answer: "Quantum Link",
     incorrect_answers: ["CompuServe", "Prodigy", "GEnie"],
   },
@@ -309,8 +271,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "medium",
-    question:
-      "What was the first Android version specifically optimized for tablets?",
+    question: "What was the first Android version specifically optimized for tablets?",
     correct_answer: "Honeycomb",
     incorrect_answers: ["Eclair", "Froyo", "Marshmellow"],
   },
@@ -354,8 +315,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "Which programming language shares its name with an island in Indonesia?",
+    question: "Which programming language shares its name with an island in Indonesia?",
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
@@ -385,31 +345,21 @@ const question = [
     difficulty: "easy",
     question: "In computing, what does LAN stand for?",
     correct_answer: "Local Area Network",
-    incorrect_answers: [
-      "Long Antenna Node",
-      "Light Access Node",
-      "Land Address Navigation",
-    ],
+    incorrect_answers: ["Long Antenna Node", "Light Access Node", "Land Address Navigation"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "hard",
-    question:
-      "According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
+    question: "According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
     correct_answer: "A&#039; + B&#039;",
-    incorrect_answers: [
-      "A&#039;B + B&#039;A",
-      "A&#039;B&#039;",
-      "AB&#039; + AB",
-    ],
+    incorrect_answers: ["A&#039;B + B&#039;A", "A&#039;B&#039;", "AB&#039; + AB"],
   },
   {
     category: "Science: Computers",
     type: "boolean",
     difficulty: "medium",
-    question:
-      "A Boolean value of &quot;0&quot; represents which of these words?",
+    question: "A Boolean value of &quot;0&quot; represents which of these words?",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -417,21 +367,15 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "hard",
-    question:
-      "Which of these is not a layer in the OSI model for data communications?",
+    question: "Which of these is not a layer in the OSI model for data communications?",
     correct_answer: "Connection Layer",
-    incorrect_answers: [
-      "Application Layer",
-      "Transport Layer",
-      "Physical Layer",
-    ],
+    incorrect_answers: ["Application Layer", "Transport Layer", "Physical Layer"],
   },
   {
     category: "Science: Computers",
     type: "boolean",
     difficulty: "easy",
-    question:
-      "The Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;",
+    question: "The Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -439,8 +383,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "medium",
-    question:
-      "What does the &#039;S&#039; in the RSA encryption algorithm stand for?",
+    question: "What does the &#039;S&#039; in the RSA encryption algorithm stand for?",
     correct_answer: "Shamir",
     incorrect_answers: ["Secure", "Schottky", "Stable"],
   },
@@ -448,8 +391,7 @@ const question = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "hard",
-    question:
-      "Which of the following computer components can be built using only NAND gates?",
+    question: "Which of the following computer components can be built using only NAND gates?",
     correct_answer: "ALU",
     incorrect_answers: ["CPU", "RAM", "Register"],
   },
@@ -468,11 +410,7 @@ const question = [
     difficulty: "hard",
     question: "Which kind of algorithm is Ron Rivest not famous for creating?",
     correct_answer: "Secret sharing scheme",
-    incorrect_answers: [
-      "Hashing algorithm",
-      "Asymmetric encryption",
-      "Stream cipher",
-    ],
+    incorrect_answers: ["Hashing algorithm", "Asymmetric encryption", "Stream cipher"],
   },
 ];
 
@@ -490,7 +428,7 @@ let currentAnswer = "";
 let counterInterval;
 let counterTimeout;
 
-const goExam = (event) => {
+const goExam = event => {
   event.preventDefault();
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("#exam").style.display = "block";
@@ -517,9 +455,7 @@ const dropSecond = () => {
   const delta = step * (timerStart - timer);
   const circle = document.querySelector("circle + circle");
   const offset = 16;
-  circle.style["stroke-dasharray"] = `${circ - delta - offset} ${
-    delta + offset
-  } `;
+  circle.style["stroke-dasharray"] = `${circ - delta - offset} ${delta + offset} `;
   timer--;
   timerElm.innerText = timer;
   if (timer < 20) {
@@ -569,9 +505,7 @@ const getQuestion = (arr, difficult) => {
 
 const setClicked = function (event) {
   event.preventDefault();
-  document
-    .querySelectorAll(".container-buttons button")
-    .forEach((elem) => elem.classList.remove("button-clicked"));
+  document.querySelectorAll(".container-buttons button").forEach(elem => elem.classList.remove("button-clicked"));
   event.target.classList.add("button-clicked");
   btnAvanti.disabled = false;
   btnAvanti.classList.add("universal-style-btn-slc");
@@ -580,9 +514,7 @@ const setClicked = function (event) {
 
 const setQuestion = () => {
   setCounter();
-  document
-    .querySelectorAll(".container-buttons button")
-    .forEach((elem) => elem.classList.remove("button-clicked"));
+  document.querySelectorAll(".container-buttons button").forEach(elem => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
   btnAvanti.disabled = true;
   btnAvanti.classList.remove("universal-style-btn-slc");
@@ -604,9 +536,7 @@ const setQuestion = () => {
     btn[2].style.display = "none";
     btn[3].style.display = "none";
   } else {
-    document
-      .querySelector("#exam form")
-      .classList.remove("exam-form-padding-top");
+    document.querySelector("#exam form").classList.remove("exam-form-padding-top");
     btn[2].style.display = "inline-block";
     btn[3].style.display = "inline-block";
   }
@@ -622,11 +552,14 @@ const setQuestion = () => {
   console.log(test);
 };
 
+toggleAnswer = event => {
+  console.log(event.target);
+  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach(elm => elm.classList.toggle("hiddenAnswer"));
+};
+
+const reviewDiv = document.querySelector("#review");
 const getReview = () => {
-  console.log("ciao!");
-  const reviewDiv = document.querySelector("#review");
-  reviewDiv.style.display = "block";
-  answers.forEach((elm) => {
+  answers.forEach(elm => {
     const div = document.createElement("div");
     const questionTest = elm.question;
     const answer = elm.answer;
@@ -635,26 +568,36 @@ const getReview = () => {
     pAnsw = document.createElement("p");
     pText = document.createElement("p");
     pCorr = document.createElement("p");
-    pText.innerHTML = questionTest;
 
+    pAnsw.classList.add("hiddenAnswer");
+    pCorr.classList.add("hiddenAnswer");
     if (correct === true) {
-      pAnsw.innerHTML =
-        `<i class="fa-solid fa-check" style="color: #00ff00;"></i>` + answer;
+      pText.innerHTML = `<i class="fa-solid fa-check" style="color: #00ff00;"></i>` + questionTest;
+      pAnsw.innerHTML = `<i class="fa-solid fa-check" style="color: #00ff00;"></i>` + answer;
       div.appendChild(pText);
       div.appendChild(pAnsw);
     } else {
-      pAnsw.innerHTML =
-        `<i class="fa-solid fa-xmark" style="color: #ff0000;"></i>` + answer;
-      pCorr.innerHTML =
-        `<i class="fa-solid fa-check" style="color: #00ff00;"></i>` +
-        correctAnswer;
+      pText.innerHTML = `<i class="fa-solid fa-xmark" style="color: #ff0000;"></i>` + questionTest;
+      pAnsw.innerHTML = `<i class="fa-solid fa-xmark" style="color: #ff0000;"></i>` + answer;
+      pCorr.innerHTML = `<i class="fa-solid fa-check" style="color: #00ff00;"></i>` + correctAnswer;
       div.appendChild(pText);
       div.appendChild(pAnsw);
       div.appendChild(pCorr);
     }
+    div.onclick = toggleAnswer;
     reviewDiv.appendChild(div);
   });
 };
+
+const showAnswers = () => {
+  if (reviewDiv.style.display == "block") {
+    reviewDiv.style.display = "none";
+  } else {
+    reviewDiv.style.display = "block";
+  }
+};
+const yourQuestion = document.getElementById("your-answers");
+yourQuestion.onclick = showAnswers;
 
 const getResult = () => {
   console.log(answers);
@@ -665,15 +608,11 @@ const getResult = () => {
   const correctPercent = (100 / numberQuestion) * correct;
   const incorrectPercent = (100 / numberQuestion) * incorrect;
 
-  correctCont.innerHTML = `<h2>Correct</h2> <h2><strong>${correctPercent.toFixed(
-    2
-  )}%</strong></h2>
+  correctCont.innerHTML = `<h2>Correct</h2> <h2><strong>${correctPercent.toFixed(2)}%</strong></h2>
   	<h4>${correct}/${numberQuestion} questions</h4>`;
 
   const incorrectCont = document.querySelector(".wrongs-result");
-  incorrectCont.innerHTML = `<h2>Wrong</h2> <h2><strong>${incorrectPercent.toFixed(
-    2
-  )}%</strong></h2>
+  incorrectCont.innerHTML = `<h2>Wrong</h2> <h2><strong>${incorrectPercent.toFixed(2)}%</strong></h2>
   	<h4>${incorrect}/${numberQuestion} questions</h4>`;
 
   document.querySelector("#exam").style.display = "none";
@@ -684,15 +623,13 @@ const getResult = () => {
 
   if (correctPercent > 60) {
     textExamResult.innerHTML =
-      "<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><p><br>We'll send you the certificate in few moments. Check your email (including promotion / spam folder)</p>";
+      "<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><p><br>We'll send you the certificate in a few moments. Check your email (including promotion / spam folder)</p>";
   } else {
     textExamResult.innerHTML =
-      "<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><p><br>We'll send you the result of the exam in few moments. Check your email (including promotion / spam folder)</p>";
+      "<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><p><br>We'll send you the result of the exam in a few moments. Check your email (including promotion / spam folder)</p>";
   }
 
-  document.querySelector(
-    ".result-grafic circle+circle"
-  ).style.strokeDasharray = `${correctToStroke} 1004.8`;
+  document.querySelector(".result-grafic circle+circle").style.strokeDasharray = `${correctToStroke} 1004.8`;
 
   getReview();
 };
@@ -701,7 +638,7 @@ const getFeedback = () => {
   window.location.href = "feedback.html";
 };
 
-const nextQuestion = (event) => {
+const nextQuestion = event => {
   event.preventDefault();
   test.answer = currentAnswer;
   if (test.correct_answer === currentAnswer) {
