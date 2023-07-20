@@ -423,10 +423,32 @@ const timerElm = document.querySelector("#countdown-text p:nth-child(2)");
 const btnAvanti = document.querySelector("#avanti");
 const numberQuestion = 7;
 let test = {};
-const difficult = "easy";
+let difficult = "easy";
 let currentAnswer = "";
 let counterInterval;
 let counterTimeout;
+
+const goExam = (event) => {
+	event.preventDefault();
+	document.querySelector("#welcome").style.display = "none";
+	document.querySelector("#exam").style.display = "block";
+	levelSelected = event.target.elements.rangeValue.value;
+	switch (levelSelected) {
+		case "1":
+			difficult = "easy";
+			break;
+		case "2":
+			difficult = "medium";
+			break;
+		case "3":
+			difficult = "hard";
+			break;
+	}
+
+	console.log(difficult);
+};
+
+document.querySelector("#welcome form").onsubmit = goExam;
 
 const dropSecond = () => {
 	const radius = document.querySelector("circle").attributes.r.value;
