@@ -3,6 +3,8 @@ let clicked = false;
 const btnNext = document.querySelector("#more-info");
 btnNext.disabled = true;
 
+const arrStelle = document.querySelectorAll("#img-stelle img");
+
 remStarNext = (element) => {
   while ((element = element.nextElementSibling)) {
     element.classList.remove("selected-stars");
@@ -27,6 +29,7 @@ const unColorStar = () => {
 
 const colorStar = (event) => {
   let element = event.target;
+  console.log(event.relatedTarget.children);
   element.classList.add("selected-stars");
   setStarPrev(element);
   remStarNext(element);
