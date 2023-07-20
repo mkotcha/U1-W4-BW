@@ -191,14 +191,14 @@ h4 {
   padding-right: 170px;
 }
 
-#review > div > p.padding-left {
-  padding-left: 8px;
+#review > div > p.margin-left {
+  margin-left: 50px;
   font-size: 1.1rem;
 }
 
 .font-size-q {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.23rem;
+  font-weight: 800;
 }
 
 /* ----------------------------------- PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
@@ -504,6 +504,29 @@ i.fa-solid.fa-check {
   padding-inline: 10px;
 }
 
+#review .font-size-q .fa-solid.fa-xmark {
+  font-size: 27px;
+}
+
+#review .font-size-q .fa-solid.fa-check {
+  font-size: 25px;
+}
+
+#review p.font-size-q {
+  position: relative;
+  max-width: 80%;
+  margin-left: 45px;
+  margin-bottom: 5px;
+}
+
+#review .font-size-q i.fa-solid.fa-xmark,
+#review .font-size-q .fa-solid.fa-check {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translate(-50%, -50%);
+}
+
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
@@ -576,5 +599,3 @@ i.fa-solid.fa-check {
 }
 
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
-
-/* commento */

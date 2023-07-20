@@ -1,0 +1,31 @@
+pAnsw.classList.add("hiddenAnswer");
+pCorr.classList.add("hiddenAnswer");
+if (correct === true) {
+  pText.innerHTML = `<i class="fa-solid fa-check"></i>` + questionTest;
+  pText.classList.add("font-size-q");
+  pAnsw.innerHTML =
+    "<strong>Your answer:</strong> " +
+    answer +
+    `<i class="fa-solid fa-check"></i>`;
+  pAnsw.classList.add("padding-left");
+  divContenitore.appendChild(pText);
+  divContenitore.appendChild(pAnsw);
+} else {
+  pText.innerHTML = `<i class="fa-solid fa-xmark"></i>` + questionTest;
+  pText.classList.add("font-size-q");
+  pAnsw.innerHTML =
+    "<strong>Your answer:</strong> " +
+    answer +
+    `<i class="fa-solid fa-xmark"></i>`;
+  pAnsw.classList.add("padding-left");
+  pCorr.innerHTML =
+    "<strong>Correct answer:</strong> " +
+    correctAnswer +
+    `<i class="fa-solid fa-check"></i>`;
+  pCorr.classList.add("padding-left");
+  divContenitore.appendChild(pText);
+  divContenitore.appendChild(pAnsw);
+  divContenitore.appendChild(pCorr);
+}
+divContenitore.onclick = toggleAnswer;
+reviewDiv.appendChild(divContenitore);
