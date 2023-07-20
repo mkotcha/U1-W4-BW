@@ -906,16 +906,16 @@ const getReview = () => {
     if (correct === true) {
       pText.innerHTML = `<i class="fa-solid fa-check"></i>` + questionTest;
       pText.classList.add("font-size-q");
-      pAnsw.innerHTML = "Your answer: " + answer + `<i class="fa-solid fa-check"></i>`;
+      pAnsw.innerHTML = "<strong>Your answer:</strong> " + answer + `<i class="fa-solid fa-check"></i>`;
       pAnsw.classList.add("padding-left");
       div.appendChild(pText);
       div.appendChild(pAnsw);
     } else {
       pText.innerHTML = `<i class="fa-solid fa-xmark"></i>` + questionTest;
       pText.classList.add("font-size-q");
-      pAnsw.innerHTML = "Your answer: " + answer + `<i class="fa-solid fa-xmark"></i>`;
+      pAnsw.innerHTML = "<strong>Your answer:</strong> " + answer + `<i class="fa-solid fa-xmark"></i>`;
       pAnsw.classList.add("padding-left");
-      pCorr.innerHTML = "Correct answer: " + correctAnswer + `<i class="fa-solid fa-check"></i>`;
+      pCorr.innerHTML = "<strong>Correct answer:</strong> " + correctAnswer + `<i class="fa-solid fa-check"></i>`;
       pCorr.classList.add("padding-left");
       div.appendChild(pText);
       div.appendChild(pAnsw);
