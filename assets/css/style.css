@@ -69,7 +69,11 @@ h4 {
   display: inline-block;
 }
 
-.universal-style-btn {
+.universal-style-btn-ns {
+  
+}
+
+.universal-style-btn-slc {
   
 }
 
@@ -136,10 +140,6 @@ h4 {
   outline: none;
   box-shadow: 0 1px 3px white;
 }
-
-
-
-
 
 .cont-range ul li:not(.cont-range u li:last-child) {
   display: inline-block;
