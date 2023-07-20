@@ -467,6 +467,8 @@ button#avanti.selected-avanti {
   display: none;
   border: 2px solid white;
   border-radius: 20px;
+  width: 960px;
+  margin: 0 auto;
 }
 
 #review > div {
