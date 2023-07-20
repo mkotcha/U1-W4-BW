@@ -428,6 +428,25 @@ let currentAnswer = "";
 let counterInterval;
 let counterTimeout;
 
+const getTotalTimeText = function (event) {
+  levelSelected = event.target.value;
+  const totalTimeText = document.querySelector(".totalTimeText");
+
+  switch (levelSelected) {
+    case "1":
+      totalTimeText.innerText = "0-10 minutes";
+      break;
+    case "2":
+      totalTimeText.innerText = "0-24 minutes";
+      break;
+    case "3":
+      totalTimeText.innerText = "0-30 minutes";
+      break;
+  }
+};
+
+document.getElementById("rangeValue").addEventListener("click", getTotalTimeText);
+
 const goExam = (event) => {
   event.preventDefault();
   document.querySelector("#welcome").style.display = "none";
@@ -451,6 +470,7 @@ const goExam = (event) => {
       numberQuestion = 30;
       break;
   }
+
   setQuestion();
 };
 
