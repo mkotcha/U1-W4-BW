@@ -855,7 +855,9 @@ const getQuestion = (arr, difficult) => {
 
 const setClicked = function (event) {
   event.preventDefault();
-  document.querySelectorAll(".container-buttons .examButtons").forEach(elem => elem.classList.remove("button-clicked"));
+  document
+    .querySelectorAll(".container-buttons .exam-buttons")
+    .forEach(elem => elem.classList.remove("button-clicked"));
 
   event.target.classList.add("button-clicked");
 
@@ -875,7 +877,9 @@ const areYouSure = event => {
 
 const setQuestion = () => {
   setCounter();
-  document.querySelectorAll(".container-buttons .examButtons").forEach(elem => elem.classList.remove("button-clicked"));
+  document
+    .querySelectorAll(".container-buttons .exam-buttons")
+    .forEach(elem => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
   btnAvanti.disabled = true;
   btnAvanti.classList.remove("universal-style-btn-slc");
@@ -883,7 +887,7 @@ const setQuestion = () => {
   h2.innerHTML = test.question;
   const arrQuestion = [test.correct_answer, ...test.incorrect_answers];
   const randQuestion = [];
-  const btn = document.querySelectorAll(".container-buttons .examButtons");
+  const btn = document.querySelectorAll(".container-buttons .exam-buttons");
 
   while (arrQuestion.length > 0) {
     index = Math.floor(Math.random() * arrQuestion.length);
