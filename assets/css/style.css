@@ -87,12 +87,20 @@ h4 {
   font-family: 'Outfit', sans-serif;
 }
 
-.universal-style-btn-slc {
+.universal-style-btn-slc, #rate-us:hover {
   background-color: #00ffff;
   color: black;
   box-shadow: 0px 0px 20px 4px #53e0e0;
   border: none;
   cursor: pointer;
+}
+
+.azzurro {
+  color: #00FFFF;
+}
+
+.rosso {
+  color: red;
 }
 
 /* ----------------------------------- INIZIO WELCOME STYLE -----------------------------------  */
@@ -145,7 +153,6 @@ h4 {
   text-align: left;
 }
 
-
 .cont-range input#rangeValue {
   display: block;
   appearance: none;
@@ -196,32 +203,7 @@ h4 {
   border: none;
 }
 
-/* ----------------------------------- FINE PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
-
-/* #proceed {
-  float: right;
-  background-color: transparent;
-  box-shadow: 0px 0px 11px 3px #00626a;
-  border: 3px solid white;
-  color: white;
-  padding-inline: 55px;
-  padding-block: 16px;
-  font-size: 1.4rem;
-  font-weight: 800;
-  font-family: 'Outfit', sans-serif;
-} */
-/* 
-#proceed.proceed-checked {
-  background-color: #00ffff;
-  color: black;
-  box-shadow: 0px 0px 20px 4px #53e0e0;
-  border: none;
-  cursor: pointer;
-} */
-
-/* ----------------------------------- FINE WELCOME STYLE -----------------------------------  */
-
-/* commento inutile */
+/* ---------------------- FINE PERSONALIZZAZIONE / WELCOME DEL CHECKBOX ----------------------  */
 
 /* ----------------------------------- INIZIO EXAM STYLE -----------------------------------  */
 
@@ -281,7 +263,6 @@ header circle+circle {
 #countdown-text p:last-child {
   font-size: 0.5rem;
 }
-
 
 #exam {
   text-align: center;
@@ -352,46 +333,13 @@ header circle+circle {
 
 #exam p,
 button#avanti {
-  position: absolute;
-  bottom: 100px;
+  position: relative;
+  top: 120px;
 }
 
 .form-footer p {
   padding-top: 30px;
-  left: 125px
 }
-/* 
-button#avanti {
-  margin: 0;
-  border-radius: 0;
-  width: 200px;
-  min-height: 50px;
-  right: 125px;
-  cursor: pointer;
-  background-color: transparent;
-  box-shadow: 0px 0px 11px 3px #00626a;
-  border: 3px solid white;
-  color: white;
-  padding-inline: 55px;
-  padding-block: 16px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-family: 'Outfit', sans-serif;
-} */
-
-#exam p,
-button#avanti {
-  bottom: 100px;
-}
-/* 
-button#avanti.selected-avanti {
-  background-color: #00ffff;
-  color: black;
-  box-shadow: 0px 0px 20px 4px #53e0e0;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-} */
 
 /* ----------------------------------- FINE EXAM STYLE -----------------------------------  */
 
@@ -478,28 +426,12 @@ button#avanti.selected-avanti {
   text-align: right;
 }
 
-/* #results button {
-  width: 220px;
-  height: 60px;
-  background-color: transparent;
-  border: 3px solid white;
-  color: white;
-  font-size: 1.3rem;
-  font-weight: bold;
-  box-shadow: 0px 0px 11px 3px #00626a;
-  cursor: pointer;
-  font-family: "Outfit", sans-serif;
-} */
-
+#rate-us {
+  float: unset;
+}
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
-/* #results button:hover {
-  background-color: #00FFFF;
-  box-shadow: 0px 0px 20px 4px #53e0e0;
-  color: black;
-  border: none;
-} */
 
 #result,
 #feedback {
@@ -563,13 +495,6 @@ button#avanti.selected-avanti {
   padding: 0 0 10px 25px;
   font-size: 21px;
 }
-/* 
-#feedback form button {
-  text-align: center;
-  float: unset;
-  margin-top: 65px;
-  color: black;
-} */
 
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
 
