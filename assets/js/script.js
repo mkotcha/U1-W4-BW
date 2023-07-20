@@ -481,9 +481,8 @@ let incorrect = 0;
 const timerStart = 30;
 let timer = timerStart;
 const timerElm = document.querySelector("#countdown-text p:nth-child(2)");
-
 const btnAvanti = document.querySelector("#avanti");
-const numberQuestion = 7;
+const numberQuestion = 3;
 let test = {};
 const answers = [];
 let difficult = "easy";
@@ -508,11 +507,8 @@ const goExam = (event) => {
       difficult = "hard";
       break;
   }
-
-  console.log(difficult);
+  setQuestion();
 };
-
-document.querySelector("#welcome form").onsubmit = goExam;
 
 const dropSecond = () => {
   const radius = document.querySelector("circle").attributes.r.value;
@@ -548,7 +544,6 @@ const dropQuestion = () => {
 const setCounter = () => {
   timer = timerStart;
   timerElm.innerText = timer;
-
   clearInterval(counterInterval);
   clearTimeout(counterTimeout);
   counterInterval = setInterval(dropSecond, 1000);
@@ -626,8 +621,6 @@ const setQuestion = () => {
   } <span>/ ${numberQuestion}</span>`;
 };
 
-setQuestion();
-
 const getResult = () => {
   console.log(answers);
   clearInterval(counterInterval);
@@ -690,5 +683,5 @@ const nextQuestion = (event) => {
 };
 
 btnAvanti.onclick = nextQuestion;
-
 document.querySelector("#rate-us").onclick = getFeedback;
+document.querySelector("#welcome form").onsubmit = goExam;

@@ -148,7 +148,6 @@ h4 {
 
 .cont-range input#rangeValue {
   display: block;
-  border: 4px solid yellow;
   appearance: none;
   width: 500px;
   height: 6px;
@@ -160,7 +159,7 @@ h4 {
 
 .cont-range ul li:not(.cont-range u li:last-child) {
   display: inline-block;
-  padding-right: 140px;
+  padding-right: 170px;
 }
 
 /* ----------------------------------- PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
