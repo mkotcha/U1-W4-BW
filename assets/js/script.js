@@ -925,7 +925,7 @@ const getReview = () => {
   answers.forEach(elm => {
     const div = document.createElement("div");
     const questionTest = elm.question;
-    const answer = elm.answer;
+    let answer = elm.answer;
     const correctAnswer = elm.correct_answer;
     const correct = elm.correct;
     pAnsw = document.createElement("p");
@@ -942,6 +942,7 @@ const getReview = () => {
       div.appendChild(pText);
       div.appendChild(pAnsw);
     } else {
+      if (answer === "") answer = "NO ANSWER";
       pText.innerHTML = `<i class="fa-solid fa-xmark"></i>` + questionTest;
       pText.classList.add("font-size-q");
       pAnsw.innerHTML = "<strong>Your answer:</strong> " + answer + `<i class="fa-solid fa-xmark"></i>`;
