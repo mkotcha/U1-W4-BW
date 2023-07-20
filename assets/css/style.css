@@ -138,28 +138,20 @@ h4 {
 #welcome form input:checked+label::before {
   background-color: #00ffff;
   box-shadow: 0px 0px 20px 4px #53e0e0;
-  border: none;
 }
 
 /* ----------------------------------- FINE PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
 
 #proceed {
   float: right;
-  background-color: transparent;
+  background-color: #00ffff;
   padding-inline: 55px;
   padding-block: 16px;
   font-size: 1.4rem;
   font-weight: 800;
-  border: 2px solid white;
-  font-family: 'Outfit', sans-serif;
-  color: white;
-}
-
-#proceed.proceed-checked {
-  background-color: #00ffff;
-  color: black;
-  box-shadow: 0px 0px 20px 4px #53e0e0;
   border: none;
+  box-shadow: 0px 0px 20px 4px #53e0e0;
+  font-family: 'Outfit', sans-serif;
   cursor: pointer;
 }
 
@@ -203,6 +195,8 @@ header circle+circle {
   transition: stroke-dasharray 2s;
   transition: stroke 20s ease-in;
 }
+
+
 
 #countdown-text {
   position: absolute;
@@ -440,10 +434,8 @@ button#avanti.selected-avanti {
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
 #results button:hover {
-  background-color: #00FFFF;
-  box-shadow: 0px 0px 20px 4px #53e0e0;
-  color: black;
-  border: none;
+  background-color: white;
+  color: #C2128D;
 }
 
 #result,
