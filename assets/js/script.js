@@ -420,7 +420,7 @@ let timerStart = 30;
 let timer = timerStart;
 const timerElm = document.querySelector("#countdown-text p:nth-child(2)");
 const btnAvanti = document.querySelector("#avanti");
-const numberQuestion = 20;
+let numberQuestion = 20;
 let test = {};
 const answers = [];
 let difficult = "easy";
@@ -438,14 +438,17 @@ const goExam = (event) => {
     case "1":
       difficult = "easy";
       timerStart = "40";
+      numberQuestion = 16;
       break;
     case "2":
       difficult = "medium";
       timerStart = "60";
+      numberQuestion = 24;
       break;
     case "3":
       difficult = "hard";
       timerStart = "90";
+      numberQuestion = 30;
       break;
   }
   setQuestion();
