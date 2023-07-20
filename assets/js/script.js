@@ -810,7 +810,7 @@ const dropSecond = () => {
   timerElm.innerText = timer;
   if (timer < 20) {
     circle.style.transition = "stroke 20s";
-    circle.style.stroke = "#4b081c";
+    circle.style.stroke = "#ff0000";
   }
 };
 
