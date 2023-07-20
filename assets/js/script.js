@@ -622,10 +622,8 @@ const setQuestion = () => {
   console.log(test);
 };
 
+const reviewDiv = document.querySelector("#review");
 const getReview = () => {
-  console.log("ciao!");
-  const reviewDiv = document.querySelector("#review");
-  reviewDiv.style.display = "block";
   answers.forEach((elm) => {
     const div = document.createElement("div");
     const questionTest = elm.question;
@@ -655,6 +653,17 @@ const getReview = () => {
     reviewDiv.appendChild(div);
   });
 };
+
+const showAnswers = () => {
+  getReview();
+  if (reviewDiv.style.display == "block") {
+    reviewDiv.style.display = "none";
+  } else {
+    reviewDiv.style.display = "block";
+  }
+};
+const yourQuestion = document.getElementById("your-answers");
+yourQuestion.onclick = showAnswers;
 
 const getResult = () => {
   console.log(answers);

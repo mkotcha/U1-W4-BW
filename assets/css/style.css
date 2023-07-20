@@ -86,7 +86,7 @@ h4 {
   font-family: 'Outfit', sans-serif;
 }
 
-.universal-style-btn-slc, #rate-us:hover, #your-questions:hover {
+.universal-style-btn-slc, #rate-us:hover, #your-answers:hover {
   background-color: #00ffff;
   box-shadow: 0px 0px 20px 4px #53e0e0;
   color: black;
@@ -97,7 +97,7 @@ h4 {
   float: left;
 }
 
-#your-questions {
+#your-answers {
   float: right;
 }
 
