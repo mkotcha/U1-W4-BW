@@ -146,6 +146,7 @@ h4 {
 #proceed {
   float: right;
   background-color: transparent;
+  box-shadow: 0px 0px 11px 3px #00626a;
   padding-inline: 55px;
   padding-block: 16px;
   font-size: 1.4rem;
