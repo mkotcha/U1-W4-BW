@@ -549,6 +549,35 @@ const setQuestion = () => {
   document.querySelector(".form-footer p").innerHTML = `QUESTION ${
     correct + incorrect + 1
   } <span>/ ${numberQuestion}</span>`;
+  console.log(test);
+};
+
+const getReview = () => {
+  console.log("ciao!");
+  const reviewDiv = document.querySelector("#review");
+  reviewDiv.style.display = "block";
+  answers.forEach(elm => {
+    const div = document.createElement("div");
+    const questionTest = elm.question;
+    const answer = elm.answer;
+    const correctAnswer = elm.correct_answer;
+    const correct = elm.correct;
+    pAnsw = document.createElement("p");
+    pText = document.createElement("p");
+    pCorr = document.createElement("p");
+    pText.innerHTML = questionTest;
+    pCorr.innerHTML = correctAnswer;
+    pAnsw.innerHTML = answer;
+    if (correct === true) {
+      div.appendChild(pText);
+      div.appendChild(pAnsw);
+    } else {
+      div.appendChild(pText);
+      div.appendChild(pAnsw);
+      div.appendChild(pCorr);
+    }
+    reviewDiv.appendChild(div);
+  });
 };
 
 const getResult = () => {
@@ -582,6 +611,8 @@ const getResult = () => {
   }
 
   document.querySelector(".result-grafic circle+circle").style.strokeDasharray = `${correctToStroke} 1004.8`;
+
+  getReview();
 };
 
 const getFeedback = () => {
