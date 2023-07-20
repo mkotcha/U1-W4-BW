@@ -446,27 +446,27 @@ button#avanti {
   padding-inline: 50px;
 }
 
-/* #review > div::before {
-  content: "";
-  height: 50px;
-  width: 200px;
-  border: double 4px transparent;
-  border-radius: 50%;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00, #3020ff);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-} */
-
 #review > div {
-  border: 2px solid white;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(#d20094, #900080);
   border-radius: 20px;
-  margin: 20px;
-  border: double 6px transparent;
-  border-radius: 20px;
-  background-image: linear-gradient(#d20094, #900080), radial-gradient(circle at top left, white, transparent);
-  /* background: linear-gradient(#d20094, #900080); */
-  background-origin: border-box;
   background-clip: content-box, border-box;
+}
+
+#review > div::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: 6px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, white, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 #review > div > p {
