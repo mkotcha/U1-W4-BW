@@ -566,12 +566,14 @@ const getReview = () => {
     pText = document.createElement("p");
     pCorr = document.createElement("p");
     pText.innerHTML = questionTest;
-    pCorr.innerHTML = correctAnswer;
-    pAnsw.innerHTML = answer;
+
     if (correct === true) {
+      pAnsw.innerHTML = `<i class="fa-solid fa-check" style="color: #00ff00;"></i>` + answer;
       div.appendChild(pText);
       div.appendChild(pAnsw);
     } else {
+      pAnsw.innerHTML = `<i class="fa-solid fa-xmark" style="color: #ff0000;"></i>` + answer;
+      pCorr.innerHTML = `<i class="fa-solid fa-check" style="color: #00ff00;"></i>` + correctAnswer;
       div.appendChild(pText);
       div.appendChild(pAnsw);
       div.appendChild(pCorr);
