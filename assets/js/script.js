@@ -883,7 +883,6 @@ const setQuestion = () => {
   h2.innerHTML = test.question;
   const arrQuestion = [test.correct_answer, ...test.incorrect_answers];
   const randQuestion = [];
-  // console.log(arrQuestion);
   const btn = document.querySelectorAll(".container-buttons .examButtons");
 
   while (arrQuestion.length > 0) {
@@ -910,13 +909,10 @@ const setQuestion = () => {
   document.querySelector(".form-footer p").innerHTML = `QUESTION ${
     correct + incorrect + 1
   } <span>/ ${numberQuestion}</span>`;
-  console.log(test);
-
   document.getElementById("backWelcomePage").onclick = areYouSure;
 };
 
 toggleAnswer = event => {
-  console.log(event.target);
   event.currentTarget.querySelectorAll("p:not(:first-child)").forEach(elm => elm.classList.toggle("hiddenAnswer"));
 };
 
@@ -969,7 +965,6 @@ const yourQuestion = document.getElementById("your-answers");
 yourQuestion.onclick = showAnswers;
 
 const getResult = () => {
-  console.log(answers);
   clearInterval(counterInterval);
   clearTimeout(counterTimeout);
   const correctCont = document.querySelector(".corrects-result");
