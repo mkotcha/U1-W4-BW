@@ -684,10 +684,10 @@ const getResult = () => {
 
   if (correctPercent > 60) {
     textExamResult.innerHTML =
-      "<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><p><br>We'll send you the certificate in few moments. Check your email (including promotion / spam folder)</p>";
+      "<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><p><br>We'll send you the certificate in a few moments. Check your email (including promotion / spam folder)</p>";
   } else {
     textExamResult.innerHTML =
-      "<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><p><br>We'll send you the result of the exam in few moments. Check your email (including promotion / spam folder)</p>";
+      "<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><p><br>We'll send you the result of the exam in a few moments. Check your email (including promotion / spam folder)</p>";
   }
 
   document.querySelector(

@@ -38,6 +38,7 @@ const setStar = (event) => {
   element.classList.add("clicked-star");
   clicked = true;
   btnNext.disabled = false;
+  document.getElementById("more-info").classList.add("universal-style-btn-slc");
 };
 
 stars.forEach((elm) => (elm.onmouseover = colorStar));
