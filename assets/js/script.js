@@ -891,20 +891,20 @@ const goExam = (event) => {
   document.querySelector("#countdown").style.display = "block";
   levelSelected = event.target.elements.rangeValue.value;
   switch (levelSelected) {
-    case "1":
+    case "0":
       difficult = "easy";
       timerStart = "40";
-      numberQuestion = 5; //16
+      numberQuestion = 16; //16
       break;
-    case "2":
+    case "100":
       difficult = "medium";
       timerStart = "60";
-      numberQuestion = 5; //24
+      numberQuestion = 24; //24
       break;
-    case "3":
+    case "200":
       difficult = "hard";
       timerStart = "90";
-      numberQuestion = 5; //30
+      numberQuestion = 30; //30
       break;
   }
 
