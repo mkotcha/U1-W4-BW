@@ -761,17 +761,17 @@ const getTotalTimeText = function (event) {
       totalTimeText.innerText = "0-10 minutes";
       break;
     case "2":
-      totalTimeText.innerText = "0-24 minutes";
+      totalTimeText.innerText = "10-24 minutes";
       break;
     case "3":
-      totalTimeText.innerText = "0-30 minutes";
+      totalTimeText.innerText = "15-30 minutes";
       break;
   }
 };
 
 document.getElementById("rangeValue").addEventListener("click", getTotalTimeText);
 
-const goExam = (event) => {
+const goExam = event => {
   event.preventDefault();
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("#exam").style.display = "block";
@@ -855,9 +855,7 @@ const getQuestion = (arr, difficult) => {
 
 const setClicked = function (event) {
   event.preventDefault();
-  document
-    .querySelectorAll(".container-buttons .examButtons")
-    .forEach((elem) => elem.classList.remove("button-clicked"));
+  document.querySelectorAll(".container-buttons .examButtons").forEach(elem => elem.classList.remove("button-clicked"));
 
   event.target.classList.add("button-clicked");
 
@@ -866,7 +864,7 @@ const setClicked = function (event) {
   currentAnswer = event.target.innerHTML;
 };
 
-const areYouSure = (event) => {
+const areYouSure = event => {
   const booleano = confirm("Are you sure to leave the page?");
   if (booleano) {
     window.location.href = "exam.html";
@@ -877,9 +875,7 @@ const areYouSure = (event) => {
 
 const setQuestion = () => {
   setCounter();
-  document
-    .querySelectorAll(".container-buttons .examButtons")
-    .forEach((elem) => elem.classList.remove("button-clicked"));
+  document.querySelectorAll(".container-buttons .examButtons").forEach(elem => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
   btnAvanti.disabled = true;
   btnAvanti.classList.remove("universal-style-btn-slc");
@@ -919,14 +915,14 @@ const setQuestion = () => {
   document.getElementById("backWelcomePage").onclick = areYouSure;
 };
 
-toggleAnswer = (event) => {
+toggleAnswer = event => {
   console.log(event.target);
-  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach((elm) => elm.classList.toggle("hiddenAnswer"));
+  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach(elm => elm.classList.toggle("hiddenAnswer"));
 };
 
 const reviewDiv = document.querySelector("#review");
 const getReview = () => {
-  answers.forEach((elm) => {
+  answers.forEach(elm => {
     const div = document.createElement("div");
     const questionTest = elm.question;
     const answer = elm.answer;
@@ -1010,7 +1006,7 @@ const getFeedback = () => {
   window.location.href = "feedback.html";
 };
 
-const nextQuestion = (event) => {
+const nextQuestion = event => {
   event.preventDefault();
   test.answer = currentAnswer;
   if (test.correct_answer === currentAnswer) {
