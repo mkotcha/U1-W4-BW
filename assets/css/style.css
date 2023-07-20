@@ -78,8 +78,7 @@ h4 {
 .universal-style-btn-ns {
   float: right;
   background-color: transparent;
-  box-shadow: 0px 0px 11px 3px #00626a;
-  border: 3px solid white;
+  border: 2px solid white;
   color: white;
   padding-inline: 55px;
   padding-block: 16px;
@@ -88,13 +87,23 @@ h4 {
   font-family: "Outfit", sans-serif;
 }
 
-.universal-style-btn-slc,
-#rate-us:hover {
+.universal-style-btn-slc, #rate-us:hover, #your-answers:hover {
   background-color: #00ffff;
-  color: black;
   box-shadow: 0px 0px 20px 4px #53e0e0;
-  border: none;
+  color: black;
   cursor: pointer;
+}
+
+#rate-us {
+  float: left;
+}
+
+#your-answers {
+  float: right;
+}
+
+#more-info {
+  float: unset;
 }
 
 .azzurro {
@@ -425,11 +434,6 @@ button#avanti {
 
 .wrongs-result {
   text-align: right;
-}
-
-#rate-us,
-#more-info {
-  float: unset;
 }
 
 #review {
