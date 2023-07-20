@@ -425,7 +425,7 @@ button#avanti {
   text-align: right;
 }
 
-#rate-us {
+#rate-us, #more-info {
   float: unset;
 }
 
@@ -508,6 +508,10 @@ button#avanti {
   border-bottom: 1px solid #c2128d;
   padding: 0 0 10px 25px;
   font-size: 21px;
+}
+
+#more-info {
+  margin-top: 60px;
 }
 
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */

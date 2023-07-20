@@ -1,15 +1,15 @@
 const stars = document.querySelectorAll("#img-stelle > img");
 let clicked = false;
-const btnNext = document.querySelector("#proceed");
+const btnNext = document.querySelector("#more-info");
 btnNext.disabled = true;
 
-remStarNext = element => {
+remStarNext = (element) => {
   while ((element = element.nextElementSibling)) {
     element.classList.remove("selected-stars");
   }
 };
 
-setStarPrev = element => {
+setStarPrev = (element) => {
   while ((element = element.previousElementSibling)) {
     element.classList.add("selected-stars");
   }
@@ -21,26 +21,26 @@ const unColorStar = () => {
     setStarPrev(element);
     remStarNext(element);
   } else {
-    stars.forEach(elm => elm.classList.remove("selected-stars"));
+    stars.forEach((elm) => elm.classList.remove("selected-stars"));
   }
 };
 
-const colorStar = event => {
+const colorStar = (event) => {
   let element = event.target;
   element.classList.add("selected-stars");
   setStarPrev(element);
   remStarNext(element);
 };
 
-const setStar = event => {
+const setStar = (event) => {
   let element = event.target;
-  stars.forEach(elm => elm.classList.remove("clicked-star"));
+  stars.forEach((elm) => elm.classList.remove("clicked-star"));
   element.classList.add("clicked-star");
   clicked = true;
   btnNext.disabled = false;
 };
 
-stars.forEach(elm => (elm.onmouseover = colorStar));
-stars.forEach(elm => (elm.onclick = setStar));
+stars.forEach((elm) => (elm.onmouseover = colorStar));
+stars.forEach((elm) => (elm.onclick = setStar));
 
 document.querySelector("#img-stelle").onmouseleave = unColorStar;
