@@ -14,7 +14,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Inter", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header {
