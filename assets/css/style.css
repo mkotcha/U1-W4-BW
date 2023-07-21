@@ -454,7 +454,7 @@ header circle + circle {
   margin-bottom: 5px;
 }
 
-#results p {
+#results .answer-result.corrects-result p {
   font-family: "Outfit", sans-serif;
   font-size: 1rem;
   margin: 0 auto;
@@ -462,7 +462,6 @@ header circle + circle {
 
 #results p span {
   font-family: "Outfit", sans-serif;
-  font-size: 0.8rem;
 }
 
 .cont-results {
@@ -508,12 +507,12 @@ header circle + circle {
 
 .resutGrafic-text {
   position: absolute;
-  margin-top: 140px;
+  margin-top: 125px;
   width: 100%;
 }
 
 .resutGrafic-text p {
-  max-width: 180px;
+  max-width: 175px;
 }
 
 .exam-not-approved {
@@ -590,6 +589,16 @@ i.fa-solid.fa-check {
   top: 50%;
   left: -30px;
   transform: translate(-50%, -50%);
+}
+
+.result-grafic .resutGrafic-text p,
+.result-grafic .resutGrafic-text span {
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.result-grafic .resutGrafic-text p span:not(:first-of-type) {
+  font-weight: 200;
 }
 
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
