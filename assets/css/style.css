@@ -207,10 +207,9 @@ input#rangeValue[type="range"]::-webkit-slider-thumb {
 input#rangeValue[type="range"]::-webkit-slider-runnable-track {
   background: linear-gradient(
     to right,
-    #000599 0%,
-    rgb(0, 162, 255) calc(100% * var(--percentage)),
-    rgb(0, 162, 255) calc(100% * var(--percentage)),
-    #00fff0 100%
+    #00fff0 0%,
+    rgb(0, 162, 255) 50%,
+    #000599 100%
   );
   height: 26px;
   border-radius: 13px;
