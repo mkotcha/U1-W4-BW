@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/426cbf9d74.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/426cbf9d74.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -30,30 +33,46 @@
         <div>
           <h3>Instruction</h3>
           <p>
-            We don't expect most engineers to know the answer to all of these questions, so don't worry if you are
-            unsure of a few of them.
+            We don't expect most engineers to know the answer to all of these
+            questions, so don't worry if you are unsure of a few of them.
           </p>
           <ul class="instrucrion-list">
-            <li>Each question is <strong>timed</strong> and can only be <strong>answered once</strong>.</li>
+            <li>
+              Each question is <strong>timed</strong> and can only be
+              <strong>answered once</strong>.
+            </li>
             <li>
               Changing browser tab or opening other windows will
               <strong>invalidate the question</strong>.
             </li>
-            <li>This exam will take approx. <strong class="totalTimeText">0-5 minutes</strong>.</li>
+            <li>
+              This exam will take approx.
+              <strong class="totalTimeText">0-5 minutes</strong>.
+            </li>
           </ul>
           <form>
             <div class="cont-range">
               <ul>
-                <li>Easy</li>
-                <li>Medium</li>
-                <li>Hard</li>
+                <li id="li1">Easy</li>
+                <li id="li2">Medium</li>
+                <li id="li3">Hard</li>
               </ul>
-              <input id="rangeValue" type="range" min="1" max="3" step="1" value="1" />
+              <input
+                id="rangeValue"
+                type="range"
+                min="0"
+                max="200"
+                step="100"
+                value="0"
+                oninput="this.style.setProperty('--percentage', this.value / 100)"
+              />
             </div>
 
             <input type="checkbox" required id="checkbox1" />
             <label for="checkbox1">
-              <strong>I promise to answer myself without help from anyone</strong>
+              <strong
+                >I promise to answer myself without help from anyone</strong
+              >
             </label>
             <button id="proceed" class="universal-style-btn-ns">PROCEED</button>
           </form>
@@ -66,16 +85,16 @@
         </div>
         <form>
           <div class="container-buttons">
-            <div class="examButtons">
+            <div class="exam-buttons">
               <p>input type =</p>
             </div>
-            <div class="examButtons">
+            <div class="exam-buttons">
               <p>&#039;Do-while&#039; loops</p>
             </div>
-            <div class="examButtons">
+            <div class="exam-buttons">
               <p>&#039;While&#039; loops</p>
             </div>
-            <div class="examButtons">
+            <div class="exam-buttons">
               <p>&#039;For&#039; loops</p>
             </div>
           </div>
@@ -103,8 +122,12 @@
           </div>
           <div class="answer-result wrongs-result"></div>
         </div>
-        <button type="button" id="rate-us" class="universal-style-btn-ns">RATE US</button>
-        <button type="button" id="your-answers" class="universal-style-btn-ns">YOUR ANSWERS</button>
+        <button type="button" id="rate-us" class="universal-style-btn-ns">
+          RATE US
+        </button>
+        <button type="button" id="your-answers" class="universal-style-btn-ns">
+          YOUR ANSWERS
+        </button>
       </div>
       <div id="review"></div>
     </main>

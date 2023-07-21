@@ -68,6 +68,10 @@ h4 {
   font-size: 1.2rem;
 }
 
+button {
+  transition: background-color 0.5s;
+}
+
 .hidden {
   display: block;
 }
@@ -171,34 +175,70 @@ h4 {
 
 #welcome .cont-range {
   margin-bottom: 50px;
-  width: 700px;
+  max-width: 500px;
   text-align: left;
 }
 
-.cont-range input#rangeValue {
+/* Stile del pallino (Webkit) */
+input#rangeValue[type="range"] {
   display: block;
-  appearance: none;
+  -webkit-appearance: none;
   width: 500px;
-  height: 6px;
-  border-radius: 10px;
-  border: 1px solid white;
+  height: 30px;
+  background: #ddd;
+  border-radius: 15px;
   outline: none;
-  box-shadow: 0 1px 3px white;
 }
 
-.cont-range ul li:not(.cont-range u li:last-child) {
-  display: inline-block;
-  padding-right: 170px;
+/* Stile del pallino (Webkit) */
+input#rangeValue[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: rgb(0, 135, 219);
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-#review>div>p.padding-left {
-  padding-left: 8px;
+/* Stile del fondo dello slider (Webkit) */
+input#rangeValue[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right,
+      #000599 0%,
+      rgb(0, 162, 255) calc(100% * var(--percentage)),
+      rgb(0, 162, 255) calc(100% * var(--percentage)),
+      #00fff0 100%);
+  height: 30px;
+  border-radius: 15px;
+}
+
+.cont-range ul {
+  position: relative;
+  width: 100%;
+}
+
+.cont-range ul>li {
+  cursor: pointer;
+}
+
+.cont-range ul #li2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cont-range ul #li3 {
+  float: right;
+}
+
+#review>div>p.margin-left {
+  margin-left: 50px;
   font-size: 1.1rem;
 }
 
 .font-size-q {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.23rem;
+  font-weight: 800;
 }
 
 /* ----------------------------------- PERSONALIZZAZIONE DEL CHECKBOX -----------------------------------  */
@@ -271,7 +311,7 @@ header circle+circle {
   stroke-width: 16;
   stroke-dasharray: 376.8 0;
   stroke-linecap: round;
-  transition: stroke-dasharray 2s;
+  transition: stroke-dasharray 1s;
 }
 
 #countdown-text {
@@ -333,7 +373,7 @@ header circle+circle {
 
 }
 
-#exam .examButtons:not(#avanti).button-clicked {
+#exam .exam-buttons:not(#avanti).button-clicked {
   background: linear-gradient(#d20094, #900080);
   border-radius: 31px;
 }
@@ -343,29 +383,26 @@ header circle+circle {
 }
 
 .container-buttons {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 80px;
 }
 
-.wrap {
+#exam .exam-buttons {
   display: inline-block;
-  width: 47%;
-  margin: 10px;
-}
-
-#exam .examButtons {
-  display: inline-block;
-  width: 47%;
-  padding: 30px;
+  width: 45%;
+  padding: 25px;
   position: relative;
   z-index: 0;
   margin: 40px;
   font-size: 1rem;
-  margin: 10px;
+  margin: 20px;
   vertical-align: middle;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
 }
 
-#exam .examButtons::before {
+#exam .exam-buttons::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -380,7 +417,7 @@ header circle+circle {
   mask-composite: exclude;
 }
 
-#exam .examButtons:hover {
+#exam .exam-buttons:hover {
   background: linear-gradient(#d20094, #900080);
   border-radius: 31px;
 }
@@ -391,6 +428,10 @@ header circle+circle {
 
 .form-footer p {
   padding-top: 30px;
+}
+
+.form-footer p span {
+  color: #c2128d;
 }
 
 /* ----------------------------------- FINE EXAM STYLE -----------------------------------  */
@@ -505,6 +546,29 @@ i.fa-solid.fa-check {
   padding-inline: 10px;
 }
 
+#review .font-size-q .fa-solid.fa-xmark {
+  font-size: 27px;
+}
+
+#review .font-size-q .fa-solid.fa-check {
+  font-size: 25px;
+}
+
+#review p.font-size-q {
+  position: relative;
+  max-width: 80%;
+  margin-left: 45px;
+  margin-bottom: 5px;
+}
+
+#review .font-size-q i.fa-solid.fa-xmark,
+#review .font-size-q .fa-solid.fa-check {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translate(-50%, -50%);
+}
+
 /* ----------------------------------- FINE RESULT STYLE -----------------------------------  */
 
 /* ----------------------------------- INIZIO FEEDBACK STYLE -----------------------------------  */
@@ -577,5 +641,3 @@ i.fa-solid.fa-check {
 }
 
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
-
-/* commento */
