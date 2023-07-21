@@ -205,12 +205,7 @@ input#rangeValue[type="range"]::-webkit-slider-thumb {
 
 /* Stile del fondo dello slider (Webkit) */
 input#rangeValue[type="range"]::-webkit-slider-runnable-track {
-  background: linear-gradient(
-    to right,
-    #00fff0 0%,
-    rgb(0, 162, 255) 50%,
-    #000599 100%
-  );
+  background: linear-gradient(to right, #00fff0 0%, rgb(0, 162, 255) 50%, #000599 100%);
   height: 26px;
   border-radius: 13px;
 }
@@ -644,18 +639,18 @@ i.fa-solid.fa-check {
 #feedback #img-stelle img {
   width: 50px;
   height: 46px;
-  margin-right: 8px;
+  margin-inline: 4px;
 }
 
 #feedback #img-stelle img.selected-stars {
   filter: none;
   width: 66px;
-  margin-right: -8px;
+  margin-inline: -4px;
 }
 
 #feedback #img-stelle img.clicked-star {
   filter: drop-shadow(0 0 10px white);
-  margin-right: -8px;
+  margin-inline: -4px;
   width: 66px;
 }
 
