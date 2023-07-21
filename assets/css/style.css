@@ -535,13 +535,15 @@ header circle + circle {
   text-align: left;
   position: absolute;
   top: 50%;
-  transform: translate(-100%, -50%);
+  left: 0%;
+  transform: translate(0%, -50%);
 }
 
 .wrongs-result {
   text-align: right;
   position: absolute;
   top: 50%;
+  right: 0%;
   transform: translate(0%, -50%);
 }
 
