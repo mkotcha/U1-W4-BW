@@ -775,7 +775,7 @@ const getTotalTimeText = function (event) {
 
 document.getElementById("rangeValue").addEventListener("click", getTotalTimeText);
 
-const setDifficult_byBtn = event => {
+const setDifficult_byBtn = (event) => {
   const totalTimeText = document.querySelector(".totalTimeText");
   const rangeInput = document.getElementById("rangeValue");
   if (event.target.innerText.toLowerCase() === "easy") {
@@ -794,9 +794,9 @@ const setDifficult_byBtn = event => {
 };
 
 const difficulty_btn = document.querySelectorAll(".cont-range ul");
-difficulty_btn.forEach(btn => btn.addEventListener("click", setDifficult_byBtn));
+difficulty_btn.forEach((btn) => btn.addEventListener("click", setDifficult_byBtn));
 
-const goExam = event => {
+const goExam = (event) => {
   event.preventDefault();
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("#exam").style.display = "block";
@@ -882,7 +882,7 @@ const setClicked = function (event) {
   event.preventDefault();
   document
     .querySelectorAll(".container-buttons .exam-buttons")
-    .forEach(elem => elem.classList.remove("button-clicked"));
+    .forEach((elem) => elem.classList.remove("button-clicked"));
 
   event.target.classList.add("button-clicked");
 
@@ -891,7 +891,7 @@ const setClicked = function (event) {
   currentAnswer = event.target.innerHTML;
 };
 
-const areYouSure = event => {
+const areYouSure = (event) => {
   const booleano = confirm("Are you sure to leave the page?");
   if (booleano) {
     window.location.href = "exam.html";
@@ -904,7 +904,7 @@ const setQuestion = () => {
   setCounter();
   document
     .querySelectorAll(".container-buttons .exam-buttons")
-    .forEach(elem => elem.classList.remove("button-clicked"));
+    .forEach((elem) => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
   btnAvanti.disabled = true;
   btnAvanti.classList.remove("universal-style-btn-slc");
@@ -941,13 +941,13 @@ const setQuestion = () => {
   document.getElementById("backWelcomePage").onclick = areYouSure;
 };
 
-toggleAnswer = event => {
-  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach(elm => elm.classList.toggle("hiddenAnswer"));
+toggleAnswer = (event) => {
+  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach((elm) => elm.classList.toggle("hiddenAnswer"));
 };
 
 const reviewDiv = document.querySelector("#review");
 const getReview = () => {
-  answers.forEach(elm => {
+  answers.forEach((elm) => {
     const div = document.createElement("div");
     const questionTest = elm.question;
     let answer = elm.answer;
@@ -1012,17 +1012,17 @@ const getResult = () => {
   document.querySelector("#results").style.display = "inline-block";
   document.querySelector("#countdown").style.display = "none";
 
-  const correctToStroke = (1004.8 * correctPercent.toFixed(2)) / 100;
+  const correctToStroke = (879.2 * correctPercent.toFixed(2)) / 100;
 
   if (correctPercent > 60) {
-    textExamResult.innerHTML =
-      "<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><p><br>We'll send you the certificate in a few moments. Check your email (including promotion / spam folder)</p>";
+    textExamResult.innerHTML = `<strong>Congratulations!<br><span class='azzurro'>You passed the exam.</span></strong><br>
+    <span>We'll send you the certificate in a few moments. Check your email (including promotion / spam folder)</span>`;
   } else {
-    textExamResult.innerHTML =
-      "<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><p><br>We'll send you the result of the exam in a few moments. Check your email (including promotion / spam folder)</p>";
+    textExamResult.innerHTML = `<strong>Sorry!<br><span class='rosso'>You didn't pass the exam.</span></strong><br>
+    <span>We'll send you the result of the exam in a few moments. Check your email (including promotion / spam folder)</span>`;
   }
 
-  document.querySelector(".result-grafic circle+circle").style.strokeDasharray = `${correctToStroke} 1004.8`;
+  document.querySelector(".result-grafic circle+circle").style.strokeDasharray = `${correctToStroke} 879.2`;
 
   getReview();
 };
@@ -1031,7 +1031,7 @@ const getFeedback = () => {
   window.location.href = "feedback.html";
 };
 
-const nextQuestion = event => {
+const nextQuestion = (event) => {
   event.preventDefault();
   test.answer = currentAnswer;
   if (test.correct_answer === currentAnswer) {
