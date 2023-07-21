@@ -921,7 +921,7 @@ const setQuestion = () => {
   }
 
   if (test.type === "boolean") {
-    document.querySelector("#exam form").classList.add("exam-form-padding-top");
+    // document.querySelector("#exam form").classList.add("exam-form-padding-top");
     btn[2].style.display = "none";
     btn[3].style.display = "none";
   } else {
