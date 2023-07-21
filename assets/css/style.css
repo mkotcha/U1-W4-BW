@@ -20,7 +20,7 @@ body {
 
 header {
   text-align: left;
-  padding-top: 40px;
+  padding-top: 10vh;
 }
 
 header img {
@@ -607,9 +607,11 @@ i.fa-solid.fa-check {
 #feedback {
   font-family: "Outfit", sans-serif;
   text-align: center;
+  vertical-align: middle;
 }
 
 #feedback #img-stelle img {
+  display: inline-block;
   filter: grayscale(20%) brightness(20%);
 }
 
@@ -639,16 +641,22 @@ i.fa-solid.fa-check {
   margin-bottom: 70px;
 }
 
-#feedback #img-stelle > img.selected-stars {
+#feedback #img-stelle img {
+  width: 50px;
+  height: 46px;
+  margin-right: 8px;
+}
+
+#feedback #img-stelle img.selected-stars {
   filter: none;
+  width: 66px;
+  margin-right: -8px;
 }
 
 #feedback #img-stelle img.clicked-star {
   filter: drop-shadow(0 0 10px white);
-}
-
-#img-stelle img:not(:last-child) {
-  padding-right: 10px;
+  margin-right: -8px;
+  width: 66px;
 }
 
 #feedback form {
