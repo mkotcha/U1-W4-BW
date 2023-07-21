@@ -683,7 +683,7 @@ const question = [
   {
     category: "Science: Computers",
     type: "boolean",
-    difficulty: "medium",boolean
+    difficulty: "medium",
     question: "&quot;Windows NT&quot; is a monolithic kernel.",
     correct_answer: "False",
     incorrect_answers: ["True"],
