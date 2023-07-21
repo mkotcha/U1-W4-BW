@@ -775,7 +775,7 @@ const getTotalTimeText = function (event) {
 
 document.getElementById("rangeValue").addEventListener("click", getTotalTimeText);
 
-const setDifficult_byBtn = (event) => {
+const setDifficult_byBtn = event => {
   const totalTimeText = document.querySelector(".totalTimeText");
   const rangeInput = document.getElementById("rangeValue");
   if (event.target.innerText.toLowerCase() === "easy") {
@@ -794,9 +794,9 @@ const setDifficult_byBtn = (event) => {
 };
 
 const difficulty_btn = document.querySelectorAll(".cont-range ul");
-difficulty_btn.forEach((btn) => btn.addEventListener("click", setDifficult_byBtn));
+difficulty_btn.forEach(btn => btn.addEventListener("click", setDifficult_byBtn));
 
-const goExam = (event) => {
+const goExam = event => {
   event.preventDefault();
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("#exam").style.display = "block";
@@ -806,7 +806,7 @@ const goExam = (event) => {
     case "0":
       difficult = "easy";
       timerStart = "40";
-      numberQuestion = 16; //16
+      numberQuestion = 2; //16
       break;
     case "100":
       difficult = "medium";
@@ -882,7 +882,7 @@ const setClicked = function (event) {
   event.preventDefault();
   document
     .querySelectorAll(".container-buttons .exam-buttons")
-    .forEach((elem) => elem.classList.remove("button-clicked"));
+    .forEach(elem => elem.classList.remove("button-clicked"));
 
   event.target.classList.add("button-clicked");
 
@@ -891,7 +891,7 @@ const setClicked = function (event) {
   currentAnswer = event.target.innerHTML;
 };
 
-const areYouSure = (event) => {
+const areYouSure = event => {
   const booleano = confirm("Are you sure to leave the page?");
   if (booleano) {
     window.location.href = "exam.html";
@@ -904,7 +904,7 @@ const setQuestion = () => {
   setCounter();
   document
     .querySelectorAll(".container-buttons .exam-buttons")
-    .forEach((elem) => elem.classList.remove("button-clicked"));
+    .forEach(elem => elem.classList.remove("button-clicked"));
   test = getQuestion(question, difficult);
   btnAvanti.disabled = true;
   btnAvanti.classList.remove("universal-style-btn-slc");
@@ -941,13 +941,13 @@ const setQuestion = () => {
   document.getElementById("backWelcomePage").onclick = areYouSure;
 };
 
-toggleAnswer = (event) => {
-  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach((elm) => elm.classList.toggle("hiddenAnswer"));
+toggleAnswer = event => {
+  event.currentTarget.querySelectorAll("p:not(:first-child)").forEach(elm => elm.classList.toggle("hiddenAnswer"));
 };
 
 const reviewDiv = document.querySelector("#review");
 const getReview = () => {
-  answers.forEach((elm) => {
+  answers.forEach(elm => {
     const div = document.createElement("div");
     const questionTest = elm.question;
     let answer = elm.answer;
@@ -1002,11 +1002,11 @@ const getResult = () => {
   const incorrectPercent = (100 / numberQuestion) * incorrect;
 
   correctCont.innerHTML = `<h2>Correct</h2> <h2><strong>${correctPercent.toFixed(2)}%</strong></h2>
-  	<h4>${correct}/${numberQuestion} questions</h4>`;
+  	<p>${correct}/${numberQuestion} questions</p>`;
 
   const incorrectCont = document.querySelector(".wrongs-result");
   incorrectCont.innerHTML = `<h2>Wrong</h2> <h2><strong>${incorrectPercent.toFixed(2)}%</strong></h2>
-  	<h4>${incorrect}/${numberQuestion} questions</h4>`;
+  	<p>${incorrect}/${numberQuestion} questions</p>`;
 
   document.querySelector("#exam").style.display = "none";
   document.querySelector("#results").style.display = "inline-block";
@@ -1031,7 +1031,7 @@ const getFeedback = () => {
   window.location.href = "feedback.html";
 };
 
-const nextQuestion = (event) => {
+const nextQuestion = event => {
   event.preventDefault();
   test.answer = currentAnswer;
   if (test.correct_answer === currentAnswer) {
