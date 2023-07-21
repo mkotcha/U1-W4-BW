@@ -94,6 +94,7 @@ button {
 }
 
 .universal-style-btn-slc,
+#more-info:hover,
 #rate-us:hover,
 #your-answers:hover {
   background-color: #00ffff;
@@ -102,6 +103,7 @@ button {
   cursor: pointer;
 }
 
+#send-feedback,
 #more-info,
 #rate-us,
 #your-answers {
@@ -666,8 +668,24 @@ i.fa-solid.fa-check {
   font-size: 1.1rem;
 }
 
-#more-info {
+#send-feedback {
   margin-top: 60px;
 }
 
 /* ----------------------------------- FINE FEEDBACK STYLE -----------------------------------  */
+
+#NoGoodFeedback,
+#MidGoodFeedback,
+#VeryGoodFeedback {
+  display: none;
+}
+
+.svg-emoji {
+  height: 100px;
+  margin-bottom: 50px;
+  padding-inline: 20px;
+}
+
+#more-info {
+  margin-top: 50px;
+}
