@@ -288,8 +288,6 @@ input#rangeValue[type="range"]::-webkit-slider-runnable-track {
 
 #countdown {
   float: right;
-  /* border: 12px solid #00ffff; */
-  /* border-radius: 50%; */
   width: 120px;
   height: 120px;
   color: white;
@@ -309,7 +307,6 @@ header circle {
   stroke-width: 16;
   stroke-dasharray: 376.8;
   fill: transparent;
-  /* transform-origin: top; */
 }
 
 header circle+circle {
@@ -325,19 +322,15 @@ header circle+circle {
 #countdown-text {
   position: absolute;
   margin: 13px 39px;
-  /* top: 50px;
-  left: 50px; */
 }
 
 #countdown-text p:first-child {
   font-size: 0.5rem;
-  /* font-weight: bold; */
   padding-top: 20px;
 }
 
 #countdown-text p:nth-child(2) {
   font-size: 2.4rem;
-  /* font-weight: 500; */
 }
 
 #countdown-text p:last-child {
@@ -493,7 +486,6 @@ header circle+circle {
   stroke-width: 50;
   stroke-dasharray: 879.2;
   fill: transparent;
-  /* transform-origin: top; */
 }
 
 .result-grafic circle+circle {
