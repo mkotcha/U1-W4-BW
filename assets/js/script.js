@@ -867,6 +867,7 @@ const examContainer = document.querySelector("#exam");
 const checkbox1 = document.getElementById("checkbox1");
 const difficulty_btn = document.querySelectorAll(".cont-range ul");
 const reviewDiv = document.querySelector("#review");
+const numQuesions = document.querySelector(".numQuesions");
 
 const getTotalTimeText = function (event) {
   levelSelected = event.target.value;
@@ -876,14 +877,17 @@ const getTotalTimeText = function (event) {
   switch (levelSelected) {
     case "0":
       totalTimeText.innerText = "0-10 minutes";
+      numQuesions.innerText = "16";
       rangeInput.style.backgroundColor = "#00fff0";
       break;
     case "100":
       totalTimeText.innerText = "10-24 minutes";
+      numQuesions.innerText = "24";
       rangeInput.style.backgroundColor = "rgb(0, 162, 255)";
       break;
     case "200":
       totalTimeText.innerText = "24-30 minutes";
+      numQuesions.innerText = "30";
       rangeInput.style.backgroundColor = "#000599";
       break;
   }
@@ -906,14 +910,17 @@ const setDifficult_byBtn = (event) => {
     totalTimeText.innerText = "0-10 minutes";
     rangeInput.value = "0";
     rangeInput.style.backgroundColor = "#00fff0";
+    numQuesions.innerText = "16";
   } else if (event.target.innerText.toLowerCase() === "medium") {
     totalTimeText.innerText = "10-24 minutes";
     rangeInput.value = "100";
     rangeInput.style.backgroundColor = "rgb(0, 162, 255)";
+    numQuesions.innerText = "24";
   } else if (event.target.innerText.toLowerCase() === "hard") {
     totalTimeText.innerText = "24-30 minutes";
     rangeInput.value = "200";
     rangeInput.style.backgroundColor = "#000599";
+    numQuesions.innerText = "30";
   }
 };
 
