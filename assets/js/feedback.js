@@ -60,19 +60,9 @@ const goToPageFeedback = event => {
     }
   }
 
-  console.log(votoStar);
-
   let UserFeedback = "";
   UserFeedback = document.querySelector("form input").value;
-  console.log(UserFeedback);
 
-  // if (votoStar >= 1 && votoStar <= 7) {
-  //   toNoGoodFeedback();
-  // } else if (votoStar > 7 && votoStar <= 8) {
-  //   toMidGoodFeedback();
-  // } else {
-  //   toVeryGoodFeedback();
-  // }
   document.getElementById("feedback").style.display = "none";
 
   switch (votoStar) {
