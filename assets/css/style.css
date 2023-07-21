@@ -677,3 +677,13 @@ i.fa-solid.fa-check {
 #VeryGoodFeedback {
   display: none;
 }
+
+.svg-emoji {
+  height: 100px;
+  margin-bottom: 50px;
+  padding-inline: 20px;
+}
+
+#more-info {
+  margin-top: 50px;
+}

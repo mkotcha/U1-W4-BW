@@ -921,7 +921,7 @@ const goExam = (event) => {
     case "0":
       difficult = "easy";
       timerStart = "40";
-      numberQuestion = 2; //16
+      numberQuestion = 16; //16
       break;
     case "100":
       difficult = "medium";
