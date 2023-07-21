@@ -609,20 +609,21 @@ i.fa-solid.fa-check {
 }
 
 #feedback #img-stelle img {
-  filter: grayscale(100%) brightness(20%);
+  filter: grayscale(20%) brightness(20%);
 }
 
 #feedback-main {
-  margin-top: 175px;
+  margin-top: 90px;
 }
 
 #feedback h2 {
   margin-bottom: 25px;
   font-weight: bold;
+  font-size: 3.1rem;
 }
 
 #feedback p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   max-width: 720px;
   margin-inline: auto;
 }
@@ -646,7 +647,7 @@ i.fa-solid.fa-check {
 }
 
 #img-stelle img:not(:last-child) {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 #feedback form {
@@ -659,10 +660,10 @@ i.fa-solid.fa-check {
 #feedback form input {
   all: unset;
   text-align: left;
-  width: 100%;
-  border-bottom: 1px solid #c2128d;
+  width: 680px;
+  border-bottom: 2px solid #c2128d;
   padding: 0 0 10px 25px;
-  font-size: 21px;
+  font-size: 1.1rem;
 }
 
 #more-info {
