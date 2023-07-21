@@ -470,11 +470,9 @@ header circle + circle {
 
 .cont-results {
   margin-top: 20px;
-  vertical-align: middle;
-  line-height: normal;
   border: 1px solid red;
   width: 828px;
-  height: 420px;
+  position: relative;
 }
 
 .result-grafic {
@@ -534,10 +532,16 @@ header circle + circle {
 
 .corrects-result {
   text-align: left;
+  position: absolute;
+  top: 50%;
+  transform: translate(-116%, -50%);
 }
 
 .wrongs-result {
   text-align: right;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 
 #review {
