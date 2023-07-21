@@ -406,6 +406,8 @@ header circle + circle {
   font-size: 1.1rem;
   font-weight: 700;
   font-family: "Outfit", sans-serif;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.09);
 }
 
 #exam .exam-buttons::before {
@@ -414,8 +416,8 @@ header circle + circle {
   z-index: -1;
   inset: 0;
   padding: 4px;
-  margin: -4px;
-  border-radius: 35px;
+  /* margin: -4px; */
+  border-radius: 32px;
   background: linear-gradient(170deg, white, transparent);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -425,7 +427,6 @@ header circle + circle {
 
 #exam .exam-buttons:hover {
   background: linear-gradient(#d20094, #900080);
-  border-radius: 31px;
   cursor: pointer;
 }
 
