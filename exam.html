@@ -58,9 +58,9 @@
           <form>
             <div class="cont-range">
               <ul>
-                <li>Easy</li>
-                <li>Medium</li>
-                <li>Hard</li>
+                <li id="li1">Easy</li>
+                <li id="li2">Medium</li>
+                <li id="li3">Hard</li>
               </ul>
               <input
                 id="rangeValue"
@@ -68,7 +68,7 @@
                 min="0"
                 max="200"
                 step="100"
-                value="100"
+                value="0"
                 oninput="this.style.setProperty('--percentage', this.value / 100)"
               />
             </div>

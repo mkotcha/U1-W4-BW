@@ -911,6 +911,18 @@ const goExam = (event) => {
   setQuestion();
 };
 
+const setDifficult_byBtn = (event) => {
+  const rangeValue = document.getElementById("rangeValue");
+  if (event.target.innerText.toLowerCase() === "easy") {
+    rangeValue.value = "0";
+  } else if (event.target.innerText.toLowerCase() === "medium") {
+    rangeValue.value = "100";
+  } else if (event.target.innerText.toLowerCase() === "hard") {
+    rangeValue.value = "200";
+  }
+};
+document.querySelector(".cont-range ul").onclick = setDifficult_byBtn;
+
 const dropSecond = () => {
   const radius = document.querySelector("circle").attributes.r.value;
   const circ = radius * 2 * Math.PI;
